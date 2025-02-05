@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Additional styling for blog page to match overall site tone */
+    .blog-article {
+      border-bottom: 1px solid #e2e2e2;
+      padding: 30px 0;
+    }
+    .blog-article:last-child {
+      border-bottom: none;
+    }
+    .blog-article img {
+      max-width: 100%;
+      height: auto;
+    }
+    .blog-article h2 {
+      margin-top: 0;
+    }
+    .window-close-btn{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+    header {
+      position: relative;
+    }
+    .container-header {
+      position: relative;
+      padding-top: 60px; /* for window close button space */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with navigation matching index.html -->
+  <header class="bg-dark text-light py-3">
+    <div class="container container-header">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="section-header">
+            <h2 class="animate text-over-block">My Blog</h2>
+            <div class="divider-draft center"></div>
+            <p>This is where business meets technology—a space dedicated to Business Analysis, Quality Assurance, Data Analytics, and AI Innovation.</p>
+          </div>
+        </div>
+      </div>
+      <nav class="text-center">
+        <ul class="nav d-inline-flex">
+          <li class="nav-item"><a class="nav-link text-light" href="index.html">Home</a></li>
+        </ul>
+      </nav>
+      <button class="window-close-btn" onclick="window.close()">&times;</button>
+    </div>
+  </header>
+  <!-- Main content -->
+  <main class="container mt-5">
+    <!-- Article 1 -->
+    <div class="blog-article row">
+      <div class="col-md-4">
+        <img src="blog/BusinessAnalyst.png" alt="The Future of AI in Business Analysis & Quality Assurance">
+      </div>
+      <div class="col-md-8">
+        <h2>The Future of AI in Business Analysis & Quality Assurance</h2>
+        <p><strong>Introduction</strong><br>
+        Artificial Intelligence (AI) is revolutionizing industries, and Business Analysis (BA) and Quality Assurance (QA) are no exception. From automating workflows to improving decision-making, AI is shaping the future of how businesses operate.</p>
+        <p><strong>How AI is Transforming Business Analysis & QA</strong><br>
+        AI in Business Analysis: Automating Data Analysis, Natural Language Processing, Predictive Analytics.<br>
+        AI in Quality Assurance: Automated Test Case Generation, Self-Healing Test Automation, AI-Powered Bug Detection.</p>
+        <p><strong>Case Study: AI-Powered Business Analysis in Action</strong><br>
+        A fintech company reduced customer churn by 25% using AI-powered analytics.</p>
+        <p><strong>The Future of AI in BA & QA: How to Stay Relevant</strong><br>
+        Learn AI-Powered Tools, Develop Data Literacy, Adapt to AI Collaboration.</p>
+        <p><a href="article1.html">Read More</a></p>
+      </div>
+    </div>
+    <!-- Article 2 -->
+    <div class="blog-article row">
+      <div class="col-md-4">
+        <img src="blog/DataAnalyst.png" alt="The Role of Business Analysts in Tech">
+      </div>
+      <div class="col-md-8">
+        <h2>The Role of Business Analysts in Tech</h2>
+        <p><strong>Introduction</strong><br>
+        In today’s fast-moving tech world, businesses constantly strive to enhance efficiency, reduce costs, and stay ahead of competitors. Business Analysts act as the bridge between business needs and technical solutions.</p>
+        <p><strong>What Does a Business Analyst Do?</strong><br>
+        Requirement Gathering & Documentation, Process Improvement, Data Analysis & Reporting, Stakeholder Communication, User Acceptance Testing (UAT).</p>
+        <p><strong>Case Study: How a Business Analyst Transformed a Failing Project</strong><br>
+        A mid-sized e-commerce company improved checkout completion rates by 35%.</p>
+        <p><strong>The Future of Business Analysis in Tech</strong><br>
+        AI-Powered Business Analysis, Agile & DevOps Integration, Data-Driven Decision Making.</p>
+        <p><a href="article2a.html">Read More</a></p>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-dark text-light py-3 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 Thisha Smith Portfolio</p>
+    </div>
+  </footer>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
