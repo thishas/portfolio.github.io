@@ -1,4 +1,4 @@
-# VCard Resume - Thisha Smith
+# Resume Portfolio - Thisha Smith
 
 A modern, responsive personal portfolio website built using HTML5, CSS3, and JavaScript. This VCard-style resume showcases professional experience, skills, and personal attributes in an elegant and interactive way.
 
