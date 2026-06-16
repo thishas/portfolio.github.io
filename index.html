@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 		<!-- Favicon -->
@@ -13,8 +13,8 @@
 
 	
 		<title>Thisha Smith - Business Analyst / QA Engineer </title>
-		<meta name="description" content="Kush Novels LLC - Responsive One Page VCard/Resume HTML Template">
-		<meta name="keywords" content="Kush Novels LLC, vcard, resposnive, resume, personal, card, cv, cards, portfolio">
+		<meta name="description" content="Thisha Smith - Professional Portfolio: Business Analyst, Data Reporting Specialist, QA & Cybersecurity Professional.">
+		<meta name="keywords" content="Thisha Smith, business analyst, data analyst, qa engineer, quality assurance, cybersecurity, healthcare reporting, resume, portfolio">
 		
 		<!--[if lt IE 9]>
 		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -48,6 +48,1136 @@
 			
 			.post-content.expanded .read-more {
 				display: none;
+			}
+
+			/* Warm Professional Palette overrides */
+			body, #wrapper, .front-section, .section, #preloader {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+			}
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important;
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.basic-info {
+				border-bottom: solid 1px #EFE7DA !important;
+			}
+			
+			/* Soften/Remove Stark Borders & Dividers */
+			.section {
+				border: none !important;
+			}
+			
+			/* High-contrast Global Typography */
+			body, p, li, span, a, h1, h2, h3, h4, h5, h6,
+			.section-header h2, .section-header p,
+			.about-info > p, 
+			.testimonial > p, .testimonial > .author > p, 
+			.service > .content > p,
+			.process > .content > p,
+			.timeline > li > .timeline-content > p,
+			.hobby > h4,
+			.footer h4,
+			.footer-social > li > a {
+				color: #2F2F2F !important;
+			}
+
+			.section-header h2 {
+				font-weight: 700 !important;
+				letter-spacing: 4px !important;
+			}
+			
+			/* Hover & Accent States: Ember Clay (#7A3E2D) */
+			a:hover,
+			.front-person-links > ul > li > a:hover,
+			.sidebar-list > li > a:hover,
+			.info-list > li > .inner > p a:hover {
+				color: #7A3E2D !important;
+			}
+			
+			.post-more .more-link:hover,
+			.process:hover > .number,
+			.testimonials-slider .owl-controls > .owl-pagination > .owl-page.active > span,
+			.testimonials-slider .owl-controls > .owl-pagination > .owl-page:hover > span,
+			.close-btn > span:before {
+				background-color: #7A3E2D !important;
+			}
+			.testimonials-slider .owl-controls > .owl-pagination > .owl-page > span,
+			.form-control:focus,
+			.process.last > .number > span:before {
+				border-color: #7A3E2D !important;
+			}
+			
+			/* Secondary Accents: Muted Gold/Taupe (#B89B72) */
+			.service > .icon,
+			.hobby > .icon {
+				background-color: #B89B72 !important;
+				color: #FFF !important;
+			}
+			.process > .number {
+				border-color: #B89B72 !important;
+				background-color: transparent !important;
+				color: #B89B72 !important;
+			}
+			.process > .number > span:before {
+				border-left-color: #B89B72 !important;
+			}
+			.process.last > .number > span:before {
+				border-color: #B89B72 !important;
+			}
+			.timeline > li:not(.timeline-header):before {
+				background-color: #B89B72 !important;
+			}
+			.divider-draft, .divider-draft:before, .divider-draft:after {
+				background-color: #B89B72 !important;
+			}
+			.skill > h4 {
+				background-color: transparent !important;
+				color: #B89B72 !important;
+			}
+			
+			/* Services 3-column Grid Fix (desktop) and mobile stack */
+			@media (min-width: 992px) {
+				.services-block .row {
+					display: flex;
+					flex-wrap: wrap;
+				}
+				.services-block .row > .col-md-4 {
+					display: flex;
+					margin-bottom: 30px;
+				}
+				.services-block .service {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+					height: 100%;
+					margin-bottom: 0px;
+				}
+				.services-block .service > .content {
+					flex-grow: 1;
+				}
+			}
+			
+			/* Services Section Icon Size Refinement */
+			.services-section .main-title {
+				margin-bottom: 50px !important; /* Tightened spacing from 80px */
+			}
+			.services-block .service > .icon {
+				height: 68px !important;
+				width: 68px !important;
+				line-height: 68px !important;
+				background-color: #B89B72 !important; /* Taupe highlights */
+				color: #FFF !important;
+				transition: all 0.3s ease-in-out !important;
+				top: 0;
+			}
+			.services-block .service:hover > .icon {
+				background-color: #7A3E2D !important; /* Ember clay accents on hover */
+				top: -10px !important;
+			}
+			.services-block .service > .icon > i {
+				line-height: 68px !important;
+				height: 68px !important;
+				width: 68px !important;
+			}
+			.services-block .service > .icon > i:before {
+				font-size: 30px !important;
+				line-height: 68px !important;
+			}
+			.services-block .service > .content > h4 {
+				font-size: 15px !important;
+				margin-top: 30px !important; /* Tightened to match the About section's 30px */
+				margin-bottom: 8px !important;
+			}
+			.services-block .service > .content > p {
+				font-size: 13px !important;
+				line-height: 1.6em !important;
+			}
+			
+			/* Branded Project Card Placeholders */
+			.project-placeholder {
+				width: 100%;
+				height: 240px;
+				background-color: #EFE7DA;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				transition: background 0.3s ease;
+				border: 1px solid #EFE7DA;
+			}
+			.project-placeholder > i {
+				font-size: 38px;
+				color: #B89B72;
+				margin-bottom: 15px;
+				transition: color 0.3s ease;
+			}
+			.project-placeholder > .placeholder-title {
+				font-family: Raleway, sans-serif;
+				font-weight: 600;
+				font-size: 14px;
+				color: #2F2F2F;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+			}
+			.portfolio-items > .item > .inner:hover .project-placeholder {
+				background-color: #B89B72 !important;
+			}
+			.portfolio-items > .item > .inner:hover .project-placeholder > i {
+				color: #F7F2EA !important;
+			}
+
+			/* 2x2 Portfolio Grid on Desktop & Responsive Spacing */
+			.portfolio-items {
+				margin: -15px !important;
+			}
+			.portfolio-items > .item {
+				padding: 15px !important;
+				box-sizing: border-box !important;
+			}
+			@media (min-width: 992px) {
+				.portfolio-items > .item {
+					width: 50% !important;
+				}
+			}
+
+			/* Hover State Refinements */
+			.portfolio-items > .item > .inner {
+				transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			
+			/* Slight lift and subtle shadow on hover */
+			.portfolio-items > .item > .inner:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 15px 30px rgba(30, 158, 143, 0.2) !important;
+			}
+
+			/* Professional Teal Gradient Overlay */
+			.portfolio-items > .item > .inner > .caption {
+				background: #1E9E8F !important; /* Fallback */
+				background: linear-gradient(135deg, rgba(30, 158, 143, 0.94), rgba(42, 183, 200, 0.97)) !important;
+				color: #F7F2EA !important; /* Ivory text */
+				transition: all 0.3s ease !important;
+			}
+
+			/* Readability improvements on hover caption text */
+			.portfolio-items > .item > .inner .caption .caption-inner {
+				width: 85% !important;
+				left: 50% !important;
+				transform: translate(-50%, -50%) !important;
+			}
+
+			/* Sequential slide-up and fade-in animations for hover elements */
+			.portfolio-items > .item > .inner .caption .caption-inner h4,
+			.portfolio-items > .item > .inner .caption .caption-inner p,
+			.portfolio-items > .item > .inner .caption .caption-inner a {
+				opacity: 0 !important;
+				visibility: hidden !important;
+				transform: translateY(15px) !important;
+				transition: opacity 0.3s ease, transform 0.3s ease !important;
+			}
+
+			.portfolio-items > .item > .inner:hover .caption .caption-inner h4 {
+				opacity: 1 !important;
+				visibility: visible !important;
+				transform: translateY(0) !important;
+				transition-delay: 0.1s !important;
+			}
+
+			.portfolio-items > .item > .inner:hover .caption .caption-inner p {
+				opacity: 0.9 !important;
+				visibility: visible !important;
+				transform: translateY(0) !important;
+				transition-delay: 0.2s !important;
+			}
+
+			.portfolio-items > .item > .inner:hover .caption .caption-inner a {
+				opacity: 1 !important;
+				visibility: visible !important;
+				transform: translateY(0) !important;
+				transition-delay: 0.3s !important;
+			}
+
+			.portfolio-items > .item > .inner .caption h4 {
+				color: #F7F2EA !important;
+				font-size: 20px !important;
+				font-weight: 700 !important;
+				letter-spacing: 1.5px !important;
+				text-transform: uppercase !important;
+				margin-bottom: 15px !important;
+			}
+			
+			.portfolio-items > .item > .inner .caption p {
+				color: #F7F2EA !important;
+				font-size: 13.5px !important;
+				line-height: 1.6 !important;
+				margin-bottom: 20px !important;
+			}
+
+			/* Hover link styling */
+			.portfolio-items > .item > .inner .caption a {
+				color: #F7F2EA !important;
+				text-decoration: none !important;
+				font-weight: 700 !important;
+				font-size: 12px !important;
+				display: inline-block !important;
+				text-transform: uppercase !important;
+				letter-spacing: 1.5px !important;
+				border: 2px solid #F7F2EA !important;
+				padding: 8px 22px !important;
+				border-radius: 4px !important;
+				transition: all 0.3s ease !important;
+				background-color: transparent !important;
+			}
+
+			.portfolio-items > .item > .inner .caption a:hover {
+				background-color: #F7F2EA !important;
+				color: #1E9E8F !important;
+				transform: translateY(-2px) !important;
+				box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+				transition-delay: 0s !important;
+				transition: all 0.2s ease !important;
+			}
+
+			/* Homepage Readability & Contrast Overrides */
+			.front-heading > h2,
+			.front-person-links > ul > li > a {
+				color: #2F2F2F !important;
+				font-weight: 700 !important;
+			}
+			.front-heading > p {
+				color: #2F2F2F !important;
+			}
+
+			/* Circular Text Readability & Tonal Consistency & Spacing Outward */
+			.front-person-titles {
+				height: 535px !important;
+				width: 535px !important;
+				margin-top: -518px !important;
+				margin-bottom: -17px !important;
+			}
+			.front-person-titles > span {
+				font-family: Raleway, sans-serif !important;
+				color: #2F2F2F !important;
+				font-weight: 600 !important;
+				text-transform: uppercase !important;
+				font-size: 11px !important;
+			}
+			.front-person-titles > .t1 {
+				left: 5px !important;
+				bottom: 0 !important;
+				letter-spacing: 12px !important;
+			}
+			.front-person-titles > .t2 {
+				top: 5px !important;
+				left: 0 !important;
+				letter-spacing: 6px !important;
+			}
+			.front-person-titles > .t3 {
+				left: 0 !important;
+				bottom: 5px !important;
+				letter-spacing: 5px !important;
+			}
+
+			/* Homepage Nav Links Hover Feedback */
+			.front-person-links > ul > li > a {
+				transition: transform 0.25s ease, color 0.25s ease, letter-spacing 0.25s ease !important;
+			}
+			.front-person-links > ul > li > a:hover {
+				color: #7A3E2D !important;
+				text-decoration: underline !important;
+				transform: scale(1.08) !important;
+				letter-spacing: 4px !important;
+			}
+
+			/* Close button color polish */
+			.close-btn > span {
+				background: #2F2F2F !important;
+			}
+
+			/* Unified About Me Typography & Palette Consistency */
+			.about-section h1, 
+			.about-section h2, 
+			.about-section h3, 
+			.about-section h4, 
+			.about-section h5, 
+			.about-section h6 {
+				font-family: Raleway, sans-serif !important;
+				color: #2F2F2F !important;
+				font-weight: 700 !important;
+			}
+			.about-section p, 
+			.about-section li, 
+			.about-section span {
+				font-family: 'Open Sans', sans-serif !important;
+				color: #2F2F2F !important;
+				line-height: 1.8 !important;
+			}
+			.about-section .bg-lightgray {
+				background-color: #EFE7DA !important; /* Warm Sand */
+			}
+			.about-section .footer {
+				background-color: #EFE7DA !important;
+				border-top: 1px solid #EFE7DA !important;
+			}
+			.about-section .basic-info {
+				border-bottom: 1px solid #EFE7DA !important;
+			}
+			.about-section .divider-draft, 
+			.about-section .divider-draft:before, 
+			.about-section .divider-draft:after {
+				background-color: #B89B72 !important; /* Muted Gold */
+			}
+			/* Labels use Ember Clay */
+			.info-list > li > .inner > h4 {
+				color: #7A3E2D !important;
+				font-weight: 700 !important;
+				font-size: 13px !important;
+				letter-spacing: 2px !important;
+				text-transform: uppercase !important;
+			}
+			/* Values use Charcoal */
+			.info-list > li > .inner > p {
+				color: #2F2F2F !important;
+				font-weight: 600 !important;
+				font-size: 15px !important;
+			}
+			.info-list > li > .inner > p a {
+				color: #7A3E2D !important;
+				font-weight: 700 !important;
+				text-decoration: underline !important;
+			}
+
+			/* Skills Capability Grid */
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+				gap: 15px;
+				margin-top: 30px;
+			}
+			@media (min-width: 768px) {
+				.skills-grid {
+					grid-template-columns: repeat(3, 1fr);
+					gap: 20px;
+				}
+			}
+			@media (min-width: 992px) {
+				.skills-grid {
+					grid-template-columns: repeat(4, 1fr);
+					gap: 20px;
+				}
+			}
+			.skill-card {
+				background: #F7F2EA; /* Soft Ivory */
+				border: 1px solid #EFE7DA; /* Warm Sand border */
+				border-radius: 8px;
+				padding: 20px;
+				text-align: center;
+				transition: all 0.3s ease;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+			}
+			.skill-card:hover {
+				transform: translateY(-5px);
+				border-color: #B89B72; /* Muted Gold */
+				box-shadow: 0 8px 15px rgba(184, 155, 114, 0.1);
+			}
+			.skill-card i {
+				font-size: 28px;
+				color: #7A3E2D; /* Ember Clay */
+				margin-bottom: 12px;
+				display: block;
+			}
+			.skill-card h4 {
+				margin: 0;
+				font-size: 14px;
+				font-weight: 700;
+				color: #2F2F2F;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+			}
+
+			/* Professional Profile Cards */
+			.profile-card {
+				background: #F7F2EA; /* Soft Ivory */
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 30px;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+				text-align: left;
+			}
+			.h-100 {
+				height: 100%;
+			}
+			.profile-section-title {
+				font-size: 16px;
+				font-weight: 700;
+				color: #7A3E2D !important; /* Ember Clay */
+				margin-top: 0;
+				margin-bottom: 20px;
+				border-bottom: 2px solid #B89B72; /* Muted Gold divider */
+				padding-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.target-roles-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.target-roles-list li {
+				background: #EFE7DA; /* Warm Sand tag */
+				color: #2F2F2F !important;
+				margin-bottom: 8px;
+				padding: 8px 12px;
+				border-radius: 4px;
+				font-size: 13px;
+				font-weight: 600;
+				border-left: 3px solid #7A3E2D; /* Ember Clay accent */
+			}
+			.value-statement {
+				font-size: 15px !important;
+				line-height: 1.8;
+				font-weight: 600 !important;
+				color: #2F2F2F !important;
+				font-style: italic;
+				border-left: 4px solid #B89B72;
+				padding-left: 15px;
+				margin-bottom: 20px;
+			}
+			.profile-summary-p {
+				font-size: 14px !important;
+				line-height: 1.7 !important;
+				color: #2F2F2F !important;
+				margin-bottom: 12px;
+			}
+			.core-skills-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+			}
+			.skill-badge {
+				background: #EFE7DA; /* Warm Sand badge */
+				color: #2F2F2F !important;
+				padding: 6px 14px;
+				border-radius: 20px;
+				font-size: 12px;
+				font-weight: 600;
+				border: 1px solid #B89B72;
+				transition: all 0.3s ease;
+			}
+			.skill-badge:hover {
+				background: #7A3E2D; /* Ember Clay */
+				color: #F7F2EA !important;
+				border-color: #7A3E2D;
+			}
+			.experience-item {
+				margin-bottom: 30px;
+				padding-bottom: 25px;
+				border-bottom: 1px dashed #EFE7DA;
+			}
+			.experience-item:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+			.experience-header {
+				margin-bottom: 15px;
+				position: relative;
+			}
+			.experience-date {
+				float: right;
+				font-size: 13px;
+				font-weight: 700;
+				color: #7A3E2D;
+			}
+			.experience-header h4 {
+				margin: 0 0 5px 0;
+				font-size: 15px;
+				font-weight: 700;
+				color: #2F2F2F;
+			}
+			.experience-header h5 {
+				margin: 0;
+				font-size: 13px;
+				font-weight: 600;
+				color: #B89B72 !important;
+			}
+			.experience-bullets {
+				padding-left: 20px;
+				margin-bottom: 0;
+			}
+			.experience-bullets li {
+				font-size: 13px !important;
+				line-height: 1.7 !important;
+				margin-bottom: 8px;
+				color: #2F2F2F !important;
+				list-style-type: disc;
+			}
+			.additional-roles h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #2F2F2F;
+				margin-top: 20px;
+				margin-bottom: 10px;
+			}
+			.additional-roles ul {
+				list-style-type: square;
+				padding-left: 20px;
+				margin-top: 10px;
+			}
+			.additional-roles li {
+				font-size: 13px !important;
+				margin-bottom: 6px;
+			}
+			.education-item h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #2F2F2F;
+				margin: 0 0 5px 0;
+			}
+			.education-item p {
+				font-size: 13px !important;
+				margin: 0;
+				line-height: 1.6 !important;
+			}
+			.cert-list, .leadership-list, .gaps-list {
+				padding-left: 20px;
+				margin-bottom: 0;
+			}
+			.cert-list li, .leadership-list li, .gaps-list li {
+				font-size: 13px !important;
+				line-height: 1.7 !important;
+				margin-bottom: 10px;
+				color: #2F2F2F !important;
+				list-style-type: disc;
+			}
+			.cert-list ul {
+				padding-left: 15px;
+				margin-top: 5px;
+				list-style-type: circle;
+			}
+
+			/* Send Message & Download Resume Button Polishing */
+			.btn-primary,
+			.symp-btn.link-btn {
+				background-color: #7A3E2D !important; /* Ember Clay */
+				border: 1px solid #7A3E2D !important;
+				color: #F7F2EA !important; /* Soft Ivory */
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 2px !important;
+				text-transform: uppercase !important;
+				padding: 12px 30px !important;
+				border-radius: 4px !important;
+				font-size: 14px !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+				display: inline-block !important;
+				text-decoration: none !important;
+			}
+			.symp-btn.link-btn > i {
+				color: #F7F2EA !important;
+				margin-right: 8px;
+			}
+			.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+			.symp-btn.link-btn:hover, .symp-btn.link-btn:focus, .symp-btn.link-btn:active {
+				background-color: #2F2F2F !important; /* Charcoal */
+				border-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transform: translateY(-4px) scale(1.05) !important;
+				box-shadow: 0 12px 20px rgba(122, 62, 45, 0.3) !important;
+				text-decoration: none !important;
+			}
+			
+			/* Glowing Breathing Animation for Contact CTA */
+			@keyframes ctaGlow {
+				0% {
+					transform: scale(1);
+					box-shadow: 0 0 0 0 rgba(122, 62, 45, 0.4), 0 2px 5px rgba(0, 0, 0, 0.1);
+				}
+				50% {
+					transform: scale(1.03);
+					box-shadow: 0 0 20px 6px rgba(122, 62, 45, 0.25), 0 4px 10px rgba(0, 0, 0, 0.15);
+				}
+				100% {
+					transform: scale(1);
+					box-shadow: 0 0 0 0 rgba(122, 62, 45, 0.4), 0 2px 5px rgba(0, 0, 0, 0.1);
+				}
+			}
+			.btn-primary {
+				animation: ctaGlow 3s ease-in-out infinite !important;
+			}
+			.btn-primary:hover {
+				animation: none !important;
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transform: translateY(-4px) scale(1.06) !important;
+				box-shadow: 0 12px 25px rgba(122, 62, 45, 0.45) !important;
+			}
+
+			/* Footer Social Icons Contrast & Interaction */
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+
+			/* Resume Downloads Cards */
+			.download-card {
+				background: #F7F2EA; /* Soft Ivory */
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+				text-align: center;
+				transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+			}
+			.download-card:hover {
+				transform: translateY(-8px);
+				background: linear-gradient(135deg, #1E9E8F, #2AB7C8) !important;
+				box-shadow: 0 15px 30px rgba(30, 158, 143, 0.25) !important;
+				border-color: #1E9E8F !important;
+			}
+			.download-card h4 {
+				font-size: 15px;
+				font-weight: 700;
+				color: #7A3E2D; /* Ember Clay */
+				margin-top: 0;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				min-height: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.download-card:hover h4 {
+				color: #F7F2EA !important;
+			}
+			.download-card-label {
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #B89B72;
+				font-weight: 700;
+				margin-bottom: 10px;
+				text-align: left;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.download-card:hover .download-card-label {
+				color: #F7F2EA !important;
+				opacity: 0.95;
+			}
+			.download-card-list {
+				list-style: none;
+				padding: 0;
+				margin: 0 0 15px 0;
+				text-align: left;
+			}
+			.download-card-list li {
+				font-size: 13px;
+				color: #2F2F2F;
+				margin-bottom: 6px;
+				position: relative;
+				padding-left: 15px;
+				font-family: 'Open Sans', sans-serif;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.download-card:hover .download-card-list li {
+				color: #F7F2EA !important;
+			}
+			.download-card-list li::before {
+				content: "•";
+				color: #7A3E2D; /* Ember Clay list bullet */
+				font-weight: bold;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.download-card:hover .download-card-list li::before {
+				color: #F7F2EA !important;
+			}
+			.download-card .symp-btn.link-btn {
+				display: block !important;
+				width: 100%;
+				padding: 12px 15px !important;
+				font-size: 12px !important;
+				letter-spacing: 1px !important;
+				text-align: center;
+				box-sizing: border-box;
+				transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+			}
+			.download-card:hover .symp-btn.link-btn {
+				background-color: #F7F2EA !important;
+				border-color: #F7F2EA !important;
+				color: #1E9E8F !important;
+			}
+			.download-card:hover .symp-btn.link-btn i {
+				color: #1E9E8F !important;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+			}
+			.download-card:hover .symp-btn.link-btn:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+			}
+			.download-card:hover .symp-btn.link-btn:hover i {
+				color: #F7F2EA !important;
+			}
+
+			/* Section Navigation Styling */
+			.section-nav {
+				text-align: center;
+				margin-bottom: 50px;
+				margin-top: 10px;
+			}
+			.section-nav ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: inline-flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 25px;
+				border-bottom: 1px solid #EFE7DA;
+				padding-bottom: 15px;
+			}
+			.section-nav ul li {
+				display: inline-block;
+			}
+			.section-nav ul li a {
+				font-family: Raleway, sans-serif;
+				font-size: 11px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: #2F2F2F !important;
+				text-decoration: none !important;
+				transition: color 0.3s ease, border-color 0.3s ease;
+				padding-bottom: 6px;
+				border-bottom: 2px solid transparent;
+			}
+			.section-nav ul li a:hover {
+				color: #7A3E2D !important; /* Ember Clay */
+			}
+			.section-nav ul li a.active-nav {
+				color: #7A3E2D !important;
+				border-bottom-color: #7A3E2D;
+			}
+
+			/* Personal Brand Card Styles */
+			.brand-card {
+				background-color: #F5F0E8 !important;
+				border: 1px solid #C5A059 !important; /* Champagne Gold border */
+				border-radius: 8px !important;
+				padding: 10px !important;
+				text-align: center !important;
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+				width: 100% !important;
+				max-width: 290px !important;
+				margin: 0 auto 30px auto !important;
+				display: flex !important;
+				flex-direction: column !important;
+				justify-content: center !important;
+				align-items: center !important;
+				box-sizing: border-box !important;
+				overflow: hidden !important;
+			}
+			.brand-logo-img {
+				width: 100% !important;
+				height: auto !important;
+				display: block !important;
+				border-radius: 6px !important;
+			}
+
+			/* Match About paragraph typography to Resume profile summary (15px size) */
+			.about-info p {
+				font-family: 'Open Sans', sans-serif !important;
+				font-size: 15px !important;
+				line-height: 1.75 !important;
+				font-weight: 400 !important;
+				color: #2F2F2F !important;
+				margin-bottom: 20px !important;
+				margin-top: 0 !important;
+			}
+			
+			/* Reduce white space after About paragraphs before info row */
+			.about-info .info-list {
+				margin-top: 5px !important;
+				margin-bottom: 30px !important;
+			}
+
+			/* Testimonial Typography Refinements */
+			.testimonial > p {
+				font-family: 'Playfair Display', 'Crimson Text', serif !important;
+				font-size: 15px !important;
+				line-height: 1.8 !important;
+				color: #2F2F2F !important; /* Charcoal text */
+				font-style: italic !important;
+				font-weight: 400 !important;
+				max-width: 700px !important;
+				margin: 0 auto !important;
+				text-align: center !important;
+			}
+			.testimonial > .author {
+				margin-top: 25px !important;
+			}
+			.testimonial > .author > h4 {
+				color: #7A3E2D !important; /* Ember clay accents */
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				font-size: 13px !important;
+				letter-spacing: 2px !important;
+			}
+			.testimonial > .author > p {
+				color: #2F2F2F !important;
+				font-family: 'Open Sans', sans-serif !important;
+				font-size: 12px !important;
+				opacity: 0.8 !important;
+			}
+
+			/* About Section Attribute Cards Polish */
+			.about-icons.section-block {
+				padding: 45px 0 15px 0 !important;
+			}
+			.about-icons .service {
+				margin-bottom: 35px !important;
+				text-align: center !important;
+			}
+			.about-icons .service > .icon {
+				height: 68px !important;
+				width: 68px !important;
+				line-height: 68px !important;
+				background-color: #B89B72 !important; /* Taupe highlights */
+				color: #FFF !important;
+				transition: all 0.3s ease-in-out !important;
+			}
+			.about-icons .service:hover > .icon {
+				background-color: #7A3E2D !important; /* Ember clay accents on hover */
+				top: -10px !important;
+			}
+			.about-icons .service > .icon > i {
+				line-height: 68px !important;
+			}
+			.about-icons .service > .icon > i:before {
+				font-size: 30px !important; /* Reduced icon size by ~33% */
+				line-height: 68px !important;
+			}
+			.about-icons .service > .content > h4 {
+				font-family: Raleway, sans-serif !important;
+				font-size: 14px !important;
+				font-weight: 700 !important;
+				text-transform: uppercase !important;
+				letter-spacing: 2px !important;
+				color: #7A3E2D !important; /* Ember clay accents */
+				margin-top: 30px !important; /* Tighten spacing from icon */
+				margin-bottom: 10px !important;
+			}
+			.about-icons .service > .content > p {
+				font-family: 'Open Sans', sans-serif !important;
+				font-size: 13px !important;
+				line-height: 1.65 !important;
+				color: #2F2F2F !important; /* Charcoal text */
+				margin: 0 !important;
+				padding: 0 10px !important;
+			}
+
+			/* Mobile & Tablet Responsiveness Polish */
+			.portfolio-section {
+				overflow-x: hidden !important;
+			}
+			@media (max-width: 991px) {
+				/* Tighten About Section when stacked */
+				.about-section .col-md-4 {
+					margin-bottom: 30px !important;
+				}
+				/* Services Grid margin adjustment */
+				.service {
+					margin-bottom: 40px !important;
+				}
+				/* Override circular titles layout on mobile/tablet */
+				.front-person-titles {
+					height: auto !important;
+					width: 85% !important;
+					margin-top: 50px !important;
+					margin-bottom: 30px !important;
+					position: relative !important;
+					transform: none !important;
+					text-align: center !important;
+					display: block !important;
+				}
+				.front-person-titles > span {
+					position: relative !important;
+					transform: none !important;
+					display: block !important;
+					margin: 15px auto !important;
+					letter-spacing: 4px !important;
+					font-size: 11px !important;
+					text-transform: uppercase !important;
+					top: auto !important;
+					left: auto !important;
+					bottom: auto !important;
+				}
+				.front-heading {
+					margin-top: 40px !important;
+				}
+				/* Force portfolio card overlay to be always visible on mobile/tablet */
+				.portfolio-items > .item > .inner > .caption {
+					opacity: 1 !important;
+					visibility: visible !important;
+					background: linear-gradient(135deg, rgba(30, 158, 143, 0.96), rgba(42, 183, 200, 0.98)) !important;
+				}
+				.portfolio-items > .item > .inner .caption .caption-inner h4,
+				.portfolio-items > .item > .inner .caption .caption-inner p,
+				.portfolio-items > .item > .inner .caption .caption-inner a {
+					opacity: 1 !important;
+					visibility: visible !important;
+					transform: translateY(0) !important;
+				}
+			}
+			@media (max-width: 767px) {
+				/* Global Section spacing on mobile */
+				.section {
+					padding-top: 60px !important;
+				}
+				.section-header h2 {
+					font-size: 24px !important;
+					margin-bottom: 20px !important;
+					letter-spacing: 2px !important;
+				}
+				.divider-draft {
+					margin-bottom: 25px !important;
+				}
+				
+				/* Section Nav wrapping and tap target sizes */
+				.section-nav {
+					margin-bottom: 30px !important;
+					margin-top: 0 !important;
+				}
+				.section-nav ul {
+					padding-bottom: 10px !important;
+					gap: 15px !important;
+				}
+				.section-nav ul li {
+					margin: 5px 8px !important;
+				}
+				.section-nav ul li a {
+					font-size: 10px !important;
+					letter-spacing: 1px !important;
+					padding: 8px 12px !important;
+					display: inline-block !important;
+				}
+				
+				/* About section list stacking */
+				.info-list > li {
+					width: 100% !important;
+					float: none !important;
+					display: block !important;
+					margin-bottom: 15px !important;
+				}
+				.info-list > li > .inner {
+					padding: 5px 0 !important;
+				}
+				.about-info .info-list {
+					margin-top: 10px !important;
+					margin-bottom: 40px !important;
+				}
+				
+				/* Experience date stacking to prevent title collisions */
+				.experience-date {
+					float: none !important;
+					display: block !important;
+					margin-bottom: 5px !important;
+					font-size: 12px !important;
+				}
+				
+				/* Download Cards layouts */
+				.download-card {
+					padding: 20px 15px !important;
+				}
+				.download-card h4 {
+					font-size: 14px !important;
+					min-height: auto !important;
+					margin-bottom: 10px !important;
+				}
+				.download-card-list li {
+					font-size: 12px !important;
+				}
+				
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+			@media (max-width: 480px) {
+				/* Skills Grid 2x2 layout on narrow screens */
+				.skills-grid {
+					grid-template-columns: repeat(2, 1fr) !important;
+					gap: 10px !important;
+				}
+				.skill-card {
+					padding: 12px 8px !important;
+				}
+				.skill-card i {
+					font-size: 20px !important;
+					margin-bottom: 6px !important;
+				}
+				.skill-card h4 {
+					font-size: 11px !important;
+				}
+				
+				/* Shrink Brand logo card on very small screens */
+				.brand-card {
+					max-width: 240px !important;
+				}
 			}
 		</style>
 		
@@ -96,24 +1226,25 @@
 						
 						<!--title1-->
 						<span class='t1' >
-							Designer
+							Business Analyst
 						</span>
 						<!--/title1-->
 						
 						<!--title2-->
 						<span class='t2' >
-							Cyber Fenix
+							Data & Reporting Specialist
 						</span>
 						<!--/title2-->
 						
 						<!--title3-->
 						<span class='t3' >
-							Freelancer
+							QA & Cybersecurity Professional
 						</span>
 						<!--/title3-->
 						
 					</div>
 					<!--/person's titles-->
+
 					
 					<nav class='front-person-links' >
 						
@@ -134,22 +1265,13 @@
 							<li>
 								<a href='#' data-section='services' >Services</a>
 							</li>
-						<!-- 	
+							
 							<li>
 								<a href='#' data-section='portfolio' >Portfolio</a>
 							</li>
-						-->	
-<li>
-    <a href='my_blog.html'>My Blog</a>
-</li>
-
 							
 							<li>
 								<a href='#' data-section='contact' >Contact</a>
-							</li>
-							
-							<li>
-								<a href='#' >Hire Me!</a>
 							</li>
 							
 						</ul>
@@ -164,7 +1286,9 @@
 							Thisha Smith
 						</h2>
 						
-					
+						<p style="margin-top: 15px; font-size: 16px; color: #888; letter-spacing: 1px;">
+							Delivering high-quality, secure, and data-driven business solutions.
+						</p>
 						
 					</div>
 					
@@ -185,6 +1309,18 @@
 					
 					<div class='container' >
 					
+						<!-- Section Navigation -->
+						<div class="section-nav">
+							<ul>
+								<li><a href="#" class="nav-link-home">Home</a></li>
+								<li><a href="#about" class="nav-link-section active-nav" data-target="about">About</a></li>
+								<li><a href="#resume" class="nav-link-section" data-target="resume">Resume</a></li>
+								<li><a href="#services" class="nav-link-section" data-target="services">Services</a></li>
+								<li><a href="#portfolio" class="nav-link-section" data-target="portfolio">Portfolio</a></li>
+								<li><a href="#contact" class="nav-link-section" data-target="contact">Contact</a></li>
+							</ul>
+						</div>
+
 						<div class='section-header text-center' >
 							
 							<h2>Basic Info About Me</h2>
@@ -199,34 +1335,27 @@
 						<div class='row' >
 							
 							<div class='col-md-4' >
-								<div class='about-person-img' >
-									
-									<img src='headshot2.jpg' alt='Kush Novels LLC'>
-									
+								<div class="brand-card">
+									<img src="img/thisha-personal-brand-logo.png" alt="Thisha Smith Personal Brand Logo" class="brand-logo-img">
 								</div>
-							
 							</div>
 							
 							
 							<div class='col-md-8 about-info' >
 								
-								
-								
-								
 								<p>
-									I'm Thisha Smith, an Experienced Business Analyst & Senior Quality Assurance Engineer with a passion for solving complex problems, optimizing processes, and ensuring high-quality solutions. With expertise in business analysis, QA, and data analytics, I bridge the gap between technology and business needs to drive efficiency and innovation.
+									I am Thisha Smith, a results-driven professional specializing in the intersection of <strong>Business Analysis, Data Reporting, Quality Assurance, and Cybersecurity</strong>. With a solid track record in managing healthcare data and verifying complex software systems, I specialize in translating stakeholder requirements into functional technical designs and high-quality deliverables.
 								</p>
 								
 								<p>
-									I specialize in process improvement, testing strategies, and data-driven decision-making, leveraging tools like Power BI, automation, and AI to enhance business performance. Beyond corporate roles, I'm also developing a digital library for Black History, using technology to preserve and share valuable cultural knowledge.
+									My experience includes healthcare reporting, software quality assurance, data quality and validation, process improvement, cybersecurity training, and AI-assisted productivity workflows.
 								</p>
 								
 								<p>
-									I thrive on collaboration, innovation, and problem-solving, and I'm always open to new opportunities in tech, business analysis, QA, and AI-driven solutions.
+									I specialize in analyzing complex business requirements, creating dashboards and reports, executing detailed testing, and implementing automation scripts to improve operational efficiency.
 								</p>
 								
 								<div class='clearfix' ></div>
-								
 								
 								<ul class='info-list' >
 									
@@ -255,16 +1384,8 @@
 										</div>
 									</li>
 									
-									
-									
 								</ul>
 								
-								<!--
-								<a href='#' class='symp-btn' >Hire Me For Work</a>
-							-->
-								<a href='https://drive.google.com/file/d/1fnh-AP3xF9B5-FmNiKxPFUUuUbaQg1cf/view?usp=sharing' target="_blank" class='symp-btn link-btn' ><i class='ion-ios-download' ></i>Download Resume</a>
-								<a href='https://www.feistyfenix.com' target="_blank" class='symp-btn link-btn' ><i class='ion-ios-download' ></i>Join and follow me on FeistyFenix</a>
-
 							</div>
 						
 							
@@ -406,45 +1527,6 @@
 					</div>
 				</div>
 				
-				<div class='funfacts-block section-block' data-stellar-background-ratio='.2' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-md-3 col-sm-6 funfact' >
-								<div class='content' >
-									<h4>243</h4>
-									<p>Awards Won</p>
-								</div>
-							</div>
-							
-							<div class='col-md-3 col-sm-6 funfact' >
-								<div class='content' >
-									<h4>845</h4>
-									<p>Happy Customers</p>
-								</div>
-							</div>
-							
-							<div class='col-md-3 col-sm-6 funfact' >
-								<div class='content' >
-									<h4>938</h4>
-									<p>Projects Done</p>
-								</div>
-							</div>
-							
-							<div class='col-md-3 col-sm-6 funfact' >
-								<div class='content' >
-									<h4>342</h4>
-									<p>Games Played</p>
-								</div>
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
 				
 				<div class='testimonials-block section-block' >
 					<div class='container' >
@@ -468,41 +1550,46 @@
 									
 									<div class='testimonial' >
 										<p>
-											
-											From Day 1 in the role, Thisha enthusiastically leaned in to learn quickly and offer suggestions for improvement. I greatly appreciate her taking the initiative to identify problems and assume ownership for resolution. If she is not able to address the problem herself, she engages with experts to help, while maintaining ownership to communicate resolution to her stakeholders.
+											"Thisha is a high performer with a consistent track record of success. She is collaborative, creative, and persistent. One example that stands out is a dashboard she configured from scratch to help eliminate manual back-and-forth interactions about monthly sales data submissions."
 										</p>
 										
 										<div class='author' >
-											<h4>Anne Matson</h4>
-											<p>Global Partner Director & Leadership Coach at Intel</p>
+											<h4><a href="https://www.linkedin.com/in/lisa-brown-369ba089/" target="_blank" style="color: inherit; text-decoration: none;">Lisa Brown <i class="ion-social-linkedin" style="color: #0077b5; font-size: 13px; margin-left: 2px;"></i></a></h4>
+											<p>Product Manager &bull; Managed Thisha directly</p>
 										</div>
 									</div>
 									
 									<div class='testimonial' >
 										<p>
-											I worked with Thisha as board members for Network of Intel Engineers of African Ancestry (NIA) in Folsom for six years. Over the years working with her, she has shown great leadership skills, pays attention to details and very dependable in delivering on tasks. She is also a good team player. I highly recommend Thisha
+											"Thisha managed partner data operations responsible for data accuracy, data validation, and reporting. She is thoughtful, responsive, fluent, and highly knowledgeable, delivering insights that help report business results."
 										</p>
 										
 										<div class='author' >
-											<h4>Eugene Asare-Mensah </h4>
-											<p>Sr Principal Engineer Digital at Northrop Grumman</p>
+											<h4><a href="https://www.linkedin.com/in/kim-ogawa-466a4a2/" target="_blank" style="color: inherit; text-decoration: none;">Kim Ogawa <i class="ion-social-linkedin" style="color: #0077b5; font-size: 13px; margin-left: 2px;"></i></a></h4>
+											<p>Strategic Partner Marketing Manager at Intel Corporation &bull; Worked on different teams</p>
 										</div>
 									</div>
 									
 									<div class='testimonial' >
 										<p>
-											Thisha was hired as a contractor to assist with an application development project in which my team was engaged. I found her to be extremely friendly, enthusiastic, and always willing to accept new tasks assigned to her. Thisha learned our testing and documentation procedures, and then assisted with building test plans, conducting testing, documenting defects and tracking defect resolution. 
-She is a very positive person and brings her smile to work every day!
+											"Thisha is an exceptional professional. She is incredibly easy to work with, displays a natural ability to connect and interact with people at all levels, and consistently demonstrates a strong commitment to delivering high-quality results."
 										</p>
 										
 										<div class='author' >
-											<h4>Kristen (Etzel) Delahanty</h4>
-											<p>Process Engineer Manager at Wells Fargo</p>
+											<h4><a href="https://www.linkedin.com/in/kleber-haraguchi/" target="_blank" style="color: inherit; text-decoration: none;">Kleber Haraguchi <i class="ion-social-linkedin" style="color: #0077b5; font-size: 13px; margin-left: 2px;"></i></a></h4>
+											<p>Business Intelligence & Operations Lead &bull; Worked on same team</p>
 										</div>
 									</div>
 									
-									
-									
+									<div class='testimonial' style="text-align: center;">
+										<h4 style="color: #7A3E2D !important; font-family: Raleway, sans-serif !important; font-weight: 700; font-size: 20px; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; margin-bottom: 15px;">More LinkedIn Recommendations</h4>
+										<p style="margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8 !important;">
+											View additional public recommendations from colleagues, leaders, and cross-functional partners across data analytics, business operations, QA, leadership, and technology.
+										</p>
+										<div style="margin-top: 20px;">
+											<a href="linkedin-recommendations.html" class="symp-btn link-btn" style="display: inline-block !important; width: auto !important; padding: 12px 30px !important;"><i class="ion-social-linkedin" style="margin-right: 8px; color: #F7F2EA !important;"></i>View More Recommendations</a>
+										</div>
+									</div>
 									
 								</div>
 								
@@ -520,29 +1607,25 @@ She is a very positive person and brings her smile to work every day!
 						<div class='row' >
 							
 							<div class='col-xs-6 text-left' >
-								<h4>Thisha Smith</h4>
+								<h4>CognitPath</h4>
+								<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
 							</div>
 							
 							<div class='col-xs-6 text-right' >
 								<ul class='footer-social' >
 									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
+										<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+											<i class='ion-social-linkedin' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='https://bsky.app/profile/feistyfenix.bsky.social' target="_blank" >
-											<i class='ion-social-twitter' ></i>
+										<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+											<i class='ion-social-github' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
+										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+											<i class='ion-email' ></i>
 										</a>
 									</li>
 								</ul>
@@ -565,126 +1648,367 @@ She is a very positive person and brings her smile to work every day!
 				Resume Section
 			===============================================================================-->
 			<section id='resume' class='resume-section section' >
-				
-				<div class='timeline-block section-block'>
-					<div class='container'>
-						<!-- Resume Frame -->
-						<div class='resume-frame' style='width: 100%; margin-bottom: 40px;'>
-							<iframe src='https://drive.google.com/file/d/1fnh-AP3xF9B5-FmNiKxPFUUuUbaQg1cf/preview' 
-									style='width: 100%; height: 500px; border: none; overflow-y: scroll;'
-									allowfullscreen>
-							</iframe>
-						</div>
-					</div>
-				</div>
-
-				<div class='hobbies-block bg-lightgray section-block'>
-					<div class='container'>
-						<div class='section-header text-center'>
-							<h2 class='animate text-over-block'>My Hobbies</h2>
-							<!--divider-->
-							<div class='divider-draft center'></div>
-							<!--/divider-->
-						</div>
-						<div class='row'>
-							<div class='col-md-offset-1 col-md-2 col-sm-4 col-xs-6'>
-								<div class='hobby'>
-									<div class='icon'>
-										<i class='ion-ios-game-controller-b'></i>
-									</div>
-									<h4>Gaming</h4>
-								</div>
-							</div>
-							<div class='col-md-2 col-sm-4 col-xs-6'>
-								<div class='hobby'>
-									<div class='icon'>
-										<i class='ion-ios-book'></i>
-									</div>
-									<h4>Reading</h4>
-								</div>
-							</div>
-							<div class='col-md-2 col-sm-4 col-xs-6'>
-								<div class='hobby'>
-									<div class='icon'>
-										<i class='ion-ios-chatboxes'></i>
-									</div>
-									<h4>Chat</h4>
-								</div>
-							</div>
-							<div class='col-md-2 col-sm-4 col-xs-6'>
-								<div class='hobby'>
-									<div class='icon'>
-										<i class='ion-ios-musical-notes'></i>
-									</div>
-									<h4>Music</h4>
-								</div>
-							</div>
-							<div class='col-md-2 col-sm-4 col-xs-6'>
-								<div class='hobby'>
-									<div class='icon'>
-										<i class='ion-ios-football'></i>
-									</div>
-									<h4>Football</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
+								
+				<!-- Capability Grid (Skills Block) -->
 				<div class='skills-block section-block'>
 					<div class='container'>
+						
+						<!-- Section Navigation -->
+						<div class="section-nav">
+							<ul>
+								<li><a href="#" class="nav-link-home">Home</a></li>
+								<li><a href="#about" class="nav-link-section" data-target="about">About</a></li>
+								<li><a href="#resume" class="nav-link-section active-nav" data-target="resume">Resume</a></li>
+								<li><a href="#services" class="nav-link-section" data-target="services">Services</a></li>
+								<li><a href="#portfolio" class="nav-link-section" data-target="portfolio">Portfolio</a></li>
+								<li><a href="#contact" class="nav-link-section" data-target="contact">Contact</a></li>
+							</ul>
+						</div>
+
 						<div class='section-header text-center'>
-							<h2 class='animate text-over-block'>My Skills</h2>
-							<!--divider-->
+							<h2>My Skills & Capabilities</h2>
 							<div class='divider-draft center'></div>
-							<!--/divider-->
 						</div>
-						<div class='row'>
-							<div class='col-md-6'>
-								<div class='skill'>
-									<h4>Business Analysis (BA)</h4>
-									<div class='skill-bar' data-percent='90'>
-										<div class='bar'>
-											<div class='percent'>90%</div>
-										</div>
-									</div>
-								</div>
-								<div class='skill'>
-									<h4>Quality Assurance (QA)</h4>
-									<div class='skill-bar' data-percent='85'>
-										<div class='bar'>
-											<div class='percent'>85%</div>
-										</div>
-									</div>
-								</div>
-								<div class='skill'>
-									<h4>Power BI & Data Visualization</h4>
-									<div class='skill-bar' data-percent='85'>
-										<div class='bar'>
-											<div class='percent'>85%</div>
-										</div>
-									</div>
-								</div>
+						
+						<div class="skills-grid">
+							<div class="skill-card">
+								<i class="ion-ios-analytics"></i>
+								<h4>Business Analysis</h4>
 							</div>
-							<div class='col-md-6'>
-								<div class='skill'>
-									<h4>Project Management & Agile Methodologies</h4>
-									<div class='skill-bar' data-percent='90'>
-										<div class='bar'>
-											<div class='percent'>90%</div>
-										</div>
-									</div>
-								</div>
-								<div class='skill'>
-									<h4>Technical & Functional Documentation</h4>
-									<div class='skill-bar' data-percent='95'>
-										<div class='bar'>
-											<div class='percent'>95%</div>
-										</div>
-									</div>
-								</div>
+							<div class="skill-card">
+								<i class="ion-ios-pulse"></i>
+								<h4>Data Reporting</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-ios-checkmark-outline"></i>
+								<h4>Quality Assurance</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-heart"></i>
+								<h4>Healthcare Reporting</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-android-sync"></i>
+								<h4>Excel Automation</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-stats-bars"></i>
+								<h4>Power BI</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-filing"></i>
+								<h4>SQL</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-ios-paper-outline"></i>
+								<h4>Documentation</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-ios-people-outline"></i>
+								<h4>Stakeholder Management</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-ios-speedometer-outline"></i>
+								<h4>Process Improvement</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-ios-locked-outline"></i>
+								<h4>Cybersecurity Support</h4>
+							</div>
+							<div class="skill-card">
+								<i class="ion-ios-lightbulb-outline"></i>
+								<h4>AI Workflow Optimization</h4>
 							</div>
 						</div>
+						
+					</div>
+				</div>
+				
+				<!-- Professional Profile HTML Content -->
+				<div class='profile-block bg-lightgray section-block'>
+					<div class='container'>
+						
+						<div class='section-header text-center'>
+							<h2>Professional Profile</h2>
+							<div class='divider-draft center'></div>
+						</div>
+						
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								
+								<!-- Target Roles & Value Statement & Summary -->
+								<div class="profile-card">
+									<div class="row">
+										<div class="col-md-4">
+											<h3 class="profile-section-title">Target Roles</h3>
+											<ul class="target-roles-list">
+												<li>Business Analyst</li>
+												<li>Data Analyst</li>
+												<li>Reporting Specialist</li>
+												<li>Quality Assurance Analyst</li>
+												<li>Program Analyst</li>
+												<li>Administrative & Operations Support</li>
+												<li>Cybersecurity Support</li>
+												<li>AI Workflow Support</li>
+											</ul>
+										</div>
+										<div class="col-md-8">
+											<h3 class="profile-section-title">Value Statement</h3>
+											<p class="value-statement">
+												Business, data, and operations professional with 20+ years of experience supporting technology, healthcare, financial, government, and customer-facing environments. Recognized for transforming complex information into actionable results through analysis, reporting, process improvement, quality assurance, and cross-functional collaboration.
+											</p>
+											
+											<h3 class="profile-section-title" style="margin-top: 25px;">Professional Summary</h3>
+											<p class="profile-summary-p">
+												Versatile business and technology professional with experience spanning business analysis, reporting, quality assurance, data validation, program support, customer service, and process improvement.
+											</p>
+											<p class="profile-summary-p">
+												Skilled in translating business requirements into actionable solutions, validating data accuracy, supporting operational workflows, documenting procedures, and coordinating with stakeholders across multiple levels of an organization.
+											</p>
+											<p class="profile-summary-p">
+												Background includes healthcare reporting, enterprise software testing, business systems analysis, customer support, compliance-focused operations, and administrative coordination.
+											</p>
+											<p class="profile-summary-p">
+												Known for strong attention to detail, analytical thinking, problem solving, and the ability to quickly learn new systems and processes.
+											</p>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Core Skills Badge Grid -->
+								<div class="profile-card" style="margin-top: 30px;">
+									<h3 class="profile-section-title text-center" style="margin-bottom: 20px;">Core Skills</h3>
+									<div class="core-skills-badges">
+										<span class="skill-badge">Business Analysis & Requirements Gathering</span>
+										<span class="skill-badge">Data Analysis & Reporting</span>
+										<span class="skill-badge">Quality Assurance & Process Validation</span>
+										<span class="skill-badge">Administrative & Program Support</span>
+										<span class="skill-badge">Customer Service & Stakeholder Communication</span>
+										<span class="skill-badge">Documentation & Procedure Development</span>
+										<span class="skill-badge">Microsoft Excel (Advanced Formulas, Validation, Reporting)</span>
+										<span class="skill-badge">Power BI & Dashboard Reporting</span>
+										<span class="skill-badge">SQL & Data Querying</span>
+										<span class="skill-badge">Data Entry & Records Management</span>
+										<span class="skill-badge">Compliance & Confidential Information Handling</span>
+										<span class="skill-badge">Cross-Functional Team Collaboration</span>
+										<span class="skill-badge">Project Coordination & Workflow Tracking</span>
+										<span class="skill-badge">Cybersecurity Awareness & Risk Support</span>
+										<span class="skill-badge">AI Productivity & Process Optimization</span>
+									</div>
+								</div>
+								
+								<!-- Resume Downloads Section -->
+								<div class="row" style="margin-top: 30px;">
+									<div class="col-md-12">
+										<h3 class="profile-section-title text-center" style="margin-bottom: 15px;"><i class="ion-ios-download-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Resume Downloads</h3>
+										<p class="text-center" style="margin-bottom: 25px; color: #2F2F2F; opacity: 0.85; font-size: 14px; font-family: 'Open Sans', sans-serif;">Supporting multiple career paths, select the resume version most relevant to your hiring needs.</p>
+									</div>
+								</div>
+								
+								<div class="row" style="margin-bottom: 10px;">
+									<!-- Card 1 -->
+									<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+										<div class="download-card">
+											<div>
+												<h4>Business Analysis &amp; Program Support</h4>
+												<p class="download-card-label">Ideal for:</p>
+												<ul class="download-card-list">
+													<li>Business Analyst</li>
+													<li>Program Analyst</li>
+													<li>Operations Analyst</li>
+													<li>Administrative Support</li>
+												</ul>
+											</div>
+											<div style="margin-top: 20px;">
+												<a href="Thisha_Smith_Business_Analyst.pdf" download class="symp-btn link-btn"><i class="ion-ios-download" style="margin-right: 6px; color: #F7F2EA;"></i>Download BA Resume</a>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Card 2 -->
+									<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 20px;">
+										<div class="download-card">
+											<div>
+												<h4>Data &amp; Reporting</h4>
+												<p class="download-card-label">Ideal for:</p>
+												<ul class="download-card-list">
+													<li>Data Analyst</li>
+													<li>Reporting Specialist</li>
+													<li>Healthcare Reporting</li>
+													<li>Power BI Analyst</li>
+												</ul>
+											</div>
+											<div style="margin-top: 20px;">
+												<a href="Thisha_Smith_Data_Reporting_Analyst.pdf" download class="symp-btn link-btn"><i class="ion-ios-download" style="margin-right: 6px; color: #F7F2EA;"></i>Download Data Resume</a>
+											</div>
+										</div>
+									</div>
+									
+									<!-- Card 3 -->
+									<div class="col-md-4 col-sm-12 col-xs-12" style="margin-bottom: 20px;">
+										<div class="download-card">
+											<div>
+												<h4>Quality Assurance &amp; Testing</h4>
+												<p class="download-card-label">Ideal for:</p>
+												<ul class="download-card-list">
+													<li>QA Analyst</li>
+													<li>QA Lead</li>
+													<li>UAT Specialist</li>
+													<li>Validation Engineer</li>
+												</ul>
+											</div>
+											<div style="margin-top: 20px;">
+												<a href="Thisha_Smith_QA_Test_Analyst.pdf" download class="symp-btn link-btn"><i class="ion-ios-download" style="margin-right: 6px; color: #F7F2EA;"></i>Download QA Resume</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Professional Experience -->
+								<div class="profile-card" style="margin-top: 30px;">
+									<h3 class="profile-section-title"><i class="ion-ios-briefcase" style="margin-right: 10px; color: #7A3E2D;"></i>Professional Experience</h3>
+									
+									<div class="experience-item">
+										<div class="experience-header">
+											<span class="experience-date">02/2026 – Present</span>
+											<h4>Data & Reporting Specialist</h4>
+											<h5>Master Care, Inc. – Sacramento, CA</h5>
+										</div>
+										<ul class="experience-bullets">
+											<li>Records & Reporting Support: Validate and reconcile member-level data for Cal AIM reporting, ensuring accurate records, clean files, and compliance with reporting requirements.</li>
+											<li>Confidential Data Handling: Retrieve, process, and organize secure files through SFTP, including encrypted files and structured reporting outputs.</li>
+											<li>Data Entry & Quality Review: Use Excel formulas, date logic, and validation checks to identify discrepancies, correct errors, and improve file accuracy before submission.</li>
+											<li>Team & Stakeholder Support: Provide timely updates, clarify reporting issues, and coordinate with internal teams to meet monthly deadlines.</li>
+											<li>Documentation: Maintain working files, mapping notes, and reporting logic to support traceability, audit readiness, and repeatable office processes.</li>
+										</ul>
+									</div>
+									
+									<div class="experience-item">
+										<div class="experience-header">
+											<span class="experience-date">10/2025 – 01/2026</span>
+											<h4>Sales Associate</h4>
+											<h5>Macy's – Sacramento, CA</h5>
+										</div>
+										<ul class="experience-bullets">
+											<li>Provided efficient, accurate customer service while handling high-volume requests, resolving issues, and following documented procedures.</li>
+											<li>Maintained clean, compliant point-of-sale records and ensured precise entry of transactions, returns, and adjustments.</li>
+											<li>Supported daily store operations through organized task tracking, inventory coordination, and adherence to documented procedures.</li>
+										</ul>
+									</div>
+									
+									<div class="experience-item">
+										<div class="experience-header">
+											<span class="experience-date">06/2023 – 11/2024</span>
+											<h4>Business Data Analyst</h4>
+											<h5>Intel Corporation – Sacramento, CA</h5>
+										</div>
+										<ul class="experience-bullets">
+											<li>Led CRM and internal system enhancements across Business Analyst, Product Owner, and QA roles, translating business needs into clear requirements, user stories, and acceptance criteria.</li>
+											<li>Directed data governance and automation initiatives, improving reporting accuracy by 30% and increasing team productivity by 25%.</li>
+											<li>Built and maintained Power BI dashboards and SQL pipelines supporting executive KPIs and operational reporting.</li>
+											<li>Coordinated UAT and release readiness activities to ensure system changes met business and compliance requirements.</li>
+											<li>Collaborated with technical and non-technical stakeholders to align priorities, resolve issues, and support timely delivery.</li>
+										</ul>
+									</div>
+									
+									<div class="experience-item">
+										<div class="experience-header">
+											<span class="experience-date">04/2017 – 06/2023</span>
+											<h4>GPU Validation Engineer</h4>
+											<h5>Intel Corporation – Sacramento, CA</h5>
+										</div>
+										<ul class="experience-bullets">
+											<li>Designed and executed validation strategies for DirectX graphics drivers across multiple hardware platforms to ensure performance, stability, and launch readiness.</li>
+											<li>Collaborated with engineering and program teams to reduce delivery risks and improve platform reliability.</li>
+											<li>Developed Python-based automation, reducing manual testing effort by 40% and accelerating validation cycles.</li>
+											<li>Integrated validation processes into CI/CD pipelines to improve testing consistency and documentation.</li>
+											<li>Analyzed defects and root causes, contributing to a 35% reduction in post-release issues.</li>
+										</ul>
+									</div>
+									
+									<div class="experience-item">
+										<div class="experience-header">
+											<span class="experience-date">07/2014 – 03/2017</span>
+											<h4>QA Test Analyst Lead</h4>
+											<h5>NextGen Information Services Inc. (Client: NJVC LLC) – St. Louis, MO</h5>
+										</div>
+										<ul class="experience-bullets">
+											<li>Led QA strategy, test planning, execution, and production support for a .NET-based enterprise application supporting government operations.</li>
+											<li>Reduced defect leakage by 30% and improved sprint testing efficiency by 40%.</li>
+											<li>Coordinated functional, regression, and system testing across multiple environments.</li>
+											<li>Mentored team members, improving onboarding efficiency and overall team performance.</li>
+											<li>Partnered with developers, analysts, and stakeholders to support continuous improvement.</li>
+										</ul>
+									</div>
+									
+									<div class="experience-item additional-roles">
+										<h4>Additional Experience</h4>
+										<ul>
+											<li>Senior QA Test Analyst Lead &ndash; Fusion Technology Solutions | Client: Reed Elsevier | 10/2011 &ndash; 02/2013</li>
+											<li>Senior QA Tester / Lead &ndash; Signature Consultants | Client: Wells Fargo | 05/2011 &ndash; 10/2011</li>
+											<li>QA Test Lead &ndash; MODIS | Client: US Bank | 10/2010 &ndash; 05/2011</li>
+											<li>Senior Analyst, Software Testing & Quality Assurance &ndash; TEKsystems | Client: MasterCard | 08/2009 &ndash; 10/2010</li>
+											<li>Senior QA Tester & Business Analyst &ndash; PlumRhino Consulting | Client: Wachovia Securities | 11/2008 &ndash; 08/2009</li>
+											<li>QA Consultant &ndash; TEKsystems | Client: MasterCard | 03/2008 &ndash; 10/2008</li>
+											<li>COBOL Developer / QA / Business Analyst &ndash; Accenture Inc. | Client: A.G. Edwards | 12/2003 &ndash; 12/2007</li>
+											<li>SAS Developer &ndash; CitiFinancial International | 08/2001 &ndash; 03/2003</li>
+										</ul>
+									</div>
+								</div>
+								
+								<!-- Education, Certifications, Leadership -->
+								<div class="row" style="margin-top: 30px;">
+									<div class="col-md-6">
+										<div class="profile-card h-100">
+											<h3 class="profile-section-title"><i class="ion-university" style="margin-right: 10px; color: #7A3E2D;"></i>Education</h3>
+											<div class="education-item">
+												<h4>American River College, Sacramento, CA</h4>
+												<p>Associates of Computer Programming (A.S.) &ndash; C++ Concentration | GPA: 3.7 | Phi Theta Kappa Honor Society | May 2023</p>
+											</div>
+											<div class="education-item" style="margin-top: 15px;">
+												<h4>Vatterott College, St. Louis, MO</h4>
+												<p>Associates of Applied Science, Computer Information Systems | GPA: 3.5 | May 1997</p>
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-md-6">
+										<div class="profile-card h-100">
+											<h3 class="profile-section-title"><i class="ion-ribbon-b" style="margin-right: 10px; color: #7A3E2D;"></i>Certifications</h3>
+											<ul class="cert-list">
+												<li>
+													<strong>Certified Business Analyst Professional (CBAP)</strong> &ndash; In Progress
+													<ul>
+														<li>Introduction to Computers and Operating Systems and Security</li>
+													</ul>
+												</li>
+												<li><strong>Microsoft Cybersecurity Analyst Professional Certificate (Microsoft SC-900)</strong> &ndash; In Progress</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<div class="row" style="margin-top: 30px;">
+									<div class="col-md-12">
+										<div class="profile-card">
+											<h3 class="profile-section-title"><i class="ion-chatbubbles" style="margin-right: 10px; color: #7A3E2D;"></i>Leadership & Communication</h3>
+											<ul class="leadership-list">
+												<li>Board Member of NIA (Network of Intel African American) ERG, providing strategic guidance to support professional development and community engagement.</li>
+												<li>Proven ability to present data-driven insights to cross-functional teams and senior leadership.</li>
+												<li>Effective coach and mentor, enhancing team performance through process training and knowledge sharing.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Download Resume Button -->
+								<div class="text-center" style="margin-top: 40px; margin-bottom: 20px;">
+									<a href='ThishaSmith_Jan29.pdf' download class='symp-btn link-btn'><i class='ion-ios-download'></i>Download Resume (PDF)</a>
+								</div>
+								
+							</div>
+						</div>
+						
 					</div>
 				</div>
 				
@@ -695,34 +2019,25 @@ She is a very positive person and brings her smile to work every day!
 						<div class='row' >
 							
 							<div class='col-xs-6 text-left' >
-								<h4>Thisha Smith</h4>
+								<h4>CognitPath</h4>
+								<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
 							</div>
 							
 							<div class='col-xs-6 text-right' >
 								<ul class='footer-social' >
 									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
+										<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+											<i class='ion-social-linkedin' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='https://bsky.app/profile/feistyfenix.bsky.social' target="_blank" >
-											<i class='ion-social-twitter' ></i>
+										<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+											<i class='ion-social-github' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='#' >
-											<i class='ion-social-twitter' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
+										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+											<i class='ion-email' ></i>
 										</a>
 									</li>
 								</ul>
@@ -748,6 +2063,19 @@ She is a very positive person and brings her smile to work every day!
 			<section id='services' class='services-section section' >
 				
 				<div class='container' >
+					
+					<!-- Section Navigation -->
+					<div class="section-nav" style="margin-bottom: 20px;">
+						<ul>
+							<li><a href="#" class="nav-link-home">Home</a></li>
+							<li><a href="#about" class="nav-link-section" data-target="about">About</a></li>
+							<li><a href="#resume" class="nav-link-section" data-target="resume">Resume</a></li>
+							<li><a href="#services" class="nav-link-section active-nav" data-target="services">Services</a></li>
+							<li><a href="#portfolio" class="nav-link-section" data-target="portfolio">Portfolio</a></li>
+							<li><a href="#contact" class="nav-link-section" data-target="contact">Contact</a></li>
+						</ul>
+					</div>
+
 					<div class='row' >
 						<div class='col-md-6 col-md-offset-3' >
 							<div class='section-header main-title text-center' >
@@ -759,7 +2087,7 @@ She is a very positive person and brings her smile to work every day!
 								<!--/divider-->
 								
 								<p>
-									I provide <b>high quality</b> services. My services that I provide are listed below. Hope you will like them. Lorem ipsum dolor.
+									I offer professional services designed to help businesses optimize processes, secure systems, and derive clear insights from data.
 								</p>
 								
 							</div>
@@ -782,10 +2110,19 @@ She is a very positive person and brings her smile to work every day!
 										<i class='ion-ios-analytics'></i>
 									</div>
 									<div class='content'>
-										<h4>Business Analysis Services</h4>
-										<p>Process Optimization & Workflow Analysis – Helping businesses streamline operations for efficiency.</p>
-										<p>Requirements Gathering & Documentation – Writing business requirements, user stories, and process maps.</p>
-										<p>Stakeholder Communication & Agile Support – Facilitating communication between tech teams and business users.</p>
+										<h4>Business Analysis & Requirements</h4>
+										<p>Translating business goals into clear technical specifications, user stories, process flows, and comprehensive backlog requirements.</p>
+									</div>
+								</div>
+							</div>
+							<div class='col-md-4'>
+								<div class='service'>
+									<div class='icon'>
+										<i class='ion-ios-pulse'></i>
+									</div>
+									<div class='content'>
+										<h4>Data Reporting & Analytics</h4>
+										<p>Creating healthcare reporting pipelines, writing SQL queries, auditing database accuracy, and ensuring rigorous data quality validation.</p>
 									</div>
 								</div>
 							</div>
@@ -796,46 +2133,40 @@ She is a very positive person and brings her smile to work every day!
 									</div>
 									<div class='content'>
 										<h4>Quality Assurance & Testing</h4>
-										<p>Manual & Automated Software Testing – Ensuring bug-free applications with test plans and automation scripts.</p>
-										<p>Test Case Development & Execution – Writing test cases and performing functional, regression, and UAT testing.</p>
-										<p>Defect Management & Reporting – Tracking and managing defects for efficient resolutions.</p>
+										<p>Designing structured test cases, executing functional, regression, and user acceptance testing (UAT) cycles, and managing defects.</p>
 									</div>
 								</div>
 							</div>
 							<div class='col-md-4'>
 								<div class='service'>
 									<div class='icon'>
-										<i class='ion-ios-pulse'></i>
+										<i class='ion-android-sync'></i>
 									</div>
 									<div class='content'>
-										<h4>Data Analysis & Visualization</h4>
-										<p>Power BI Dashboard Development – Creating data-driven dashboards for actionable insights.</p>
-										<p>Data Cleaning & Reporting – Transforming raw data into meaningful reports.</p>
-										<p>SQL & Database Analysis – Extracting and analyzing data for business decision-making.</p>
+										<h4>Excel Automation & Process Improvement</h4>
+										<p>Writing VBA macro scripts, optimizing complex spreadsheets, and streamlining legacy manual processes to increase team speed.</p>
 									</div>
 								</div>
 							</div>
-							<div class='col-md-6'>
+							<div class='col-md-4'>
 								<div class='service'>
 									<div class='icon'>
-										<i class='ion-ios-people'></i>
+										<i class='ion-ios-locked'></i>
 									</div>
 									<div class='content'>
-										<h4>Project Management & Agile Consulting</h4>
-										<p>Agile/Scrum Facilitation – Assisting teams with Agile methodologies and sprint planning.</p>
-										<p>Project Documentation & Risk Management – Keeping track of project risks and documentation.</p>
+										<h4>Cybersecurity Support & Documentation</h4>
+										<p>Drafting cybersecurity training guides, mapping software assets, verifying compliance, and documenting security practices.</p>
 									</div>
 								</div>
 							</div>
-							<div class='col-md-6'>
+							<div class='col-md-4'>
 								<div class='service'>
 									<div class='icon'>
-										<i class='ion-ios-briefcase'></i>
+										<i class='ion-ios-lightbulb'></i>
 									</div>
 									<div class='content'>
-										<h4>Resume & Career Consulting</h4>
-										<p>Resume Optimization – Helping job seekers improve their resumes for ATS and recruiter visibility.</p>
-										<p>LinkedIn Profile Enhancement – Writing and optimizing LinkedIn profiles for job searching.</p>
+										<h4>AI Productivity & Workflow Consulting</h4>
+										<p>Deploying AI-assisted administrative operations, prompt engineering, and utilizing large language models for process efficiency.</p>
 									</div>
 								</div>
 							</div>
@@ -843,94 +2174,6 @@ She is a very positive person and brings her smile to work every day!
 					</div>
 				</div>
 				
-				<div class='pricing-block section-block'>
-					<div class='container'>
-						<div class='section-header text-center'>
-							<h2 class='animate text-over-block'>Pricing</h2>
-							<p>How much I charge</p>
-							<!--divider-->
-							<div class='divider-draft center'></div>
-							<!--/divider-->
-						</div>
-						<div class='row'>
-							<div class='col-md-4'>
-								<div class='pricing'>
-									<div class='header'>
-										<h4>BASIC PLAN</h4>
-										<div class='price'>
-											<span class='currency'>$</span>
-											<span class='amount'>49</span>
-											<span class='period'>/hr</span>
-										</div>
-									</div>
-									<div class='content'>
-										<ul>
-											<li>Business Process Analysis</li>
-											<li>Basic Quality Assurance Testing</li>
-											<li>Resume & LinkedIn Review</li>
-											<li>Basic Power BI Report Setup</li>
-											<li>Email Support</li>
-										</ul>
-									</div>
-									<div class='footer'>
-										<!--<a href='#contact' class='btn-custom-sm dark'>Choose This</a>-->
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Basic Plan Opportunity&body=This is in reference to your portfolio website for basic plan." class="btn btn-primary">Choose This</a>
-									</div>
-								</div>
-							</div>
-							<div class='col-md-4'>
-								<div class='pricing'>
-									<div class='header'>
-										<h4>PRO PLAN</h4>
-										<div class='price'>
-											<span class='currency'>$</span>
-											<span class='amount'>69</span>
-											<span class='period'>/hr</span>
-										</div>
-									</div>
-									<div class='content'>
-										<ul>
-											<li>Advanced Business Analysis & Documentation</li>
-											<li>Full Software Testing & Defect Management</li>
-											<li>Custom Power BI Dashboards</li>
-											<li>SQL & Data Analysis</li>
-											<li>Agile/Scrum Facilitation</li>
-										</ul>
-									</div>
-									<div class='footer'>
-										<!--<a href='#contact' class='btn-custom-sm dark'>Choose This</a>-->
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Pro Plan Opportunity&body=This is in reference to your portfolio website for pro plan." class="btn btn-primary">Choose This</a>
-									</div>
-								</div>
-							</div>
-							<div class='col-md-4'>
-								<div class='pricing'>
-									<div class='header'>
-										<h4>PREMIUM PLAN</h4>
-										<div class='price'>
-											<span class='currency'>$</span>
-											<span class='amount'>89</span>
-											<span class='period'>/hr</span>
-										</div>
-									</div>
-									<div class='content'>
-										<ul>
-											<li>End-to-End Business & QA Solutions</li>
-											<li>Test Automation & Process Optimization</li>
-											<li>Data Strategy & Visualization Consulting</li>
-											<li>Ongoing Project Support & Training</li>
-											<li>Priority Support & Revisions</li>
-										</ul>
-									</div>
-									<div class='footer'>
-										<!--<a href='#contact' class='btn-custom-sm dark'>Choose This</a>-->
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Premium Plan Opportunity&body=This is in reference to your portfolio website for premium plan." class="btn btn-primary">Choose This</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 				
 				<div class='process-block bg-lightgray section-block' >
 					<div class='container' >
@@ -1097,29 +2340,25 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 						<div class='row' >
 							
 							<div class='col-xs-6 text-left' >
-								<h4>Thisha Smith</h4>
+								<h4>CognitPath</h4>
+								<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
 							</div>
 							
 							<div class='col-xs-6 text-right' >
 								<ul class='footer-social' >
 									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
+										<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+											<i class='ion-social-linkedin' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='https://bsky.app/profile/feistyfenix.bsky.social' target="_blank" >
-											<i class='ion-social-twitter' ></i>
+										<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+											<i class='ion-social-github' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
+										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+											<i class='ion-email' ></i>
 										</a>
 									</li>
 								</ul>
@@ -1148,6 +2387,18 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 					
 					<div class='container' >
 					
+						<!-- Section Navigation -->
+						<div class="section-nav">
+							<ul>
+								<li><a href="#" class="nav-link-home">Home</a></li>
+								<li><a href="#about" class="nav-link-section" data-target="about">About</a></li>
+								<li><a href="#resume" class="nav-link-section" data-target="resume">Resume</a></li>
+								<li><a href="#services" class="nav-link-section" data-target="services">Services</a></li>
+								<li><a href="#portfolio" class="nav-link-section active-nav" data-target="portfolio">Portfolio</a></li>
+								<li><a href="#contact" class="nav-link-section" data-target="contact">Contact</a></li>
+							</ul>
+						</div>
+
 						<div class='row' >
 							<div class='col-md-6 col-md-offset-3' >
 								
@@ -1160,7 +2411,7 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 									<!--/divider-->
 									
 									<p>
-										Check out my works. Lorem ipsum dolor sit amet is simply a dummy text. Lorem ipsum dolor sit amet.
+										A selection of recent projects highlighting my work in business analysis, data validation, and process automation.
 									</p>
 								
 								</div>
@@ -1174,45 +2425,35 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 									<a href='#' data-group='all' class='active' >All</a>
 								</li>
 								<li>
-									<a href='#' data-group='web' >Web</a>
+									<a href='#' data-group='data' >Data & Reporting</a>
 								</li>
 								<li>
-									<a href='#' data-group='tech' >Tech</a>
+									<a href='#' data-group='qa' >QA & Testing</a>
 								</li>
 								<li>
-									<a href='#' data-group='photography' >Photography</a>
+									<a href='#' data-group='automation' >AI & Automation</a>
 								</li>
 							</ul>
 						</div>
 						
 						<div id='portfolio-grid' class='portfolio-items' >
 							
-							<div class='item' data-groups='["all","web","photography"]' >
+							<div class='item' data-groups='["all","data"]' >
 								<div class='inner' >
 									
-									<img alt='Kush Novels LLC' src='img/portfolio/1.jpg' >
+									<div class="project-placeholder">
+										<i class="ion-ios-pulse"></i>
+										<span class="placeholder-title">Healthcare Data</span>
+									</div>
 									
 									<div class='caption' >
 										
 										<div class='caption-inner' >
 										
-											<h4>Project Title</h4>
+											<h4>Healthcare Reporting & Data Quality</h4>
+											<p style="color: #bbb; font-size: 13px; margin: 10px 0;">Automated reporting and data validation pipelines for healthcare compliance.</p>
 											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/1.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
+											<a href='healthcare-reporting-case-study.html' style="color: #FFF; text-decoration: underline; font-weight: bold; font-size: 13px; display: inline-block; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px;">View Case Study &rarr;</a>
 										
 										</div>
 										
@@ -1222,32 +2463,22 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 								</div>
 							</div>
 							
-							<div class='item' data-groups='["all","photography","tech"]' >
+							<div class='item' data-groups='["all","automation"]' >
 								<div class='inner' >
 									
-									<img alt='Kush Novels LLC' src='img/portfolio/2.jpg' >
+									<div class="project-placeholder">
+										<i class="ion-ios-lightbulb-outline"></i>
+										<span class="placeholder-title">AI & AUTOMATION</span>
+									</div>
 									
 									<div class='caption' >
 										
 										<div class='caption-inner' >
 										
-											<h4>Project Title</h4>
+											<h4>AI & AUTOMATION</h4>
+											<p style="color: #bbb; font-size: 13px; margin: 10px 0;">Workflow Automation • Prompt Systems • Productivity</p>
 											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/2.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
+											<a href='ai-automation-case-study.html' style="color: #FFF; text-decoration: underline; font-weight: bold; font-size: 13px; display: inline-block; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px;">View Case Study &rarr;</a>
 										
 										</div>
 										
@@ -1257,32 +2488,22 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 								</div>
 							</div>
 							
-							<div class='item' data-groups='["all","web","tech"]' >
+							<div class='item' data-groups='["all","qa"]' >
 								<div class='inner' >
 									
-									<img alt='Kush Novels LLC' src='img/portfolio/3.jpg' >
+									<div class="project-placeholder">
+										<i class="ion-ios-checkmark-outline"></i>
+										<span class="placeholder-title">TrueBalance Planner</span>
+									</div>
 									
 									<div class='caption' >
 										
 										<div class='caption-inner' >
 										
-											<h4>Project Title</h4>
+											<h4>TrueBalance Planner</h4>
+											<p style="color: #bbb; font-size: 13px; margin: 10px 0;">Product Design • Financial Planning • Web Application</p>
 											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/3.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
+											<a href='truebalance-planner-case-study.html' style="color: #FFF; text-decoration: underline; font-weight: bold; font-size: 13px; display: inline-block; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px;">View Product Case Study &rarr;</a>
 										
 										</div>
 										
@@ -1292,32 +2513,23 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 								</div>
 							</div>
 							
-							<div class='item' data-groups='["all","web"]' >
+							<div class='item' data-groups='["all","automation","qa"]' >
 								<div class='inner' >
 									
-									<img alt='Kush Novels LLC' src='img/portfolio/4.jpg' >
+									<div class="project-placeholder">
+										<i class="ion-ios-game-controller-b-outline"></i>
+										<span class="placeholder-title">Project Continuum</span>
+									</div>
 									
 									<div class='caption' >
 										
 										<div class='caption-inner' >
 										
-											<h4>Project Title</h4>
+											<h4>Project Continuum</h4>
+											<p style="color: #bbb; font-size: 13px; margin: 10px 0 5px 0; font-weight: bold;">Creative Technology &amp; Narrative Systems</p>
+											<p style="color: #ccc; font-size: 12px; margin: 0 0 10px 0; line-height: 1.5;">Narrative quality assurance, automation workflows, validation systems, AI-assisted production pipelines, and interactive storytelling architecture.</p>
 											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/4.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
+											<a href='cold-day-case-study.html' style="color: #FFF; text-decoration: underline; font-weight: bold; font-size: 13px; display: inline-block; margin-top: 5px; text-transform: uppercase; letter-spacing: 1px;">View Case Study &rarr;</a>
 										
 										</div>
 										
@@ -1326,183 +2538,6 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 									
 								</div>
 							</div>
-							
-							<div class='item' data-groups='["all","tech"]' >
-								<div class='inner' >
-									
-									<img alt='Kush Novels LLC' src='img/portfolio/5.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Project Title</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/5.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='item' data-groups='["all","photography"]' >
-								<div class='inner' >
-									
-									<img alt='Kush Novels LLC' src='img/portfolio/6.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Project Title</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/6.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='item' data-groups='["all","web"]' >
-								<div class='inner' >
-									
-									<img alt='Kush Novels LLC' src='img/portfolio/7.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Project Title</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/7.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='item' data-groups='["all","tech"]' >
-								<div class='inner' >
-									
-									<img alt='Kush Novels LLC' src='img/portfolio/8.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Project Title</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/8.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							<div class='item' data-groups='["all","photography"]' >
-								<div class='inner' >
-									
-									<img alt='Kush Novels LLC' src='img/portfolio/9.jpg' >
-									
-									<div class='caption' >
-										
-										<div class='caption-inner' >
-										
-											<h4>Project Title</h4>
-											
-											<ul class='links' >
-												
-												<li>
-													<a href='work.html' >
-														<i class='ion-ios-plus-empty' ></i>
-													</a>
-												</li>
-												
-												<li>
-													<a href='img/portfolio/9.jpg' class='image-link' >
-														<i class='ion-ios-search' ></i>
-													</a>
-												</li>
-												
-											</ul>
-										
-										</div>
-										
-										
-									</div>
-									
-								</div>
-							</div>
-							
-							
 							
 						</div>
 						
@@ -1517,29 +2552,25 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 						<div class='row' >
 							
 							<div class='col-xs-6 text-left' >
-								<h4>Thisha Smith</h4>
+								<h4>CognitPath</h4>
+								<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
 							</div>
 							
 							<div class='col-xs-6 text-right' >
 								<ul class='footer-social' >
 									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
+										<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+											<i class='ion-social-linkedin' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='https://bsky.app/profile/feistyfenix.bsky.social' target="_blank" >
-											<i class='ion-social-twitter' ></i>
+										<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+											<i class='ion-social-github' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
+										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+											<i class='ion-email' ></i>
 										</a>
 									</li>
 								</ul>
@@ -1559,260 +2590,6 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 			
 			
 			<!--=============================================================================
-				Blog Section
-			===============================================================================-->
-			<section id='blog' class='blog-section section' >
-				
-				<div class='container' >
-					
-					<div class='row' >
-						
-						<div class='col-md-6 col-md-offset-3' >
-							<div class='section-header text-center' >
-								
-								<h2>My Blog</h2>
-								
-								<!--divider-->
-								<div class='divider-draft center' ></div>
-								<!--/divider-->
-								
-								<p>
-									This is where business meets technology—a space dedicated to Business Analysis, Quality Assurance, Data Analytics, and AI Innovation.
-								</p>
-								
-							</div>
-						</div>
-						
-					</div>
-					
-				</div>
-			
-				<div class='posts-block section-block'>
-					<div class='container'>
-						<div class='row'>
-							<div class='col-md-8'>
-								<div class='post'>
-									<div class='media'>
-										<img src='blog/BusinessAnalyst.png' alt='Business Analysis and AI'>
-									</div>
-									<div class='content'>
-										<h4>
-											<a href='post.html'>How AI is Transforming Business Analysis & QA</a>
-										</h4>
-										<ul class='post-icons'>
-											<li>
-												<i class='ion-ios-person'></i>
-												<span>Thisha Smith</span>
-											</li>
-											<li>
-												<i class='ion-ios-clock'></i>
-												<span>February 1, 2025</span>
-											</li>
-											<li>
-												<i class='ion-ios-chatbubble'></i>
-												<span>5</span>
-											</li>
-										</ul>
-										<p>
-											AI is revolutionizing Business Analysis and Quality Assurance by automating data analysis, enhancing decision-making, and optimizing testing processes to improve efficiency and accuracy...
-										</p>
-										<a href='post.html' class='read-more'>
-											Read More
-											<i class='ion-ios-arrow-thin-right'></i>
-										</a>
-									</div>
-								</div>
-
-								<div class='post'>
-									<div class='media'>
-										<img src='img/bg2.jpg' alt='Data Analytics'>
-									</div>
-									<div class='content'>
-										<h4>
-											<a href='post.html'>The Power of Data Analytics in Modern Business</a>
-										</h4>
-										<ul class='post-icons'>
-											<li>
-												<i class='ion-ios-person'></i>
-												<span>Thisha Smith</span>
-											</li>
-											<li>
-												<i class='ion-ios-clock'></i>
-												<span>January 15, 2025</span>
-											</li>
-											<li>
-												<i class='ion-ios-chatbubble'></i>
-												<span>3</span>
-											</li>
-										</ul>
-										<p>
-											Discover how data analytics is transforming business decision-making and creating competitive advantages in today's digital landscape...
-										</p>
-										<a href='post.html' class='read-more'>
-											Read More
-											<i class='ion-ios-arrow-thin-right'></i>
-										</a>
-									</div>
-								</div>
-
-								<div class='post'>
-									<div class='media'>
-										<img src='img/bg2.jpg' alt='Quality Assurance'>
-									</div>
-									<div class='content'>
-										<h4>
-											<a href='post.html'>Essential QA Practices for Modern Software Development</a>
-										</h4>
-										<ul class='post-icons'>
-											<li>
-												<i class='ion-ios-person'></i>
-												<span>Thisha Smith</span>
-											</li>
-											<li>
-												<i class='ion-ios-clock'></i>
-												<span>January 1, 2025</span>
-											</li>
-											<li>
-												<i class='ion-ios-chatbubble'></i>
-												<span>4</span>
-											</li>
-										</ul>
-										<p>
-											Explore the latest quality assurance methodologies and best practices that ensure robust and reliable software delivery...
-										</p>
-										<a href='post.html' class='read-more'>
-											Read More
-											<i class='ion-ios-arrow-thin-right'></i>
-										</a>
-									</div>
-								</div>
-
-								<div class='post-more'>
-									<a href='#' class='more-link'>
-										Load More
-									</a>
-								</div>
-							</div>
-
-							<div class='col-md-4'>
-								<div class='sidebar'>
-									<div class='sidebar-widget'>
-										<div class='search-box'>
-											<input type='text' placeholder='Search' class='search-input'>
-											<a class='search-btn' href='#'>
-												<i class='ion-ios-search'></i>
-											</a>
-										</div>
-									</div>
-
-									<div class='sidebar-widget'>
-										<div class='categories-widget'>
-											<div class='widget-header'>
-												<h4>
-													<i class='ion-ios-folder'></i> Categories
-												</h4>
-											</div>
-											<ul class='sidebar-list'>
-												<li><a href='#'>Business Analysis</a></li>
-												<li><a href='#'>Quality Assurance</a></li>
-												<li><a href='#'>Data Analytics</a></li>
-												<li><a href='#'>AI & Technology</a></li>
-												<li><a href='#'>Process Optimization</a></li>
-											</ul>
-										</div>
-									</div>
-
-									<div class='sidebar-widget'>
-										<div class='widget-header'>
-											<h4>
-												<i class='ion-document'></i> Recent Posts
-											</h4>
-										</div>
-										<ul class='sidebar-list'>
-											<li>
-												<a href='#'>How AI is Transforming Business Analysis & QA</a>
-											</li>
-											<li>
-												<a href='#'>The Power of Data Analytics in Modern Business</a>
-											</li>
-											<li>
-												<a href='#'>Essential QA Practices for Modern Software Development</a>
-											</li>
-											<li>
-												<a href='#'>Agile Methodologies in Business Analysis</a>
-											</li>
-										</ul>
-									</div>
-
-									<div class='sidebar-widget'>
-										<div class='widget-header'>
-											<h4>
-												<i class='ion-ios-pricetag'></i> Tags
-											</h4>
-										</div>
-										<ul class='sidebar-list list-inline'>
-											<li><a href='#'>Business Analysis</a></li>
-											<li><a href='#'>QA</a></li>
-											<li><a href='#'>Data</a></li>
-											<li><a href='#'>AI</a></li>
-											<li><a href='#'>Technology</a></li>
-											<li><a href='#'>Agile</a></li>
-											<li><a href='#'>Process</a></li>
-											<li><a href='#'>Testing</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				<div class='footer bg-lightgray section-block' >
-					
-					<div class='container' >
-						
-						<div class='row' >
-							
-							<div class='col-xs-6 text-left' >
-								<h4>Thisha Smith</h4>
-							</div>
-							
-							<div class='col-xs-6 text-right' >
-								<ul class='footer-social' >
-									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='https://bsky.app/profile/feistyfenix.bsky.social' target="_blank" >
-											<i class='ion-social-twitter' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-							
-						</div>
-						
-						
-					</div>
-					
-				</div>
-				
-				
-			</section>
-			<!--=============================================================================
 				/Blog Section
 			===============================================================================-->
 			
@@ -1824,6 +2601,19 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 				
 				<div class='contact-block section-block' >
 					<div class='container' >
+						
+						<!-- Section Navigation -->
+						<div class="section-nav">
+							<ul>
+								<li><a href="#" class="nav-link-home">Home</a></li>
+								<li><a href="#about" class="nav-link-section" data-target="about">About</a></li>
+								<li><a href="#resume" class="nav-link-section" data-target="resume">Resume</a></li>
+								<li><a href="#services" class="nav-link-section" data-target="services">Services</a></li>
+								<li><a href="#portfolio" class="nav-link-section" data-target="portfolio">Portfolio</a></li>
+								<li><a href="#contact" class="nav-link-section active-nav" data-target="contact">Contact</a></li>
+							</ul>
+						</div>
+
 						<div class='row' >
 							<div class='col-md-6 col-md-offset-3' >
 							
@@ -1832,9 +2622,15 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 									<!--divider-->
 									<div class='divider-draft center'></div>
 									<!--/divider-->
-									<p>
-										I'm available for freelancing. If you want something to be built or just to say hi, feel free to shoot me a message.
+									<p style="margin-bottom: 30px;">
+										I’m open to conversations around Business Analysis, Data Reporting, Quality Assurance, Cybersecurity, AI workflow support, and technology-driven business improvement.
 									</p>
+									<ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2.2em; display: inline-block; text-align: left; margin: auto; margin-bottom: 40px;">
+										<li><i class="ion-email" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>Email:</strong> <a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" style="color: #2F2F2F; text-decoration: underline;">ThishaSmith@Outlook.com</a></li>
+										<li><i class="ion-social-linkedin" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thisha/" target="_blank" style="color: #2F2F2F; text-decoration: underline;">linkedin.com/in/thisha</a></li>
+										<li><i class="ion-social-github" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>GitHub:</strong> <a href="https://github.com/thishas" target="_blank" style="color: #2F2F2F; text-decoration: underline;">github.com/thishas</a></li>
+										<li><i class="ion-ios-location" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>Location:</strong> Sacramento, CA</li>
+									</ul>
 								</div>
 							
 							</div>
@@ -1917,29 +2713,25 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 						<div class='row' >
 							
 							<div class='col-xs-6 text-left' >
-								<h4>Thisha Smith</h4>
+								<h4>CognitPath</h4>
+								<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
 							</div>
 							
 							<div class='col-xs-6 text-right' >
 								<ul class='footer-social' >
 									<li>
-										<a href='#' >
-											<i class='ion-social-facebook' ></i>
+										<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+											<i class='ion-social-linkedin' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='https://bsky.app/profile/feistyfenix.bsky.social' target="_blank" >
-											<i class='ion-social-twitter' ></i>
+										<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+											<i class='ion-social-github' ></i>
 										</a>
 									</li>
 									<li>
-										<a href='#' >
-											<i class='ion-social-pinterest' ></i>
-										</a>
-									</li>
-									<li>
-										<a href='#' >
-											<i class='ion-social-dribbble' ></i>
+										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+											<i class='ion-email' ></i>
 										</a>
 									</li>
 								</ul>
@@ -1987,14 +2779,93 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 		<script src='js/script.js' ></script>
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
+				// Read more post expansion
 				const readMoreLinks = document.querySelectorAll('.read-more');
-				
 				readMoreLinks.forEach(link => {
 					link.addEventListener('click', function(e) {
 						e.preventDefault();
 						const postContent = this.closest('.post-content');
 						postContent.classList.add('expanded');
 					});
+				});
+
+				const validHashes = ['#about', '#resume', '#services', '#portfolio', '#contact'];
+
+				// Update URL hash using HTML5 pushState to prevent screen jump/scroll behavior
+				function updateSectionHash(hash) {
+					if (hash) {
+						history.pushState(null, null, '#' + hash);
+					} else {
+						history.pushState(null, null, window.location.pathname + window.location.search);
+					}
+				}
+
+				// Unified navigation and transition function
+				function navigateToHash(hash) {
+					if (validHashes.includes(hash)) {
+						const targetId = hash.substring(1);
+						const targetSection = document.getElementById(targetId);
+						if (targetSection) {
+							const currentActive = document.querySelector('section.active');
+							if (currentActive && currentActive.id !== targetId) {
+								currentActive.classList.remove('active');
+							}
+							document.body.classList.add('section-show');
+							targetSection.classList.add('active');
+							
+							// Auto scroll to top of the activated section
+							targetSection.scrollTop = 0;
+						}
+					} else {
+						// Close all sections cleanly
+						document.body.classList.remove('section-show');
+						const activeSection = document.querySelector('section.active');
+						if (activeSection) {
+							activeSection.classList.remove('active');
+						}
+					}
+				}
+
+				// Direct load hash support
+				const initialHash = window.location.hash;
+				if (validHashes.includes(initialHash)) {
+					setTimeout(function() {
+						navigateToHash(initialHash);
+					}, 900);
+				}
+
+				// Listen to browser navigation changes (Back/Forward buttons)
+				window.addEventListener('popstate', function() {
+					navigateToHash(window.location.hash);
+				});
+				window.addEventListener('hashchange', function() {
+					navigateToHash(window.location.hash);
+				});
+
+				// Intercept main landing page links to update URL hash
+				$('.front-person-links > ul > li > a[data-section]').on('click', function() {
+					const sectionId = $(this).data('section');
+					updateSectionHash(sectionId);
+				});
+
+				// Clean URL when closing a section via X button
+				$('.close-btn').on('click', function() {
+					updateSectionHash(null);
+				});
+
+				// Handle clicks on internal section nav links
+				$(document).on('click', '.nav-link-section', function(e) {
+					e.preventDefault();
+					const targetId = $(this).data('target');
+					updateSectionHash(targetId);
+					navigateToHash('#' + targetId);
+				});
+
+				// Handle clicks on internal Home link
+				$(document).on('click', '.nav-link-home', function(e) {
+					e.preventDefault();
+					updateSectionHash(null);
+					navigateToHash(null);
 				});
 			});
 		</script>

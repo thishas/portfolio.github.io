@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Healthcare Reporting Dashboard - Thisha Smith</title>
+		<meta name="description" content="Simulated executive reporting dashboard used to monitor submission metrics and compliance goals.">
+		
+		<link rel="icon" type="image/png" href="img/favicon_transparent.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="img/favicon_transparent.png">
+
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		<style>
+			body {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+				font-family: 'Raleway', 'Open Sans', sans-serif;
+			}
+			#wrapper {
+				background-color: #F7F2EA !important;
+			}
+			.case-study-hero {
+				background-color: #EFE7DA;
+				padding: 60px 0;
+				text-align: center;
+				border-bottom: 2px solid #B89B72;
+			}
+			.case-study-hero h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.case-study-hero .subtitle {
+				font-size: 14px;
+				color: #B89B72;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			.case-study-hero .overview {
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 15px;
+				line-height: 1.8;
+				color: #2F2F2F;
+				opacity: 0.9;
+			}
+			.btn-back {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 24px !important;
+				font-weight: 700;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-top: 20px;
+				transition: all 0.3s ease !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.btn-back:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				color: #F7F2EA !important;
+			}
+			
+			.section-title {
+				font-size: 18px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 50px;
+				margin-bottom: 25px;
+				border-bottom: 2px solid #B89B72;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			.disclaimer-banner {
+				background-color: rgba(184, 155, 114, 0.12);
+				border: 1px dashed #B89B72;
+				border-left: 5px solid #7A3E2D;
+				border-radius: 6px;
+				padding: 20px;
+				margin: 30px auto 10px auto;
+				max-width: 900px;
+			}
+			.disclaimer-banner h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.disclaimer-banner p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* KPI Dashboard style */
+			.kpi-row {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0 -10px 30px -10px;
+			}
+			.kpi-col {
+				flex: 1;
+				min-width: 150px;
+				padding: 0 10px;
+				margin-bottom: 20px;
+			}
+			.kpi-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px 15px;
+				text-align: center;
+				transition: all 0.3s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+			}
+			.kpi-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+				border-color: #B89B72;
+				background: #F7F2EA;
+			}
+			.kpi-value {
+				font-size: 30px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-bottom: 5px;
+				line-height: 1.2;
+			}
+			.kpi-label {
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #2F2F2F;
+				font-weight: 700;
+				opacity: 0.8;
+			}
+
+			/* CSS Horizontal Bar Chart */
+			.chart-container {
+				background-color: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+			}
+			.chart-row {
+				display: flex;
+				align-items: center;
+				margin-bottom: 15px;
+			}
+			.chart-label {
+				width: 90px;
+				font-size: 13px;
+				font-weight: 700;
+				color: #2F2F2F;
+			}
+			.chart-bar-wrapper {
+				flex-grow: 1;
+				background-color: #EFE7DA;
+				height: 20px;
+				border-radius: 4px;
+				overflow: hidden;
+				margin: 0 15px;
+			}
+			.chart-bar {
+				background-color: #7A3E2D;
+				height: 100%;
+				border-radius: 4px 0 0 4px;
+				transition: width 1s ease-in-out;
+			}
+			.chart-value {
+				width: 40px;
+				font-size: 13px;
+				font-weight: 700;
+				color: #7A3E2D;
+				text-align: right;
+			}
+
+			/* Executive Insights Cards */
+			.insight-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 22px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				height: 100%;
+			}
+			.insight-card h4 {
+				font-size: 12px;
+				font-weight: 700;
+				color: #B89B72;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.insight-value {
+				font-size: 18px;
+				font-weight: 700;
+				color: #7A3E2D;
+				line-height: 1.3;
+			}
+
+			/* Notes section */
+			.notes-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-top: 30px;
+				border-left: 5px solid #7A3E2D;
+			}
+			.notes-card p {
+				margin: 0;
+				font-size: 13.5px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Approved Footer Overrides from main site */
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important; /* Warm Sand / Tan */
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.footer h4 {
+				color: #2F2F2F !important;
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				margin-top: 0;
+			}
+			.footer p {
+				color: #2F2F2F !important;
+				opacity: 0.85 !important;
+			}
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+		
+			/* Mobile Responsiveness Polish */
+			.table-responsive {
+				overflow-x: auto !important;
+				-webkit-overflow-scrolling: touch;
+			}
+			@media (max-width: 991px) {
+				.case-study-hero {
+					padding: 40px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 26px !important;
+				}
+			}
+			@media (max-width: 767px) {
+				.case-study-hero {
+					padding: 30px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 22px !important;
+					letter-spacing: 1px !important;
+				}
+				.case-study-hero .subtitle {
+					font-size: 11px !important;
+					letter-spacing: 1px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-hero .overview {
+					font-size: 13px !important;
+					line-height: 1.6 !important;
+				}
+				.section-title {
+					font-size: 15px !important;
+					margin-top: 35px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-table th, .case-study-table td {
+					padding: 10px 12px !important;
+					font-size: 12px !important;
+				}
+				.btn-back {
+					font-size: 11px !important;
+					padding: 8px 18px !important;
+					margin-top: 15px !important;
+				}
+				.kpi-value {
+					font-size: 24px !important;
+				}
+				.kpi-card {
+					padding: 15px 10px !important;
+				}
+				.recommendations-card {
+					padding: 15px !important;
+				}
+				.formula-card {
+					padding: 15px !important;
+				}
+				.formula-code {
+					font-size: 11.5px !important;
+					padding: 10px !important;
+				}
+				.btn-back {
+					font-size: 12px !important;
+					padding: 10px 20px !important;
+					margin-top: 15px !important;
+					display: inline-block !important;
+				}
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<!--close button-->
+		<a href='healthcare-reporting-case-study.html' id="btn-close" class='close-btn' title="Back to Healthcare Case Study">
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		<!--preloader-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='img/load.gif' alt='Preloader' >
+			</div>
+		</div>
+		<!--/preloader-->
+		
+		<div id='wrapper' >
+			
+			<!-- Hero Section -->
+			<section class="case-study-hero">
+				<div class="container">
+					<h1>Healthcare Reporting Dashboard</h1>
+					<div class="subtitle">Executive Reporting Metrics</div>
+					<p class="overview">
+						This artifact simulates a Power BI-style executive dashboard used to monitor reporting readiness, exception trends, plan-level risk, and submission confidence.
+					</p>
+					<div>
+						<a href="healthcare-reporting-case-study.html" id="btn-back-top" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Healthcare Case Study</a>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Portfolio Disclaimer Banner -->
+			<div class="container">
+				<div class="disclaimer-banner">
+					<h4><i class="ion-alert-circled" style="margin-right: 8px; color: #7A3E2D;"></i>Portfolio Demonstration Environment</h4>
+					<p>All data, member identifiers, reporting records, metrics, and examples shown on this page are simulated for portfolio demonstration purposes only. No actual patient, member, provider, employer, healthcare organization, or health plan data is displayed.</p>
+				</div>
+			</div>
+			
+			<!-- Case Study Body Content -->
+			<section style="padding: 40px 0 60px 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							
+							<!-- Dashboard KPIs -->
+							<h3 class="section-title"><i class="ion-ios-speedometer-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Executive Performance Indicators</h3>
+							<div class="kpi-row">
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">1,139</div>
+										<div class="kpi-label">Members Reviewed</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">5</div>
+										<div class="kpi-label">Plans Processed</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">142</div>
+										<div class="kpi-label">Exceptions Identified</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">137</div>
+										<div class="kpi-label">Resolved</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">5</div>
+										<div class="kpi-label">Outstanding</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">99.6%</div>
+										<div class="kpi-label">Readiness Target</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Charts Row -->
+							<div class="row">
+								<!-- Chart 1 -->
+								<div class="col-md-6">
+									<div class="chart-container">
+										<h3 style="font-size: 14px; font-weight: 700; color: #7A3E2D; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="ion-alert-circled" style="margin-right: 6px;"></i>Exceptions by Managed Care Plan</h3>
+										<div class="chart-row">
+											<div class="chart-label">Anthem</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 100%;"></div>
+											</div>
+											<div class="chart-value">42</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">Centene</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 90%;"></div>
+											</div>
+											<div class="chart-value">38</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">PHP</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 64%;"></div>
+											</div>
+											<div class="chart-value">27</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">SFHP</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 48%;"></div>
+											</div>
+											<div class="chart-value">20</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">SCFHP</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 36%;"></div>
+											</div>
+											<div class="chart-value">15</div>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Chart 2 -->
+								<div class="col-md-6">
+									<div class="chart-container">
+										<h3 style="font-size: 14px; font-weight: 700; color: #7A3E2D; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="ion-ios-pulse" style="margin-right: 6px;"></i>Monthly Exception Volume Trend</h3>
+										<div class="chart-row">
+											<div class="chart-label">January</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 100%; background-color: #B89B72;"></div>
+											</div>
+											<div class="chart-value">188</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">February</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 92%; background-color: #B89B72;"></div>
+											</div>
+											<div class="chart-value">173</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">March</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 85%; background-color: #B89B72;"></div>
+											</div>
+											<div class="chart-value">160</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">April</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 79%; background-color: #B89B72;"></div>
+											</div>
+											<div class="chart-value">149</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">May</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 75%;"></div>
+											</div>
+											<div class="chart-value">142</div>
+										</div>
+										<div class="chart-row">
+											<div class="chart-label">June</div>
+											<div class="chart-bar-wrapper">
+												<div class="chart-bar" style="width: 64%; background-color: #B89B72;"></div>
+											</div>
+											<div class="chart-value">121</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Executive Insights -->
+							<h3 class="section-title"><i class="ion-ios-search" style="margin-right: 10px; color: #7A3E2D;"></i>Executive Insights</h3>
+							<div class="row">
+								<div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+									<div class="insight-card">
+										<h4>Highest Risk Plan</h4>
+										<div class="insight-value">Centene</div>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+									<div class="insight-card">
+										<h4>Most Improved Plan</h4>
+										<div class="insight-value">PHP</div>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+									<div class="insight-card">
+										<h4>Top Failure Reason</h4>
+										<div class="insight-value">Missing Referral Date</div>
+									</div>
+								</div>
+								<div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
+									<div class="insight-card">
+										<h4>Submission Readiness</h4>
+										<div class="insight-value">99.6%</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Dashboard Notes -->
+							<div class="notes-card">
+								<p><strong>Dashboard Note:</strong> This simulated dashboard demonstrates how reporting leaders can monitor exception trends, plan-level readiness, open risks, and submission confidence before monthly reporting deadlines.</p>
+							</div>
+							
+							<!-- Footer Navigation -->
+							<div class="text-center" style="margin-top: 50px;">
+								<a href="healthcare-reporting-case-study.html" id="btn-back-bottom" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Healthcare Case Study</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<div class='footer bg-lightgray section-block' >
+				<div class='container' >
+					<div class='row' >
+						<div class='col-xs-6 text-left' >
+							<h4>CognitPath</h4>
+							<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
+						</div>
+						<div class='col-xs-6 text-right' >
+							<ul class='footer-social' >
+								<li>
+									<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+										<i class='ion-social-linkedin' ></i>
+									</a>
+								</li>
+								<li>
+									<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+										<i class='ion-social-github' ></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<i class='ion-email' ></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>

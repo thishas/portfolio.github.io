@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Project Continuum Case Study - Thisha Smith</title>
+		<meta name="description" content="Project Continuum case study demonstrating narrative quality assurance, workflow automation, validation systems, and interactive storytelling architecture.">
+		<meta name="keywords" content="narrative QA, continuity validation, game QA, automated script validation, interactive storytelling, visual novel testing">
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="icon" type="image/png" href="img/favicon_transparent.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="img/favicon_transparent.png">
+
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		<style>
+			body {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+				font-family: 'Raleway', 'Open Sans', sans-serif;
+			}
+			#wrapper {
+				background-color: #F7F2EA !important;
+			}
+			.case-study-hero {
+				background-color: #EFE7DA;
+				padding: 60px 0;
+				text-align: center;
+				border-bottom: 2px solid #B89B72;
+			}
+			.case-study-hero h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.case-study-hero .subtitle {
+				font-size: 14px;
+				color: #B89B72;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			.case-study-hero .overview {
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 15px;
+				line-height: 1.8;
+				color: #2F2F2F;
+				opacity: 0.9;
+			}
+			.btn-back {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 24px !important;
+				font-weight: 700;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-top: 20px;
+				transition: all 0.3s ease !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.btn-back:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				color: #F7F2EA !important;
+			}
+			
+			.section-title {
+				font-size: 18px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 50px;
+				margin-bottom: 25px;
+				border-bottom: 2px solid #B89B72;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			.disclaimer-banner {
+				background-color: rgba(184, 155, 114, 0.12);
+				border: 1px dashed #B89B72;
+				border-left: 5px solid #7A3E2D;
+				border-radius: 6px;
+				padding: 20px;
+				margin: 30px auto 10px auto;
+				max-width: 900px;
+			}
+			.disclaimer-banner h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.disclaimer-banner p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Overview Cards */
+			.overview-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				height: 100%;
+				border-top: 4px solid #7A3E2D;
+			}
+			.overview-card h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.overview-card p {
+				font-size: 13.5px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin-bottom: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Tables */
+			.case-study-table {
+				width: 100%;
+				background-color: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-collapse: collapse;
+				margin-bottom: 30px;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.case-study-table th {
+				background-color: #EFE7DA;
+				color: #7A3E2D;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 11px;
+				letter-spacing: 1px;
+				padding: 14px 18px;
+				border-bottom: 2px solid #B89B72;
+				text-align: left;
+			}
+			.case-study-table td {
+				padding: 14px 18px;
+				border-bottom: 1px solid #EFE7DA;
+				font-size: 13px;
+				color: #2F2F2F;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.case-study-table tr:hover {
+				background-color: rgba(239, 231, 218, 0.4);
+			}
+
+			/* Status Badges */
+			.status-badge {
+				display: inline-block;
+				padding: 3px 8px;
+				border-radius: 4px;
+				font-size: 10px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				text-align: center;
+				border: 1px solid transparent;
+			}
+			.status-badge.success {
+				background-color: rgba(46, 125, 50, 0.1);
+				color: #2e7d32;
+				border-color: rgba(46, 125, 50, 0.3);
+			}
+			.status-badge.review {
+				background-color: rgba(184, 155, 114, 0.15);
+				color: #7A3E2D;
+				border-color: rgba(184, 155, 114, 0.4);
+			}
+
+			/* Architecture Flow */
+			.architecture-flow {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-bottom: 30px;
+			}
+			.flow-step {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 15px;
+				width: 11%;
+				min-width: 100px;
+				text-align: center;
+				position: relative;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				margin-bottom: 15px;
+			}
+			.flow-step i {
+				font-size: 24px;
+				color: #7A3E2D;
+				margin-bottom: 8px;
+				display: block;
+			}
+			.flow-step h5 {
+				font-size: 10px;
+				font-weight: 700;
+				color: #2F2F2F;
+				margin: 0;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.flow-arrow {
+				font-size: 16px;
+				color: #B89B72;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			@media (max-width: 767px) {
+				.architecture-flow {
+					flex-direction: column;
+				}
+				.flow-step {
+					width: 80%;
+				}
+				.flow-arrow {
+					transform: rotate(90deg);
+					margin: 5px 0 15px 0;
+				}
+			}
+
+			/* Feature/Artifact Showcase Card */
+			.feature-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+				height: calc(100% - 30px);
+				transition: all 0.3s ease;
+			}
+			.feature-card:hover {
+				transform: translateY(-3px);
+				border-color: #B89B72;
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+			}
+			.feature-card i {
+				font-size: 32px;
+				color: #7A3E2D;
+				margin-bottom: 15px;
+				display: block;
+			}
+			.feature-card h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.feature-card p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin-bottom: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Artifact Card */
+			.artifact-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+				height: calc(100% - 30px);
+				transition: all 0.3s ease;
+				text-align: center;
+			}
+			.artifact-card:hover {
+				transform: translateY(-3px);
+				border-color: #B89B72;
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+			}
+			.artifact-card h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.artifact-card p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin-bottom: 20px;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Lessons Learned / Insight styling */
+			.insight-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 30px;
+				margin-bottom: 30px;
+				border-left: 5px solid #7A3E2D;
+			}
+			.insight-card p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 1.7;
+				color: #2F2F2F;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Skills/Badges styling */
+			.core-skills-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+			}
+			.skill-badge {
+				background: #EFE7DA; /* Warm Sand badge */
+				color: #2F2F2F !important;
+				padding: 6px 14px;
+				border-radius: 20px;
+				font-size: 12px;
+				font-weight: 600;
+				border: 1px solid #B89B72;
+				transition: all 0.3s ease;
+			}
+			.skill-badge:hover {
+				background: #7A3E2D; /* Ember Clay */
+				color: #F7F2EA !important;
+				border-color: #7A3E2D;
+			}
+
+			/* Approved Button Style */
+			.symp-btn.link-btn {
+				background-color: #7A3E2D !important; /* Ember Clay */
+				border: 1px solid #7A3E2D !important;
+				color: #F7F2EA !important; /* Soft Ivory */
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				padding: 10px 20px !important;
+				border-radius: 4px !important;
+				font-size: 12px !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+				display: inline-block !important;
+				text-decoration: none !important;
+			}
+			.symp-btn.link-btn:hover {
+				background-color: #2F2F2F !important; /* Charcoal */
+				border-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transform: translateY(-2px) !important;
+				box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+
+			/* Approved Footer Overrides from main site */
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important; /* Warm Sand / Tan */
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.footer h4 {
+				color: #2F2F2F !important;
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				margin-top: 0;
+			}
+			.footer p {
+				color: #2F2F2F !important;
+				opacity: 0.85 !important;
+			}
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+		
+			/* Mobile Responsiveness Polish */
+			.table-responsive {
+				overflow-x: auto !important;
+				-webkit-overflow-scrolling: touch;
+			}
+			@media (max-width: 991px) {
+				.case-study-hero {
+					padding: 40px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 26px !important;
+				}
+			}
+			@media (max-width: 767px) {
+				.case-study-hero {
+					padding: 30px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 22px !important;
+					letter-spacing: 1px !important;
+				}
+				.case-study-hero .subtitle {
+					font-size: 11px !important;
+					letter-spacing: 1px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-hero .overview {
+					font-size: 13px !important;
+					line-height: 1.6 !important;
+				}
+				.section-title {
+					font-size: 15px !important;
+					margin-top: 35px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-table th, .case-study-table td {
+					padding: 10px 12px !important;
+					font-size: 12px !important;
+				}
+				.btn-back {
+					font-size: 11px !important;
+					padding: 8px 18px !important;
+					margin-top: 15px !important;
+				}
+				.kpi-value {
+					font-size: 24px !important;
+				}
+				.kpi-card {
+					padding: 15px 10px !important;
+				}
+				.recommendations-card {
+					padding: 15px !important;
+				}
+				.formula-card {
+					padding: 15px !important;
+				}
+				.formula-code {
+					font-size: 11.5px !important;
+					padding: 10px !important;
+				}
+				.btn-back {
+					font-size: 12px !important;
+					padding: 10px 20px !important;
+					margin-top: 15px !important;
+					display: inline-block !important;
+				}
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<!--close button-->
+		<a href='index.html#portfolio' id="btn-close" class='close-btn' title="Back to Portfolio">
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		<!--preloader-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='img/load.gif' alt='Preloader' >
+			</div>
+		</div>
+		<!--/preloader-->
+		
+		<div id='wrapper' >
+			
+			<!-- Hero Section -->
+			<section class="case-study-hero">
+				<div class="container">
+					<h1 id="main-title">Project Continuum</h1>
+					<div class="subtitle">Creative Technology &amp; Narrative Systems Project</div>
+					<p class="overview">
+						Project Continuum is an original creative technology initiative focused on narrative quality assurance, workflow automation, documentation systems, AI-assisted production, and interactive storytelling development.
+					</p>
+					<p class="overview" style="margin-top: 15px;">
+						The project demonstrates how business analysis, quality assurance, validation practices, and automation concepts can be applied to large-scale narrative and media production.
+					</p>
+					<div style="margin-top: 25px;">
+						<a href="index.html#portfolio" id="btn-back-top" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Portfolio</a>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Case Study Body Content -->
+			<section style="padding: 40px 0 60px 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							
+							<!-- Section — Creative Technology Project -->
+							<h3 class="section-title"><i class="ion-ios-lightbulb-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Creative Technology Project</h3>
+							<div class="insight-card" style="border-left-color: #B89B72;">
+								<p style="margin-bottom: 15px; font-weight: bold;">Project Continuum is an original intellectual property and development initiative created by Thisha Smith.</p>
+								<p style="margin-bottom: 15px;">The project combines storytelling, business analysis, quality assurance, documentation, automation workflows, AI-assisted content production, and interactive media planning into a unified creative technology ecosystem.</p>
+								<p style="margin-bottom: 0;">The initiative serves as both a long-form narrative development environment and a practical demonstration of structured validation, process design, workflow management, and production governance.</p>
+							</div>
+							
+							<!-- Section 1 — Project Overview -->
+							<h3 class="section-title"><i class="ion-ios-information-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Project Overview</h3>
+							<div class="row" style="margin-bottom: 20px;">
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Problem</h4>
+										<p>Branching stories and interactive narrative systems can become difficult to manage when scripts, character continuity, scene logic, and production assets grow across multiple chapters or episodes.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Goal</h4>
+										<p>Build a repeatable workflow for organizing story content, validating continuity, identifying inconsistencies, and supporting future game or visual novel production.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Outcome</h4>
+										<p>Created a structured local production pipeline using documentation, automation planning, continuity checks, and AI-assisted workflow support.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 2 — Workflow Architecture -->
+							<h3 class="section-title"><i class="ion-ios-git-network" style="margin-right: 10px; color: #7A3E2D;"></i>Workflow Architecture</h3>
+							<div class="architecture-flow" id="workflow-architecture">
+								<div class="flow-step">
+									<i class="ion-ios-paper-outline"></i>
+									<h5>Source Canon</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-copy-outline"></i>
+									<h5>Expanded Chapters</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-list-outline"></i>
+									<h5>Script Breakdown</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-checkmark-outline"></i>
+									<h5>Continuity Checks</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-eye-outline"></i>
+									<h5>Visual Prompt Gen</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-people-outline"></i>
+									<h5>QA Review</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-download-outline"></i>
+									<h5>Production Export</h5>
+								</div>
+							</div>
+							
+							<!-- Section 3 — Validation Areas -->
+							<h3 class="section-title"><i class="ion-ios-list-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Validation Areas</h3>
+							<div class="table-responsive">
+								<table class="case-study-table" id="validation-table">
+									<thead>
+										<tr>
+											<th>Validation Area</th>
+											<th>Purpose</th>
+											<th>Example Check</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>Character Continuity</strong></td>
+											<td>Ensure character behavior stays consistent</td>
+											<td>Verify motives, dialogue tone, and scene reactions.</td>
+										</tr>
+										<tr>
+											<td><strong>Timeline Logic</strong></td>
+											<td>Confirm events occur in correct sequence</td>
+											<td>Detect chapter-to-chapter contradictions.</td>
+										</tr>
+										<tr>
+											<td><strong>Scene State</strong></td>
+											<td>Track locations, objects, and unresolved actions</td>
+											<td>Confirm scene locations, objects, and state variables remain consistent.</td>
+										</tr>
+										<tr>
+											<td><strong>Dialogue Integrity</strong></td>
+											<td>Preserve key lines and emotional intent</td>
+											<td>Ensure required dialogue remains unchanged.</td>
+										</tr>
+										<tr>
+											<td><strong>Branch Readiness</strong></td>
+											<td>Prepare story segments for interactive structure</td>
+											<td>Identify choices, consequences, and state variables.</td>
+										</tr>
+										<tr>
+											<td><strong>Production Notes</strong></td>
+											<td>Support downstream assets and prompts</td>
+											<td>Capture visual, sound, and cinematic direction.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Section 4 — Automation & Testing Concepts -->
+							<h3 class="section-title"><i class="ion-ios-star-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Automation &amp; Testing Concepts</h3>
+							<div class="row">
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-search"></i>
+										<h4>Continuity Checker</h4>
+										<p><strong>Purpose:</strong> Detects character, timeline, and setting inconsistencies across chapters.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-compose-outline"></i>
+										<h4>Script Compiler</h4>
+										<p><strong>Purpose:</strong> Organizes narrative content into scene-ready output for review or production.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-eye-outline"></i>
+										<h4>Visual Prompt Agent</h4>
+										<p><strong>Purpose:</strong> Converts story beats into structured image/video prompt concepts.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-people-outline"></i>
+										<h4>Showrunner Review</h4>
+										<p><strong>Purpose:</strong> Reviews tone, pacing, continuity, and cinematic consistency.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-refresh"></i>
+										<h4>Regression Review</h4>
+										<p><strong>Purpose:</strong> Ensures new chapter edits do not break established canon or prior story logic.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 5 — Sample Test Matrix -->
+							<h3 class="section-title"><i class="ion-ios-speedometer-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Sample Test Matrix</h3>
+							<div class="table-responsive">
+								<table class="case-study-table" id="test-matrix-table">
+									<thead>
+										<tr>
+											<th>Test ID</th>
+											<th>Scenario</th>
+											<th>Expected Result</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>CDH-001</strong></td>
+											<td>Chapter continuity check</td>
+											<td>Verify that script elements align with prior chapter canon</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>CDH-002</strong></td>
+											<td>Required dialogue validation</td>
+											<td>Key dialogue remains intact after expansion</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>CDH-003</strong></td>
+											<td>Timeline sequence review</td>
+											<td>Events follow established order</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>CDH-004</strong></td>
+											<td>Scene state validation</td>
+											<td>Location and unresolved actions remain consistent</td>
+											<td><span class="status-badge review">Review</span></td>
+										</tr>
+										<tr>
+											<td><strong>CDH-005</strong></td>
+											<td>Visual prompt readiness</td>
+											<td>Scene contains enough visual detail for asset generation</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Section 6 — Example Issue Log -->
+							<h3 class="section-title"><i class="ion-alert-circled" style="margin-right: 10px; color: #7A3E2D;"></i>Example Issue Log</h3>
+							<div class="table-responsive">
+								<table class="case-study-table" id="issue-log-table">
+									<thead>
+										<tr>
+											<th>Issue ID</th>
+											<th>Finding</th>
+											<th>Risk</th>
+											<th>Resolution</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>ISS-001</strong></td>
+											<td>Scene transition lacked clear narrative continuity</td>
+											<td>Medium</td>
+											<td>Added continuity note for next-chapter opening.</td>
+										</tr>
+										<tr>
+											<td><strong>ISS-002</strong></td>
+											<td>Dialogue segment had inconsistent tone compared to prior scene settings</td>
+											<td>High</td>
+											<td>Flagged for rewrite review and tone alignment.</td>
+										</tr>
+										<tr>
+											<td><strong>ISS-003</strong></td>
+											<td>Visual asset prompt missing environment details</td>
+											<td>Low</td>
+											<td>Added lighting, location, and mood descriptors.</td>
+										</tr>
+										<tr>
+											<td><strong>ISS-004</strong></td>
+											<td>Branching implication not documented</td>
+											<td>Medium</td>
+											<td>Added potential state variable note for future VN adaptation.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							
+							<!-- Section 8 — Tools & Methods Used -->
+							<h3 class="section-title"><i class="ion-ios-gear-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Tools &amp; Methods Used</h3>
+							<div class="core-skills-badges text-center" style="margin-top: 10px; margin-bottom: 30px;">
+								<span class="skill-badge">Narrative QA</span>
+								<span class="skill-badge">Continuity Review</span>
+								<span class="skill-badge">Test Planning</span>
+								<span class="skill-badge">Defect Tracking</span>
+								<span class="skill-badge">Automation Planning</span>
+								<span class="skill-badge">PowerShell</span>
+								<span class="skill-badge">Markdown</span>
+								<span class="skill-badge">Local AI Workflows</span>
+								<span class="skill-badge">Prompt Engineering</span>
+								<span class="skill-badge">Visual Prompt Design</span>
+								<span class="skill-badge">Game QA</span>
+								<span class="skill-badge">Documentation</span>
+							</div>
+							
+							<!-- Section 9 — Lessons Learned -->
+							<h3 class="section-title"><i class="ion-ios-lightbulb-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Lessons Learned</h3>
+							<div class="insight-card">
+								<p>Interactive storytelling requires the same quality discipline used in software systems: traceability, regression checks, clear acceptance criteria, and controlled change management. This project demonstrates how QA and business analysis methods can be applied to creative production pipelines to reduce inconsistency, preserve continuity, and prepare story content for future interactive formats.</p>
+							</div>
+							
+
+							<!-- Section 10 — Future Expansion -->
+							<h3 class="section-title"><i class="ion-ios-more-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Future Expansion</h3>
+							<div class="row" style="margin-bottom: 30px;">
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Visual Novel Adaptation</h4>
+										<p>Branching choice logic and state tracking.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Unity / Game Export</h4>
+										<p>Future-ready structure for game scene integration.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>AI-Assisted Production</h4>
+										<p>Local/offline AI agents to support writing, prompting, validation, and documentation.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Footer Navigation -->
+							<div class="text-center" style="margin-top: 50px;">
+								<a href="index.html#portfolio" id="btn-back-bottom" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Portfolio</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<div class='footer bg-lightgray section-block' >
+				<div class='container' >
+					<div class='row' >
+						<div class='col-xs-6 text-left' >
+							<h4>CognitPath</h4>
+							<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
+						</div>
+						<div class='col-xs-6 text-right' >
+							<ul class='footer-social' >
+								<li>
+									<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+										<i class='ion-social-linkedin' ></i>
+									</a>
+								</li>
+								<li>
+									<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+										<i class='ion-social-github' ></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<i class='ion-email' ></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>

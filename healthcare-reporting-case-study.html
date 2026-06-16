@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Healthcare Reporting & Data Quality Case Study - Thisha Smith</title>
+		<meta name="description" content="A healthcare reporting compliance case study showcasing data validation, operational workflows, and quality assurance exception tracking.">
+		<meta name="keywords" content="healthcare reporting, data validation, quality assurance, business analyst, data analyst, SQL, Excel">
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="icon" type="image/png" href="img/favicon_transparent.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="img/favicon_transparent.png">
+
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.theme.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.transitions.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		<style>
+			body {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+				font-family: 'Raleway', 'Open Sans', sans-serif;
+			}
+			#wrapper {
+				background-color: #F7F2EA !important;
+			}
+			.case-study-hero {
+				background-color: #EFE7DA;
+				padding: 60px 0;
+				text-align: center;
+				border-bottom: 2px solid #B89B72;
+			}
+			.case-study-hero h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.case-study-hero .subtitle {
+				font-size: 14px;
+				color: #B89B72;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			.case-study-hero .overview {
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 15px;
+				line-height: 1.8;
+				color: #2F2F2F;
+				opacity: 0.9;
+			}
+			.btn-back {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 24px !important;
+				font-weight: 700;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-top: 20px;
+				transition: all 0.3s ease !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.btn-back:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				color: #F7F2EA !important;
+			}
+			
+			.section-title {
+				font-size: 18px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 50px;
+				margin-bottom: 25px;
+				border-bottom: 2px solid #B89B72;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			/* Section 1 - Dashboard KPI Cards */
+			.kpi-row {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0 -10px 30px -10px;
+			}
+			.kpi-col {
+				flex: 1;
+				min-width: 160px;
+				padding: 0 10px;
+				margin-bottom: 20px;
+			}
+			.kpi-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px 15px;
+				text-align: center;
+				transition: all 0.3s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+			}
+			.kpi-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+				border-color: #B89B72;
+				background: #F7F2EA;
+			}
+			.kpi-value {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-bottom: 5px;
+				line-height: 1.2;
+			}
+			.kpi-label {
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #2F2F2F;
+				font-weight: 700;
+				opacity: 0.8;
+			}
+			
+			/* Section 2 - Workflow Flow */
+			.flow-container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				background: #EFE7DA;
+				padding: 30px 20px;
+				border-radius: 8px;
+				border: 1px solid #EFE7DA;
+				margin-bottom: 30px;
+			}
+			.flow-step {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 6px;
+				padding: 15px;
+				text-align: center;
+				flex: 1;
+				min-width: 130px;
+				margin: 10px 5px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+			}
+			.flow-step i {
+				font-size: 24px;
+				color: #7A3E2D;
+				margin-bottom: 8px;
+				display: block;
+			}
+			.flow-step span {
+				font-size: 11px;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #2F2F2F;
+				letter-spacing: 0.5px;
+				display: block;
+			}
+			.flow-connector {
+				font-size: 18px;
+				color: #B89B72;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0 5px;
+			}
+			@media (max-width: 991px) {
+				.flow-container {
+					flex-direction: column;
+					align-items: stretch;
+				}
+				.flow-connector {
+					transform: rotate(90deg);
+					margin: 10px 0;
+					padding: 5px 0;
+				}
+				.flow-step {
+					margin: 5px 0;
+				}
+			}
+			
+			/* Table Styling */
+			.table-responsive {
+				border: none;
+				margin-bottom: 30px;
+			}
+			.case-study-table {
+				width: 100%;
+				background-color: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-collapse: collapse;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.case-study-table th {
+				background-color: #EFE7DA;
+				color: #7A3E2D;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 11px;
+				letter-spacing: 1px;
+				padding: 14px 18px;
+				border-bottom: 2px solid #B89B72;
+				text-align: left;
+			}
+			.case-study-table td {
+				padding: 14px 18px;
+				border-bottom: 1px solid #EFE7DA;
+				font-size: 13px;
+				color: #2F2F2F;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.case-study-table tr:hover {
+				background-color: rgba(239, 231, 218, 0.4);
+			}
+			
+			/* Status Badges */
+			.status-badge {
+				display: inline-block;
+				padding: 3px 8px;
+				border-radius: 4px;
+				font-size: 10px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				text-align: center;
+			}
+			.status-badge.critical {
+				background-color: rgba(122, 62, 45, 0.12);
+				color: #7A3E2D;
+				border: 1px solid rgba(122, 62, 45, 0.3);
+			}
+			.status-badge.high {
+				background-color: rgba(184, 155, 114, 0.15);
+				color: #7A3E2D;
+				border: 1px solid rgba(184, 155, 114, 0.4);
+			}
+			.status-badge.medium {
+				background-color: rgba(239, 231, 218, 0.9);
+				color: #2F2F2F;
+				border: 1px solid #B89B72;
+			}
+			.status-badge.success {
+				background-color: rgba(46, 125, 50, 0.1);
+				color: #2e7d32;
+				border: 1px solid rgba(46, 125, 50, 0.3);
+			}
+			.status-badge.warning {
+				background-color: rgba(198, 40, 40, 0.08);
+				color: #c62828;
+				border: 1px solid rgba(198, 40, 40, 0.25);
+			}
+			
+			/* Section 5 - Formula Cards */
+			.formula-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 22px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				height: 100%;
+			}
+			.formula-card h4 {
+				font-size: 13px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.formula-code {
+				background: #2F2F2F;
+				color: #F7F2EA;
+				font-family: Consolas, Monaco, monospace;
+				padding: 12px;
+				border-radius: 4px;
+				font-size: 12.5px;
+				margin-top: 12px;
+				margin-bottom: 12px;
+				overflow-x: auto;
+				border-left: 3px solid #B89B72;
+			}
+			.formula-purpose {
+				font-size: 13px;
+				color: #2F2F2F;
+				opacity: 0.85;
+				margin-bottom: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			/* Section 6 - RCA Flow */
+			.rca-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+			}
+			.rca-flow {
+				display: flex;
+				justify-content: space-between;
+				align-items: stretch;
+				gap: 15px;
+			}
+			.rca-box {
+				flex: 1;
+				background: #EFE7DA;
+				border-radius: 6px;
+				padding: 20px;
+				border-left: 4px solid #7A3E2D;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+			.rca-box h4 {
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				font-weight: 700;
+			}
+			.rca-box p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+			@media (max-width: 768px) {
+				.rca-flow {
+					flex-direction: column;
+					gap: 15px;
+				}
+				.rca-box {
+					margin-bottom: 5px;
+				}
+			}
+			
+			/* Section 7 - Recommendations */
+			.recommendations-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 30px;
+				border-left: 5px solid #7A3E2D;
+			}
+			.recommendations-card h3 {
+				color: #7A3E2D;
+				font-size: 16px;
+				font-weight: 700;
+				margin-top: 0;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.recommendations-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.recommendations-list li {
+				position: relative;
+				padding-left: 25px;
+				font-size: 13.5px;
+				color: #2F2F2F;
+				margin-bottom: 12px;
+				line-height: 1.6;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.recommendations-list li::before {
+				content: "\f3ff"; /* ion-ios-checkmark */
+				font-family: "Ionicons";
+				color: #7A3E2D;
+				font-size: 18px;
+				position: absolute;
+				left: 0;
+				top: -1px;
+			}
+			
+			/* Section 8 - Badges */
+			.badges-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-bottom: 30px;
+			}
+			.badge-chip {
+				background-color: #EFE7DA;
+				color: #2F2F2F;
+				padding: 6px 14px;
+				border-radius: 20px;
+				font-size: 11.5px;
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				border: 1px solid #B89B72;
+			}
+			
+			/* Section 9 - Artifacts Cards */
+			.artifact-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 22px;
+				margin-bottom: 20px;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				transition: all 0.3s ease;
+			}
+			.artifact-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 8px 16px rgba(122, 62, 45, 0.08);
+				border-color: #B89B72;
+			}
+			.artifact-card h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.artifact-status {
+				background-color: #EFE7DA;
+				color: #B89B72;
+				border: 1px solid #B89B72;
+				font-size: 10px;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding: 3px 8px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-bottom: 12px;
+			}
+			.artifact-description {
+				font-size: 13px;
+				color: #2F2F2F;
+				opacity: 0.9;
+				line-height: 1.6;
+				margin-bottom: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			/* Simulated Healthcare Data Reusable Disclaimer */
+			.disclaimer-banner {
+				background-color: rgba(184, 155, 114, 0.12); /* Soft Muted Gold tint */
+				border: 1px dashed #B89B72;
+				border-left: 5px solid #7A3E2D; /* Ember Clay accent */
+				border-radius: 6px;
+				padding: 20px;
+				margin: 30px auto 10px auto;
+				max-width: 900px;
+			}
+			.disclaimer-banner h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.disclaimer-banner p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Approved Footer Overrides from main site */
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important; /* Warm Sand / Tan */
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.footer h4 {
+				color: #2F2F2F !important;
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				margin-top: 0;
+			}
+			.footer p {
+				color: #2F2F2F !important;
+				opacity: 0.85 !important;
+			}
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+		
+			/* Mobile Responsiveness Polish */
+			.table-responsive {
+				overflow-x: auto !important;
+				-webkit-overflow-scrolling: touch;
+			}
+			@media (max-width: 991px) {
+				.case-study-hero {
+					padding: 40px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 26px !important;
+				}
+			}
+			@media (max-width: 767px) {
+				.case-study-hero {
+					padding: 30px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 22px !important;
+					letter-spacing: 1px !important;
+				}
+				.case-study-hero .subtitle {
+					font-size: 11px !important;
+					letter-spacing: 1px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-hero .overview {
+					font-size: 13px !important;
+					line-height: 1.6 !important;
+				}
+				.section-title {
+					font-size: 15px !important;
+					margin-top: 35px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-table th, .case-study-table td {
+					padding: 10px 12px !important;
+					font-size: 12px !important;
+				}
+				.btn-back {
+					font-size: 11px !important;
+					padding: 8px 18px !important;
+					margin-top: 15px !important;
+				}
+				.kpi-value {
+					font-size: 24px !important;
+				}
+				.kpi-card {
+					padding: 15px 10px !important;
+				}
+				.recommendations-card {
+					padding: 15px !important;
+				}
+				.formula-card {
+					padding: 15px !important;
+				}
+				.formula-code {
+					font-size: 11.5px !important;
+					padding: 10px !important;
+				}
+				.btn-back {
+					font-size: 12px !important;
+					padding: 10px 20px !important;
+					margin-top: 15px !important;
+					display: inline-block !important;
+				}
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<!--close button-->
+		<a href='index.html#portfolio' id="btn-close" class='close-btn' title="Back to Portfolio">
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		<!--preloader-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='img/load.gif' alt='Preloader' >
+			</div>
+		</div>
+		<!--/preloader-->
+		
+		<div id='wrapper' >
+			
+			<!-- Hero Section -->
+			<section class="case-study-hero">
+				<div class="container">
+					<h1>Healthcare Reporting &amp; Data Quality</h1>
+					<div class="subtitle">Data Validation • Reporting Operations • Process Improvement</div>
+					<p class="overview">
+						This case study demonstrates how healthcare reporting data is validated, analyzed, reconciled, and prepared for submission through structured business rules, exception management, and quality assurance processes.
+					</p>
+					<div>
+						<a href="index.html#portfolio" id="btn-back-top" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Portfolio</a>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Reusable Disclaimer Block -->
+			<div class="container">
+				<div class="disclaimer-banner">
+					<h4><i class="ion-alert-circled" style="margin-right: 8px; color: #7A3E2D;"></i>Portfolio Demonstration Environment</h4>
+					<p>All data, member identifiers, reporting records, metrics, and examples shown on this page are simulated for portfolio demonstration purposes only. No actual patient, member, provider, employer, healthcare organization, or health plan data is displayed.</p>
+				</div>
+			</div>
+			
+			<!-- Case Study Body Content -->
+			<section style="padding: 40px 0 60px 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							
+							<!-- Section 1 — Executive Summary Dashboard -->
+							<h3 class="section-title"><i class="ion-ios-speedometer-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Executive Summary Dashboard</h3>
+							<div class="kpi-row">
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">1,139</div>
+										<div class="kpi-label">Members Reviewed</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">5</div>
+										<div class="kpi-label">Plans Processed</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">142</div>
+										<div class="kpi-label">Exceptions Identified</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">137</div>
+										<div class="kpi-label">Resolved</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">5</div>
+										<div class="kpi-label">Outstanding</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">99.6%</div>
+										<div class="kpi-label">Submission Readiness</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 2 — Reporting Workflow -->
+							<h3 class="section-title"><i class="ion-ios-gear-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Reporting Workflow</h3>
+							<div class="flow-container">
+								<div class="flow-step">
+									<i class="ion-ios-download-outline"></i>
+									<span>Receive Files</span>
+								</div>
+								<div class="flow-connector"><i class="ion-ios-arrow-thin-right"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-checkmark-outline"></i>
+									<span>Validate Eligibility</span>
+								</div>
+								<div class="flow-connector"><i class="ion-ios-arrow-thin-right"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-person-outline"></i>
+									<span>Validate Demographics</span>
+								</div>
+								<div class="flow-connector"><i class="ion-ios-arrow-thin-right"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-list-outline"></i>
+									<span>Apply Business Rules</span>
+								</div>
+								<div class="flow-connector"><i class="ion-ios-arrow-thin-right"></i></div>
+								<div class="flow-step">
+									<i class="ion-alert-circled"></i>
+									<span>Exception Management</span>
+								</div>
+								<div class="flow-connector"><i class="ion-ios-arrow-thin-right"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-compose-outline"></i>
+									<span>QA Review</span>
+								</div>
+								<div class="flow-connector"><i class="ion-ios-arrow-thin-right"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-paperplane-outline"></i>
+									<span>Submission Ready</span>
+								</div>
+							</div>
+							
+							<!-- Section 3 — Validation Rules Library -->
+							<h3 class="section-title"><i class="ion-ios-list-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Validation Rules Library</h3>
+							<div class="table-responsive">
+								<table class="case-study-table">
+									<thead>
+										<tr>
+											<th>Rule ID</th>
+											<th>Validation Rule</th>
+											<th>Severity</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>VAL-001</strong></td>
+											<td>Missing CIN (Client Index Number)</td>
+											<td><span class="status-badge critical">Critical</span></td>
+										</tr>
+										<tr>
+											<td><strong>VAL-002</strong></td>
+											<td>Invalid Status (Active / Discharged / Inactive check)</td>
+											<td><span class="status-badge critical">Critical</span></td>
+										</tr>
+										<tr>
+											<td><strong>VAL-003</strong></td>
+											<td>Missing Outreach Date for records in active outreach</td>
+											<td><span class="status-badge high">High</span></td>
+										</tr>
+										<tr>
+											<td><strong>VAL-004</strong></td>
+											<td>Duplicate Member ID in the same reporting month</td>
+											<td><span class="status-badge high">High</span></td>
+										</tr>
+										<tr>
+											<td><strong>VAL-005</strong></td>
+											<td>Missing MCP (Managed Care Plan) identifier</td>
+											<td><span class="status-badge medium">Medium</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Section 4 — Exception Management Dashboard -->
+							<h3 class="section-title"><i class="ion-ios-paper-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Exception Management Dashboard</h3>
+							<div class="table-responsive">
+								<table class="case-study-table">
+									<thead>
+										<tr>
+											<th>CIN</th>
+											<th>Plan</th>
+											<th>Issue</th>
+											<th>Severity</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>DEMO001A</strong></td>
+											<td>Anthem</td>
+											<td>Missing Referral Date</td>
+											<td><span class="status-badge high">High</span></td>
+											<td><span class="status-badge success">Resolved</span></td>
+										</tr>
+										<tr>
+											<td><strong>DEMO002B</strong></td>
+											<td>Centene</td>
+											<td>Invalid Status</td>
+											<td><span class="status-badge critical">Critical</span></td>
+											<td><span class="status-badge warning">Open</span></td>
+										</tr>
+										<tr>
+											<td><strong>DEMO003C</strong></td>
+											<td>PHP</td>
+											<td>Duplicate CIN</td>
+											<td><span class="status-badge high">High</span></td>
+											<td><span class="status-badge success">Resolved</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Section 5 — Formula Library -->
+							<h3 class="section-title"><i class="ion-calculator" style="margin-right: 10px; color: #7A3E2D;"></i>Formula Library</h3>
+							<div class="row">
+								<div class="col-md-6" style="margin-bottom: 20px;">
+									<div class="formula-card">
+										<h4>Formula 1: Eligibility Cross-Reference</h4>
+										<div class="formula-code">=XLOOKUP(A2,MIF!A:A,MIF!G:G,"Not Found")</div>
+										<p class="formula-purpose"><strong>Purpose:</strong> Validates whether a member exists in the source eligibility file.</p>
+									</div>
+								</div>
+								<div class="col-md-6" style="margin-bottom: 20px;">
+									<div class="formula-card">
+										<h4>Formula 2: Duplicate Record Finder</h4>
+										<div class="formula-code">=COUNTIF($C:$C,C2)&gt;1</div>
+										<p class="formula-purpose"><strong>Purpose:</strong> Identifies duplicate member records within the active dataset.</p>
+									</div>
+								</div>
+								<div class="col-md-12" style="margin-bottom: 20px;">
+									<div class="formula-card">
+										<h4>Formula 3: Outreach Date Completeness Audit</h4>
+										<div class="formula-code">=IF(AND(Status="Currently in Outreach",ISBLANK(OutreachDate)),"Missing Outreach Date","OK")</div>
+										<p class="formula-purpose"><strong>Purpose:</strong> Flags missing outreach dates specifically for active outreach records.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 6 — Root Cause Analysis -->
+							<h3 class="section-title"><i class="ion-ios-search" style="margin-right: 10px; color: #7A3E2D;"></i>Root Cause Analysis</h3>
+							<div class="rca-card">
+								<div class="rca-flow">
+									<div class="rca-box">
+										<h4>Problem</h4>
+										<p>High volume of invalid outreach dates reported during monthly consolidation pass.</p>
+									</div>
+									<div class="rca-box" style="border-left-color: #B89B72;">
+										<h4>Analysis</h4>
+										<p>Review identified inconsistent activity extraction logic across multiple source file structures.</p>
+									</div>
+									<div class="rca-box" style="border-left-color: #2F2F2F;">
+										<h4>Resolution</h4>
+										<p>Implemented validation rule coverage and automated exception tracking checks.</p>
+									</div>
+									<div class="rca-box" style="border-left-color: #2e7d32;">
+										<h4>Outcome</h4>
+										<p>Reduced invalid outreach date exceptions by 78% within the first reporting cycle.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 7 — Executive Recommendations -->
+							<h3 class="section-title"><i class="ion-ios-star-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Executive Recommendations</h3>
+							<div class="recommendations-card">
+								<h3>VP-Level Leadership Summary</h3>
+								<ul class="recommendations-list">
+									<li><strong>Standardize referral intake processes:</strong> Establish strict intake formats at source departments to minimize downstream clean-up efforts.</li>
+									<li><strong>Expand automated validation coverage:</strong> Shift validation checks further upstream, validating database uploads prior to excel processing.</li>
+									<li><strong>Implement centralized exception management:</strong> Transition issue tracking to a shared ServiceNow instance to improve SLA visibility.</li>
+									<li><strong>Improve reporting documentation and governance:</strong> Establish clear mapping dictionaries and logical traceability audits to ensure compliance continuity.</li>
+								</ul>
+							</div>
+							
+							<!-- Section 8 — Tools & Methods Used -->
+							<h3 class="section-title"><i class="ion-ios-wrench-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Tools &amp; Methods Used</h3>
+							<div class="badges-container">
+								<span class="badge-chip">Excel</span>
+								<span class="badge-chip">XLOOKUP</span>
+								<span class="badge-chip">COUNTIFS</span>
+								<span class="badge-chip">Data Validation</span>
+								<span class="badge-chip">Reporting Operations</span>
+								<span class="badge-chip">Healthcare Reporting</span>
+								<span class="badge-chip">Business Analysis</span>
+								<span class="badge-chip">Quality Assurance</span>
+								<span class="badge-chip">Root Cause Analysis</span>
+								<span class="badge-chip">Process Improvement</span>
+							</div>
+							
+							<!-- Section 9 — Portfolio Artifacts -->
+							<h3 class="section-title"><i class="ion-ios-folder-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Portfolio Artifacts</h3>
+							<div class="row">
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<a href="healthcare-validation-workbook.html" style="text-decoration: none; display: block; height: 100%;">
+										<div class="artifact-card">
+											<div>
+												<h4>Validation Workbook Sample</h4>
+												<div class="artifact-status">View Workbook</div>
+												<p class="artifact-description">Sample Excel validation workbook demonstrating exception management, data quality checks, and reporting readiness workflows.</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<a href="healthcare-reporting-dashboard.html" style="text-decoration: none; display: block; height: 100%;">
+										<div class="artifact-card">
+											<div>
+												<h4>Reporting Dashboard Sample</h4>
+												<div class="artifact-status">View Dashboard</div>
+												<p class="artifact-description">Power BI-style executive dashboard displaying reporting KPIs, exception metrics, and submission readiness indicators.</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<a href="healthcare-executive-package.html" style="text-decoration: none; display: block; height: 100%;">
+										<div class="artifact-card">
+											<div>
+												<h4>Executive Reporting Package</h4>
+												<div class="artifact-status">View Package</div>
+												<p class="artifact-description">Leadership-focused reporting summary showing findings, recommendations, risk areas, and operational metrics.</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							
+							<!-- Footer Navigation -->
+							<div class="text-center" style="margin-top: 50px;">
+								<a href="index.html#portfolio" id="btn-back-bottom" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Portfolio</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<div class='footer bg-lightgray section-block' >
+				<div class='container' >
+					<div class='row' >
+						<div class='col-xs-6 text-left' >
+							<h4>CognitPath</h4>
+							<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
+						</div>
+						<div class='col-xs-6 text-right' >
+							<ul class='footer-social' >
+								<li>
+									<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+										<i class='ion-social-linkedin' ></i>
+									</a>
+								</li>
+								<li>
+									<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+										<i class='ion-social-github' ></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<i class='ion-email' ></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>

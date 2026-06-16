@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>TrueBalance Planner Case Study - Thisha Smith</title>
+		<meta name="description" content="TrueBalance Planner is a financial planning and personal debt elimination platform case study demonstrating business analysis, product design, requirements gathering, and QA validation.">
+		<meta name="keywords" content="TrueBalance Planner, debt payoff, financial planning, business analyst, product manager, QA validation, requirements analysis">
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="icon" type="image/png" href="img/favicon_transparent.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="img/favicon_transparent.png">
+
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		<style>
+			body {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+				font-family: 'Raleway', 'Open Sans', sans-serif;
+			}
+			#wrapper {
+				background-color: #F7F2EA !important;
+			}
+			.case-study-hero {
+				background-color: #EFE7DA;
+				padding: 60px 0;
+				text-align: center;
+				border-bottom: 2px solid #B89B72;
+			}
+			.case-study-hero h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.case-study-hero .subtitle {
+				font-size: 14px;
+				color: #B89B72;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			.case-study-hero .overview {
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 15px;
+				line-height: 1.8;
+				color: #2F2F2F;
+				opacity: 0.9;
+			}
+			.btn-back {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 24px !important;
+				font-weight: 700;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-top: 20px;
+				transition: all 0.3s ease !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.btn-back:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				color: #F7F2EA !important;
+			}
+			
+			.section-title {
+				font-size: 18px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 50px;
+				margin-bottom: 25px;
+				border-bottom: 2px solid #B89B72;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			.disclaimer-banner {
+				background-color: rgba(184, 155, 114, 0.12);
+				border: 1px dashed #B89B72;
+				border-left: 5px solid #7A3E2D;
+				border-radius: 6px;
+				padding: 20px;
+				margin: 30px auto 10px auto;
+				max-width: 900px;
+			}
+			.disclaimer-banner h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.disclaimer-banner p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Overview Cards */
+			.overview-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				height: 100%;
+				border-top: 4px solid #7A3E2D;
+			}
+			.overview-card h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 15px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.overview-card p {
+				font-size: 13.5px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin-bottom: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+			
+			/* Lists in cards */
+			.value-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.value-list li {
+				position: relative;
+				padding-left: 25px;
+				font-size: 13.5px;
+				color: #2F2F2F;
+				margin-bottom: 10px;
+				line-height: 1.6;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.value-list li::before {
+				content: "\f3ff"; /* ion-ios-checkmark */
+				font-family: "Ionicons";
+				color: #7A3E2D;
+				font-size: 18px;
+				position: absolute;
+				left: 0;
+				top: -1px;
+			}
+
+			/* Tables */
+			.case-study-table {
+				width: 100%;
+				background-color: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-collapse: collapse;
+				margin-bottom: 30px;
+				border-radius: 8px;
+				overflow: hidden;
+			}
+			.case-study-table th {
+				background-color: #EFE7DA;
+				color: #7A3E2D;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 11px;
+				letter-spacing: 1px;
+				padding: 14px 18px;
+				border-bottom: 2px solid #B89B72;
+				text-align: left;
+			}
+			.case-study-table td {
+				padding: 14px 18px;
+				border-bottom: 1px solid #EFE7DA;
+				font-size: 13px;
+				color: #2F2F2F;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.case-study-table tr:hover {
+				background-color: rgba(239, 231, 218, 0.4);
+			}
+
+			/* Status Badges */
+			.status-badge {
+				display: inline-block;
+				padding: 3px 8px;
+				border-radius: 4px;
+				font-size: 10px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				text-align: center;
+				border: 1px solid transparent;
+			}
+			.status-badge.success {
+				background-color: rgba(46, 125, 50, 0.1);
+				color: #2e7d32;
+				border-color: rgba(46, 125, 50, 0.3);
+			}
+
+			/* Architecture Flow */
+			.architecture-flow {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-bottom: 30px;
+			}
+			.flow-step {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 20px;
+				width: 14%;
+				min-width: 120px;
+				text-align: center;
+				position: relative;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				margin-bottom: 15px;
+			}
+			.flow-step i {
+				font-size: 28px;
+				color: #7A3E2D;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.flow-step h5 {
+				font-size: 11px;
+				font-weight: 700;
+				color: #2F2F2F;
+				margin: 0;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.flow-arrow {
+				font-size: 20px;
+				color: #B89B72;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			@media (max-width: 767px) {
+				.architecture-flow {
+					flex-direction: column;
+				}
+				.flow-step {
+					width: 80%;
+				}
+				.flow-arrow {
+					transform: rotate(90deg);
+					margin: 5px 0 15px 0;
+				}
+			}
+
+			/* Feature Showcase */
+			.feature-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 30px;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+				height: calc(100% - 30px);
+				transition: all 0.3s ease;
+			}
+			.feature-card:hover {
+				transform: translateY(-3px);
+				border-color: #B89B72;
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+			}
+			.feature-card i {
+				font-size: 32px;
+				color: #7A3E2D;
+				margin-bottom: 15px;
+				display: block;
+			}
+			.feature-card h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+			.feature-card p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin-bottom: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* KPI/Product Metrics styling */
+			.kpi-row {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0 -10px 30px -10px;
+			}
+			.kpi-col {
+				flex: 1;
+				min-width: 160px;
+				padding: 0 10px;
+				margin-bottom: 20px;
+			}
+			.kpi-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px 15px;
+				text-align: center;
+				transition: all 0.3s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+			}
+			.kpi-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+				border-color: #B89B72;
+				background: #F7F2EA;
+			}
+			.kpi-value {
+				font-size: 28px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-bottom: 5px;
+				line-height: 1.2;
+			}
+			.kpi-label {
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #2F2F2F;
+				font-weight: 700;
+				opacity: 0.8;
+			}
+
+			/* Screenshots Placeholders */
+			.screenshot-placeholder {
+				background-color: rgba(184, 155, 114, 0.05);
+				border: 2px dashed #B89B72;
+				border-radius: 8px;
+				padding: 40px 20px;
+				text-align: center;
+				margin-bottom: 30px;
+				height: calc(100% - 30px);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			.screenshot-placeholder i {
+				font-size: 48px;
+				color: #B89B72;
+				margin-bottom: 15px;
+				display: block;
+			}
+			.screenshot-placeholder h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.screenshot-placeholder p {
+				font-size: 12px;
+				color: #2F2F2F;
+				opacity: 0.7;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+			}
+
+			/* Lessons Learned / Insight styling */
+			.insight-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 30px;
+				margin-bottom: 30px;
+				border-left: 5px solid #7A3E2D;
+			}
+			.insight-card p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 1.7;
+				color: #2F2F2F;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Skills/Badges styling */
+			.core-skills-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+			}
+			.skill-badge {
+				background: #EFE7DA; /* Warm Sand badge */
+				color: #2F2F2F !important;
+				padding: 6px 14px;
+				border-radius: 20px;
+				font-size: 12px;
+				font-weight: 600;
+				border: 1px solid #B89B72;
+				transition: all 0.3s ease;
+			}
+			.skill-badge:hover {
+				background: #7A3E2D; /* Ember Clay */
+				color: #F7F2EA !important;
+				border-color: #7A3E2D;
+			}
+
+			/* Approved Footer Overrides from main site */
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important; /* Warm Sand / Tan */
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.footer h4 {
+				color: #2F2F2F !important;
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				margin-top: 0;
+			}
+			.footer p {
+				color: #2F2F2F !important;
+				opacity: 0.85 !important;
+			}
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+		
+			/* Mobile Responsiveness Polish */
+			.table-responsive {
+				overflow-x: auto !important;
+				-webkit-overflow-scrolling: touch;
+			}
+			@media (max-width: 991px) {
+				.case-study-hero {
+					padding: 40px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 26px !important;
+				}
+			}
+			@media (max-width: 767px) {
+				.case-study-hero {
+					padding: 30px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 22px !important;
+					letter-spacing: 1px !important;
+				}
+				.case-study-hero .subtitle {
+					font-size: 11px !important;
+					letter-spacing: 1px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-hero .overview {
+					font-size: 13px !important;
+					line-height: 1.6 !important;
+				}
+				.section-title {
+					font-size: 15px !important;
+					margin-top: 35px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-table th, .case-study-table td {
+					padding: 10px 12px !important;
+					font-size: 12px !important;
+				}
+				.btn-back {
+					font-size: 11px !important;
+					padding: 8px 18px !important;
+					margin-top: 15px !important;
+				}
+				.kpi-value {
+					font-size: 24px !important;
+				}
+				.kpi-card {
+					padding: 15px 10px !important;
+				}
+				.recommendations-card {
+					padding: 15px !important;
+				}
+				.formula-card {
+					padding: 15px !important;
+				}
+				.formula-code {
+					font-size: 11.5px !important;
+					padding: 10px !important;
+				}
+				.btn-back {
+					font-size: 12px !important;
+					padding: 10px 20px !important;
+					margin-top: 15px !important;
+					display: inline-block !important;
+				}
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<!--close button-->
+		<a href='index.html#portfolio' id="btn-close" class='close-btn' title="Back to Portfolio">
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		<!--preloader-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='img/load.gif' alt='Preloader' >
+			</div>
+		</div>
+		<!--/preloader-->
+		
+		<div id='wrapper' >
+			
+			<!-- Hero Section -->
+			<section class="case-study-hero">
+				<div class="container">
+					<h1 id="main-title">TrueBalance Planner</h1>
+					<div class="subtitle">Personal Debt Elimination &amp; Financial Planning Platform</div>
+					<p class="overview">
+						TrueBalance Planner is a web-based financial planning application designed to help users organize debt obligations, evaluate payoff strategies, visualize progress, and create realistic paths toward financial freedom.
+					</p>
+					<div style="margin-top: 25px;">
+						<a href="index.html#portfolio" id="btn-back-top" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Portfolio</a>
+						<a href="https://app-truebalance.netlify.app/" target="_blank" id="btn-launch-top" class="btn-back" style="margin-left: 15px;"><i class="ion-android-open" style="margin-right: 8px;"></i>Launch Live Application</a>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Portfolio Disclaimer Banner -->
+			<div class="container">
+				<div class="disclaimer-banner">
+					<h4><i class="ion-alert-circled" style="margin-right: 8px; color: #7A3E2D;"></i>Portfolio Demonstration Environment</h4>
+					<p>All data, balances, calculations, and examples shown on this page are simulated for portfolio demonstration purposes only. No actual financial records or sensitive user data is displayed.</p>
+				</div>
+			</div>
+			
+			<!-- Case Study Body Content -->
+			<section style="padding: 40px 0 60px 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							
+							<!-- Section 1 — Product Overview -->
+							<h3 class="section-title"><i class="ion-ios-information-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Product Overview</h3>
+							<div class="row" style="margin-bottom: 20px;">
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Problem</h4>
+										<p>Many consumers struggle to visualize debt payoff timelines, prioritize balances, and understand the long-term impact of interest rates.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Goal</h4>
+										<p>Create an easy-to-use planning tool that transforms debt data into actionable payoff strategies.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="overview-card">
+										<h4>Success Criteria</h4>
+										<ul class="value-list">
+											<li>Clear payoff visibility</li>
+											<li>Multiple payoff strategies</li>
+											<li>Mobile-friendly design</li>
+											<li>Data privacy</li>
+											<li>Simple onboarding</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 2 — Requirements Analysis -->
+							<h3 class="section-title"><i class="ion-ios-paper-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Requirements Analysis</h3>
+							<div class="table-responsive">
+								<table class="case-study-table" id="requirements-table">
+									<thead>
+										<tr>
+											<th>Requirement ID</th>
+											<th>Requirement</th>
+											<th>Business Value</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>FR-001</strong></td>
+											<td>Add debt accounts</td>
+											<td>Allows users to centralize debt obligations.</td>
+										</tr>
+										<tr>
+											<td><strong>FR-002</strong></td>
+											<td>Calculate payoff timeline</td>
+											<td>Helps users understand payoff duration.</td>
+										</tr>
+										<tr>
+											<td><strong>FR-003</strong></td>
+											<td>Compare payoff strategies</td>
+											<td>Supports Snowball and Avalanche decision-making.</td>
+										</tr>
+										<tr>
+											<td><strong>FR-004</strong></td>
+											<td>Track balances and payments</td>
+											<td>Shows progress over time.</td>
+										</tr>
+										<tr>
+											<td><strong>FR-005</strong></td>
+											<td>Generate charts</td>
+											<td>Makes debt reduction visually understandable.</td>
+										</tr>
+										<tr>
+											<td><strong>FR-006</strong></td>
+											<td>Import CSV data</td>
+											<td>Supports faster setup and repeatable data loading.</td>
+										</tr>
+										<tr>
+											<td><strong>FR-007</strong></td>
+											<td>Export or backup data</td>
+											<td>Supports user control and portability.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Section 3 — Product Architecture -->
+							<h3 class="section-title"><i class="ion-ios-git-network" style="margin-right: 10px; color: #7A3E2D;"></i>Product Architecture</h3>
+							<div class="architecture-flow" id="architecture-diagram">
+								<div class="flow-step">
+									<i class="ion-ios-compose-outline"></i>
+									<h5>User Input</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-filing-outline"></i>
+									<h5>Debt Data</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-gear-outline"></i>
+									<h5>Calculation Engine</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-shuffle"></i>
+									<h5>Payoff Strategy</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-analytics-outline"></i>
+									<h5>Charts &amp; Analytics</h5>
+								</div>
+								<div class="flow-arrow"><i class="ion-ios-arrow-forward"></i></div>
+								<div class="flow-step">
+									<i class="ion-ios-speedometer-outline"></i>
+									<h5>Progress Tracking</h5>
+								</div>
+							</div>
+							
+							<!-- Section 4 — Feature Showcase -->
+							<h3 class="section-title"><i class="ion-ios-star-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Feature Showcase</h3>
+							<div class="row">
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-list-outline"></i>
+										<h4>Debt Management</h4>
+										<p>Track balances, APR, minimum payments, due dates, and account details.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-shuffle"></i>
+										<h4>Strategy Engine</h4>
+										<p>Supports Snowball and Avalanche payoff methodologies.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-speedometer-outline"></i>
+										<h4>Dashboard</h4>
+										<p>Displays payoff progress, total debt, remaining balances, and strategy insights.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-analytics-outline"></i>
+										<h4>Charts &amp; Analytics</h4>
+										<p>Visualizes debt reduction, payment progress, and payoff trends.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-ios-download-outline"></i>
+										<h4>Import / Export</h4>
+										<p>Supports CSV-based data handling, backup, and portability.</p>
+									</div>
+								</div>
+								<div class="col-md-4 col-sm-6" style="margin-bottom: 20px;">
+									<div class="feature-card">
+										<i class="ion-iphone"></i>
+										<h4>Mobile Experience</h4>
+										<p>Responsive interface designed for desktop and mobile use.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 5 — Product Metrics -->
+							<h3 class="section-title"><i class="ion-ios-pulse" style="margin-right: 10px; color: #7A3E2D;"></i>Product Metrics</h3>
+							<div class="kpi-row" id="metrics-grid">
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">12</div>
+										<div class="kpi-label">Application Modules</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">7</div>
+										<div class="kpi-label">Core Financial Tools</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">0</div>
+										<div class="kpi-label">Data Shared (Third-Party)</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">100%</div>
+										<div class="kpi-label">Client-Side Processing</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">Netlify</div>
+										<div class="kpi-label">Deployment Platform</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">Available</div>
+										<div class="kpi-label">Live Application</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 6 — Testing & Validation -->
+							<h3 class="section-title"><i class="ion-ios-checkmark-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Testing &amp; Validation</h3>
+							<div class="table-responsive">
+								<table class="case-study-table" id="qa-table">
+									<thead>
+										<tr>
+											<th>Test Area</th>
+											<th>Validation Focus</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><strong>Debt Calculations</strong></td>
+											<td>Confirm payoff totals, balances, and projected timelines</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>CSV Import</strong></td>
+											<td>Validate file structure, field mapping, and error handling</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>Mobile Layout</strong></td>
+											<td>Confirm responsive display across screen sizes</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>Data Persistence</strong></td>
+											<td>Confirm saved user data behaves as expected</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>Chart Rendering</strong></td>
+											<td>Confirm charts update when debt inputs change</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+										<tr>
+											<td><strong>Navigation Flow</strong></td>
+											<td>Confirm tabs and major workflows are accessible</td>
+											<td><span class="status-badge success">Passed</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							
+							<!-- Section 7 — Product Screenshots Placeholder -->
+							<h3 class="section-title"><i class="ion-ios-photos-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Application Screenshots</h3>
+							<div class="row">
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="screenshot-placeholder">
+										<i class="ion-ios-analytics-outline"></i>
+										<h4>Dashboard View</h4>
+										<p>Screenshot Coming Soon</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="screenshot-placeholder">
+										<i class="ion-ios-compose-outline"></i>
+										<h4>Debt Entry Workflow</h4>
+										<p>Screenshot Coming Soon</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="screenshot-placeholder">
+										<i class="ion-ios-pulse"></i>
+										<h4>Charts &amp; Payoff Progress</h4>
+										<p>Screenshot Coming Soon</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Section 8 — Lessons Learned -->
+							<h3 class="section-title"><i class="ion-ios-lightbulb-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Lessons Learned</h3>
+							<div class="insight-card">
+								<p>Designing financial tools requires balancing analytical accuracy with usability. This project reinforced the importance of requirements gathering, iterative testing, user-centered design, data visualization, and clear decision-support workflows when creating tools that help users make financial decisions.</p>
+							</div>
+							
+							<!-- Section 9 — Tools & Methods Used -->
+							<h3 class="section-title"><i class="ion-ios-gear-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Tools &amp; Methods Used</h3>
+							<div class="core-skills-badges text-center" style="margin-top: 10px; margin-bottom: 30px;">
+								<span class="skill-badge">HTML</span>
+								<span class="skill-badge">CSS</span>
+								<span class="skill-badge">JavaScript</span>
+								<span class="skill-badge">Netlify</span>
+								<span class="skill-badge">Financial Modeling</span>
+								<span class="skill-badge">Business Analysis</span>
+								<span class="skill-badge">Product Ownership</span>
+								<span class="skill-badge">Requirements Analysis</span>
+								<span class="skill-badge">QA Testing</span>
+								<span class="skill-badge">Data Visualization</span>
+								<span class="skill-badge">AI-Assisted Development</span>
+								<span class="skill-badge">UX Design</span>
+							</div>
+							
+							<!-- Section 10 — Live Product CTA -->
+							<div class="cta-block text-center" style="background-color: #EFE7DA; padding: 40px; border-radius: 8px; margin-top: 40px; border: 1px solid #EFE7DA; margin-bottom: 30px;">
+								<h3 style="color: #7A3E2D; font-weight: 700; margin-top: 0; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">Explore the Live Application</h3>
+								<p style="color: #2F2F2F; font-size: 14.5px; margin-bottom: 25px; font-family: 'Open Sans', sans-serif;">View the working TrueBalance Planner application and explore the live debt planning workflow.</p>
+								<a href="https://app-truebalance.netlify.app/" target="_blank" id="btn-launch-bottom" class="btn-back" style="margin-top: 0;"><i class="ion-social-chrome" style="margin-right: 8px;"></i>Launch TrueBalance Planner</a>
+							</div>
+							
+							<!-- Footer Navigation -->
+							<div class="text-center" style="margin-top: 50px;">
+								<a href="index.html#portfolio" id="btn-back-bottom" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Portfolio</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<div class='footer bg-lightgray section-block' >
+				<div class='container' >
+					<div class='row' >
+						<div class='col-xs-6 text-left' >
+							<h4>CognitPath</h4>
+							<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
+						</div>
+						<div class='col-xs-6 text-right' >
+							<ul class='footer-social' >
+								<li>
+									<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+										<i class='ion-social-linkedin' ></i>
+									</a>
+								</li>
+								<li>
+									<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+										<i class='ion-social-github' ></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<i class='ion-email' ></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>

@@ -10,8 +10,9 @@ $(function(){
 	
 	
 	$(window).on('load', function(){
-	
-		$('body').addClass('loaded');
+		setTimeout(function(){
+			$('body').addClass('loaded');
+		}, 800);
 	
 		
 		/*=========================================================================

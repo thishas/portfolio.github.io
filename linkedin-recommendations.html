@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>LinkedIn Recommendations - Thisha Smith</title>
+		<meta name="description" content="Public LinkedIn recommendations from colleagues, leaders, and partners highlighting business analysis, data analytics, and quality assurance.">
+		<meta name="keywords" content="LinkedIn recommendations, business analyst, data analyst, QA engineer, testimonials, Intel, Thisha Smith">
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="icon" type="image/png" href="img/favicon_transparent.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="img/favicon_transparent.png">
+
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.carousel.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.theme.css' >
+		<link rel='stylesheet' type='text/css' href='css/owl.transitions.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		<style>
+			body {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+				font-family: 'Raleway', 'Open Sans', sans-serif;
+			}
+			#wrapper {
+				background-color: #F7F2EA !important;
+			}
+			.case-study-hero {
+				background-color: #EFE7DA;
+				padding: 60px 0;
+				text-align: center;
+				border-bottom: 2px solid #B89B72;
+			}
+			.case-study-hero h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.case-study-hero .subtitle {
+				font-size: 14px;
+				color: #B89B72;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			.case-study-hero .overview {
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 15px;
+				line-height: 1.8;
+				color: #2F2F2F;
+				opacity: 0.9;
+			}
+			.btn-back {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 24px !important;
+				font-weight: 700;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-top: 20px;
+				transition: all 0.3s ease !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.btn-back:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				color: #F7F2EA !important;
+			}
+			
+			/* Recommendations Grid & Cards */
+			@media (min-width: 768px) {
+				.recommendations-grid {
+					display: flex;
+					flex-wrap: wrap;
+				}
+				.recommendations-grid > div {
+					display: flex;
+				}
+			}
+			.recommendation-card-wrapper {
+				text-decoration: none !important;
+				display: block;
+				width: 100%;
+				height: 100%;
+				color: inherit !important;
+			}
+			.recommendation-card-wrapper:focus {
+				outline: none;
+			}
+			.recommendation-card-wrapper:focus .recommendation-card {
+				box-shadow: 0 0 0 3px rgba(30, 158, 143, 0.6) !important;
+				border-color: #1E9E8F !important;
+			}
+			.recommendation-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+				transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				height: 100%;
+				width: 100%;
+			}
+			.recommendation-card h4 {
+				font-size: 16px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 4px;
+				font-family: Raleway, sans-serif;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.recommendation-card-title {
+				font-size: 11.5px;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				color: #B89B72;
+				font-weight: 700;
+				margin-bottom: 15px;
+				line-height: 1.4;
+				min-height: 32px;
+				display: flex;
+				align-items: center;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.recommendation-card-excerpt {
+				font-family: 'Playfair Display', 'Crimson Text', serif;
+				font-size: 13.5px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				font-style: italic;
+				margin-bottom: 20px;
+				flex-grow: 1;
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			.recommendation-card .btn-linkedin {
+				display: block;
+				width: 100%;
+				text-align: center;
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 15px !important;
+				font-size: 11px !important;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+			}
+			.recommendation-card .btn-linkedin i {
+				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+			}
+			
+			/* Desktop & Hover Device Overrides */
+			@media (hover: hover) {
+				.recommendation-card-wrapper:hover .recommendation-card {
+					cursor: pointer;
+					transform: translateY(-5px);
+					background: linear-gradient(135deg, #1E9E8F, #2AB7C8) !important;
+					box-shadow: 0 15px 30px rgba(30, 158, 143, 0.25) !important;
+					border-color: #1E9E8F !important;
+				}
+				.recommendation-card-wrapper:hover .recommendation-card h4 {
+					color: #FFFFFF !important;
+				}
+				.recommendation-card-wrapper:hover .recommendation-card .recommendation-card-title {
+					color: #F7F2EA !important;
+					opacity: 0.9;
+				}
+				.recommendation-card-wrapper:hover .recommendation-card .recommendation-card-excerpt {
+					color: #FFFFFF !important;
+				}
+				.recommendation-card-wrapper:hover .recommendation-card .btn-linkedin {
+					background-color: #F7F2EA !important;
+					border-color: #F7F2EA !important;
+					color: #1E9E8F !important;
+					box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+				}
+				.recommendation-card-wrapper:hover .recommendation-card .btn-linkedin i {
+					color: #1E9E8F !important;
+				}
+				.recommendation-card-wrapper:hover .recommendation-card .btn-linkedin:hover {
+					background-color: #2F2F2F !important;
+					border-color: #2F2F2F !important;
+					color: #F7F2EA !important;
+					transform: translateY(-2px);
+					box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+				}
+				.recommendation-card-wrapper:hover .recommendation-card .btn-linkedin:hover i {
+					color: #F7F2EA !important;
+				}
+			}
+			
+			/* Approved Footer Overrides */
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important;
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.footer h4 {
+				color: #2F2F2F !important;
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				margin-top: 0;
+			}
+			.footer p {
+				color: #2F2F2F !important;
+				opacity: 0.85 !important;
+			}
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+		
+			/* Mobile Responsiveness Polish */
+			@media (max-width: 991px) {
+				.case-study-hero {
+					padding: 40px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 26px !important;
+				}
+			}
+			@media (max-width: 767px) {
+				.case-study-hero {
+					padding: 30px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 22px !important;
+					letter-spacing: 1px !important;
+				}
+				.case-study-hero .subtitle {
+					font-size: 11px !important;
+					letter-spacing: 1px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-hero .overview {
+					font-size: 13px !important;
+					line-height: 1.6 !important;
+				}
+				.recommendation-card {
+					padding: 20px !important;
+				}
+				.recommendation-card-title {
+					min-height: auto !important;
+					margin-bottom: 10px !important;
+				}
+				.btn-back {
+					font-size: 12px !important;
+					padding: 10px 20px !important;
+					margin-top: 15px !important;
+					display: inline-block !important;
+				}
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<!--close button-->
+		<a href='index.html#about' id="btn-close" class='close-btn' title="Back to About">
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		<!--preloader-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='img/load.gif' alt='Preloader' >
+			</div>
+		</div>
+		<!--/preloader-->
+		
+		<div id='wrapper' >
+			
+			<!-- Hero Section -->
+			<section class="case-study-hero">
+				<div class="container">
+					<h1>LinkedIn Recommendations</h1>
+					<div class="subtitle">Public recommendations from colleagues, leaders, and cross-functional partners</div>
+					<p class="overview">
+						These recommendations highlight my work across business analysis, data reporting, quality assurance, stakeholder collaboration, leadership, documentation, and process improvement.
+					</p>
+					<p style="font-size: 11.5px; font-style: italic; color: #2F2F2F; opacity: 0.75; margin-top: 15px; font-family: 'Open Sans', sans-serif;">
+						Recommendations are summarized from public LinkedIn recommendations and linked to the recommender’s LinkedIn profile when available.
+					</p>
+					<div>
+						<a href="index.html#about" id="btn-back-top" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to About</a>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Recommendations Body Content -->
+			<section style="padding: 60px 0;">
+				<div class="container">
+					
+					<div class="recommendations-grid row">
+						
+						<!-- Card 1 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/jakub-kuchta/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Jakub Kuchta</h4>
+										<div class="recommendation-card-title">Lead Data Analytics Engineer</div>
+										<p class="recommendation-card-excerpt">
+											"Rare combination of organizational and analytical skills, a constant growth mindset, and a commitment to lifelong learning."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 2 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/vahid-nikougoftar/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Vahid Nikougoftar</h4>
+										<div class="recommendation-card-title">AV Safety SWE @ Zoox</div>
+										<p class="recommendation-card-excerpt">
+											"Exceptional Data Analyst with technical expertise, business acumen, and a deep understanding of the data management lifecycle."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 3 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/kleber-haraguchi/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Kleber Haraguchi</h4>
+										<div class="recommendation-card-title">Business Intelligence & Operations Lead</div>
+										<p class="recommendation-card-excerpt">
+											"Exceptional professional with strong interpersonal skills, technical proficiency, dedication, and the ability to navigate multiple domains."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 4 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/moumita-ghosh-b0984314/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Moumita Ghosh</h4>
+										<div class="recommendation-card-title">Data & Analytics Specialist</div>
+										<p class="recommendation-card-excerpt">
+											"Very competent business analyst who helped streamline partner operations, requirements gathering, prioritization, and clear concise presentation."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 5 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/ericclind/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Eric Lind</h4>
+										<div class="recommendation-card-title">Business Systems Analyst & Architect</div>
+										<p class="recommendation-card-excerpt">
+											"Highly skilled at communicating change and digesting complex technical concepts while leading stakeholders through complex change."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 6 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/kim-ogawa-466a4a2/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Kim Ogawa</h4>
+										<div class="recommendation-card-title">Strategic Partner Marketing Manager at Intel</div>
+										<p class="recommendation-card-excerpt">
+											"Thoughtful, responsive, fluent, and highly knowledgeable in data accuracy, validation, reporting, and partner strategy support."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 7 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/norberto-mateos-098976/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Norberto Mateos</h4>
+										<div class="recommendation-card-title">EMEA Channel Sales Director</div>
+										<p class="recommendation-card-excerpt">
+											"Effective driving force behind partner reports, with strong commitment to quality, coordination, communication, and high standards."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 8 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/lisa-brown-369ba089/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Lisa Brown</h4>
+										<div class="recommendation-card-title">Product Manager</div>
+										<p class="recommendation-card-excerpt">
+											"High performer with a consistent track record of success. Designed a dashboard and process that reduced manual status follow-up for monthly data submissions."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 9 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/liakashdan/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Lia Kashdan</h4>
+										<div class="recommendation-card-title">Partner Alliance Strategy Specialist</div>
+										<p class="recommendation-card-excerpt">
+											"Disciplined and methodical analyst with strong QA experience, predictable reporting cadence, and documented quality issue tracking."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 10 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/annematson/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Anne Matson</h4>
+										<div class="recommendation-card-title">Global Partner Director & Leadership Coach</div>
+										<p class="recommendation-card-excerpt">
+											"Quick learner who takes initiative, identifies problems, assumes ownership, and engages experts to help resolve issues."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 11 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/tyjones/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Tychaun Jones</h4>
+										<div class="recommendation-card-title">Software Engineering Manager at Intel</div>
+										<p class="recommendation-card-excerpt">
+											"Validation engineer who analyzes test results and identifies solutions to improve graphics driver health."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 12 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/pushpaadusumalli/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Pushpa A</h4>
+										<div class="recommendation-card-title">GPU Software Engineer</div>
+										<p class="recommendation-card-excerpt">
+											"Mentor and team member who is organized, detailed, disciplined, patient, and ready to guide others."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 13 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/eugene-asare-mensah-b917a0254/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Eugene Asare-Mensah</h4>
+										<div class="recommendation-card-title">Sr Principal Engineer</div>
+										<p class="recommendation-card-excerpt">
+											"Shows strong leadership, attention to detail, dependability, and team-player qualities through years of board-level collaboration."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 14 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/aarthi-krishnamurthy-4b7676aa/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Aarthi Krishnamurthy</h4>
+										<div class="recommendation-card-title">Sr. GPU Software Development Engineer at Intel</div>
+										<p class="recommendation-card-excerpt">
+											"Validation component owner with strong collaboration, work ethic, organization, mentorship, and delivery focus."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 15 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/ashishcs2/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Ashish Srivastava</h4>
+										<div class="recommendation-card-title">SVP, Chief Digital & Information Officer</div>
+										<p class="recommendation-card-excerpt">
+											"Analytical and technical resource with strong attention to detail, relevance to the bigger picture, data analysis, and testing ability."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+						<!-- Card 16 -->
+						<div class="col-md-4 col-sm-6 col-xs-12" style="margin-bottom: 30px;">
+							<a href="https://www.linkedin.com/in/eric-warren-9ba77512/" target="_blank" rel="noopener noreferrer" class="recommendation-card-wrapper">
+								<div class="recommendation-card">
+									<div>
+										<h4>Eric Warren</h4>
+										<div class="recommendation-card-title">Senior Analyst</div>
+										<p class="recommendation-card-excerpt">
+											"Detailed-oriented, outgoing, and hardworking."
+										</p>
+									</div>
+									<div>
+										<span class="btn-linkedin"><i class="ion-social-linkedin" style="margin-right: 6px;"></i>View LinkedIn Profile</span>
+									</div>
+								</div>
+							</a>
+						</div>
+						
+					</div>
+					
+					<!-- Footer Navigation -->
+					<div class="text-center" style="margin-top: 30px;">
+						<a href="index.html#about" id="btn-back-bottom" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to About</a>
+					</div>
+					
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<div class='footer bg-lightgray section-block' >
+				<div class='container' >
+					<div class='row' >
+						<div class='col-xs-6 text-left' >
+							<h4>CognitPath</h4>
+							<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
+						</div>
+						<div class='col-xs-6 text-right' >
+							<ul class='footer-social' >
+								<li>
+									<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+										<i class='ion-social-linkedin' ></i>
+									</a>
+								</li>
+								<li>
+									<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+										<i class='ion-social-github' ></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<i class='ion-email' ></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>

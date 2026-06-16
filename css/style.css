@@ -286,9 +286,9 @@ body.section-show .section.active{
 	bottom:0;
 	background:#FFF;
 	z-index:199;
-	-webkit-transition:all .5s ease;
-	-moz-transition:all .5s ease;
-	transition:all .5s ease;
+	-webkit-transition:all 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+	-moz-transition:all 1.3s cubic-bezier(0.25, 1, 0.5, 1);
+	transition:all 1.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .js #preloader .loader{
 	position:absolute;

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html class='no-js' lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Executive Reporting Package - Thisha Smith</title>
+		<meta name="description" content="Simulated leadership executive reporting package summarizing findings, risks, and strategic recommendations.">
+		
+		<link rel="icon" type="image/png" href="img/favicon_transparent.png" sizes="32x32">
+		<link rel="apple-touch-icon" href="img/favicon_transparent.png">
+
+		<link rel='stylesheet' type='text/css' href='bootstrap/css/bootstrap.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/ionicons.min.css' >
+		<link rel='stylesheet' type='text/css' href='css/style.css' >
+		<link rel='stylesheet' type='text/css' href='css/color-default.css' >
+		
+		<style>
+			body {
+				background-color: #F7F2EA !important;
+				color: #2F2F2F !important;
+				font-family: 'Raleway', 'Open Sans', sans-serif;
+			}
+			#wrapper {
+				background-color: #F7F2EA !important;
+			}
+			.case-study-hero {
+				background-color: #EFE7DA;
+				padding: 60px 0;
+				text-align: center;
+				border-bottom: 2px solid #B89B72;
+			}
+			.case-study-hero h1 {
+				font-size: 32px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+			.case-study-hero .subtitle {
+				font-size: 14px;
+				color: #B89B72;
+				font-weight: 700;
+				letter-spacing: 1.5px;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			.case-study-hero .overview {
+				max-width: 800px;
+				margin: 0 auto;
+				font-size: 15px;
+				line-height: 1.8;
+				color: #2F2F2F;
+				opacity: 0.9;
+			}
+			.btn-back {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				border: 1px solid #7A3E2D !important;
+				padding: 10px 24px !important;
+				font-weight: 700;
+				font-size: 13px !important;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				border-radius: 4px;
+				display: inline-block;
+				margin-top: 20px;
+				transition: all 0.3s ease !important;
+				text-decoration: none !important;
+				box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			}
+			.btn-back:hover {
+				background-color: #2F2F2F !important;
+				border-color: #2F2F2F !important;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+				color: #F7F2EA !important;
+			}
+			
+			.section-title {
+				font-size: 18px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 50px;
+				margin-bottom: 25px;
+				border-bottom: 2px solid #B89B72;
+				padding-bottom: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			
+			.disclaimer-banner {
+				background-color: rgba(184, 155, 114, 0.12);
+				border: 1px dashed #B89B72;
+				border-left: 5px solid #7A3E2D;
+				border-radius: 6px;
+				padding: 20px;
+				margin: 30px auto 10px auto;
+				max-width: 900px;
+			}
+			.disclaimer-banner h4 {
+				font-size: 14px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 8px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.disclaimer-banner p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* KPI cards */
+			.kpi-row {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0 -10px 30px -10px;
+			}
+			.kpi-col {
+				flex: 1;
+				min-width: 150px;
+				padding: 0 10px;
+				margin-bottom: 20px;
+			}
+			.kpi-card {
+				background: #EFE7DA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px 15px;
+				text-align: center;
+				transition: all 0.3s ease;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+			}
+			.kpi-card:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 6px 12px rgba(122, 62, 45, 0.08);
+				border-color: #B89B72;
+				background: #F7F2EA;
+			}
+			.kpi-value {
+				font-size: 30px;
+				font-weight: 700;
+				color: #7A3E2D;
+				margin-bottom: 5px;
+				line-height: 1.2;
+			}
+			.kpi-label {
+				font-size: 11px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #2F2F2F;
+				font-weight: 700;
+				opacity: 0.8;
+			}
+
+			/* Risk cards */
+			.risk-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 20px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+				height: 100%;
+				border-left: 5px solid transparent;
+				transition: all 0.3s ease;
+			}
+			.risk-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+			}
+			.risk-card.low {
+				border-left-color: #2e7d32;
+			}
+			.risk-card.medium {
+				border-left-color: #B89B72;
+			}
+			.risk-card.high {
+				border-left-color: #7A3E2D;
+			}
+			.risk-card h4 {
+				font-size: 13px;
+				font-weight: 700;
+				margin-top: 0;
+				margin-bottom: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+			.risk-card.low h4 { color: #2e7d32; }
+			.risk-card.medium h4 { color: #B89B72; }
+			.risk-card.high h4 { color: #7A3E2D; }
+			.risk-card p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Standard Card (for Findings and Recommendations) */
+			.info-card {
+				background: #F7F2EA;
+				border: 1px solid #EFE7DA;
+				border-radius: 8px;
+				padding: 25px;
+				margin-bottom: 25px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.01);
+			}
+			.info-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+			.info-list li {
+				position: relative;
+				padding-left: 25px;
+				font-size: 13.5px;
+				color: #2F2F2F;
+				margin-bottom: 12px;
+				line-height: 1.6;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.info-list li::before {
+				content: "•";
+				color: #7A3E2D;
+				font-size: 20px;
+				position: absolute;
+				left: 5px;
+				top: -3px;
+				font-weight: bold;
+			}
+			.info-list.check li::before {
+				content: "\f3ff"; /* ion-ios-checkmark */
+				font-family: "Ionicons";
+				font-size: 18px;
+				top: -1px;
+			}
+
+			/* Recommendation block styling */
+			.rec-card-wrapper {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 15px;
+				margin-bottom: 30px;
+			}
+			.rec-card {
+				flex: 1;
+				min-width: 200px;
+				background: #EFE7DA;
+				border-radius: 6px;
+				padding: 20px;
+				border-left: 4px solid #7A3E2D;
+			}
+			.rec-card h4 {
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #7A3E2D;
+				margin-top: 0;
+				margin-bottom: 10px;
+				font-weight: 700;
+			}
+			.rec-card p {
+				font-size: 13px;
+				line-height: 1.6;
+				color: #2F2F2F;
+				margin: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+
+			/* Badges/Chips */
+			.badges-container {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+				margin-bottom: 30px;
+			}
+			.badge-chip {
+				background-color: #EFE7DA;
+				color: #2F2F2F;
+				padding: 6px 14px;
+				border-radius: 20px;
+				font-size: 11.5px;
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				border: 1px solid #B89B72;
+			}
+
+			/* Approved Footer Overrides from main site */
+			.bg-lightgray, .footer {
+				background-color: #EFE7DA !important; /* Warm Sand / Tan */
+			}
+			.footer {
+				border-top: solid 1px #EFE7DA !important;
+				padding: 30px 0 !important;
+			}
+			.footer h4 {
+				color: #2F2F2F !important;
+				font-family: Raleway, sans-serif !important;
+				font-weight: 700 !important;
+				letter-spacing: 1px !important;
+				text-transform: uppercase !important;
+				margin-top: 0;
+			}
+			.footer p {
+				color: #2F2F2F !important;
+				opacity: 0.85 !important;
+			}
+			.footer-social > li > a {
+				background-color: #2F2F2F !important;
+				color: #F7F2EA !important;
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+				display: block;
+			}
+			.footer-social > li > a:hover {
+				background-color: #7A3E2D !important;
+				color: #F7F2EA !important;
+				transform: translateY(-5px) scale(1.1) rotate(45deg) !important;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15) !important;
+			}
+			.footer-social > li > a:hover > i {
+				transform: rotate(-45deg) scale(1.05) !important;
+			}
+		
+			/* Mobile Responsiveness Polish */
+			.table-responsive {
+				overflow-x: auto !important;
+				-webkit-overflow-scrolling: touch;
+			}
+			@media (max-width: 991px) {
+				.case-study-hero {
+					padding: 40px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 26px !important;
+				}
+			}
+			@media (max-width: 767px) {
+				.case-study-hero {
+					padding: 30px 0 !important;
+				}
+				.case-study-hero h1 {
+					font-size: 22px !important;
+					letter-spacing: 1px !important;
+				}
+				.case-study-hero .subtitle {
+					font-size: 11px !important;
+					letter-spacing: 1px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-hero .overview {
+					font-size: 13px !important;
+					line-height: 1.6 !important;
+				}
+				.section-title {
+					font-size: 15px !important;
+					margin-top: 35px !important;
+					margin-bottom: 15px !important;
+				}
+				.case-study-table th, .case-study-table td {
+					padding: 10px 12px !important;
+					font-size: 12px !important;
+				}
+				.btn-back {
+					font-size: 11px !important;
+					padding: 8px 18px !important;
+					margin-top: 15px !important;
+				}
+				.kpi-value {
+					font-size: 24px !important;
+				}
+				.kpi-card {
+					padding: 15px 10px !important;
+				}
+				.recommendations-card {
+					padding: 15px !important;
+				}
+				.formula-card {
+					padding: 15px !important;
+				}
+				.formula-code {
+					font-size: 11.5px !important;
+					padding: 10px !important;
+				}
+				.btn-back {
+					font-size: 12px !important;
+					padding: 10px 20px !important;
+					margin-top: 15px !important;
+					display: inline-block !important;
+				}
+				/* Footer Stacking and Centering */
+				.footer .text-left, .footer .text-right {
+					width: 100% !important;
+					text-align: center !important;
+					float: none !important;
+					margin-bottom: 15px !important;
+				}
+				.footer .text-right {
+					margin-bottom: 0 !important;
+				}
+				.footer-social {
+					justify-content: center !important;
+					display: flex !important;
+					padding-left: 0 !important;
+				}
+				.footer-social > li {
+					margin: 0 10px !important;
+				}
+				.footer-social > li > a {
+					height: 36px !important;
+					width: 36px !important;
+					line-height: 36px !important;
+				}
+				.footer-social > li > a > i:before {
+					font-size: 16px !important;
+				}
+			}
+		</style>
+	</head>
+	
+	<body>
+		
+		<!--close button-->
+		<a href='healthcare-reporting-case-study.html' id="btn-close" class='close-btn' title="Back to Healthcare Case Study">
+			<span></span>
+			<span></span>
+		</a>
+		<!--/close button-->
+		
+		<!--preloader-->
+		<div id='preloader' >
+			<div class='loader' >
+				<img src='img/load.gif' alt='Preloader' >
+			</div>
+		</div>
+		<!--/preloader-->
+		
+		<div id='wrapper' >
+			
+			<!-- Hero Section -->
+			<section class="case-study-hero">
+				<div class="container">
+					<h1>Executive Reporting Package</h1>
+					<div class="subtitle">Leadership Summary &amp; Recommendations</div>
+					<p class="overview">
+						This artifact simulates a leadership-facing reporting package summarizing monthly readiness, operational risk, root cause findings, and recommendations for reporting governance.
+					</p>
+					<div>
+						<a href="healthcare-reporting-case-study.html" id="btn-back-top" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Healthcare Case Study</a>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Portfolio Disclaimer Banner -->
+			<div class="container">
+				<div class="disclaimer-banner">
+					<h4><i class="ion-alert-circled" style="margin-right: 8px; color: #7A3E2D;"></i>Portfolio Demonstration Environment</h4>
+					<p>All data, member identifiers, reporting records, metrics, and examples shown on this page are simulated for portfolio demonstration purposes only. No actual patient, member, provider, employer, healthcare organization, or health plan data is displayed.</p>
+				</div>
+			</div>
+			
+			<!-- Case Study Body Content -->
+			<section style="padding: 40px 0 60px 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							
+							<!-- Executive Overview -->
+							<h3 class="section-title"><i class="ion-ios-paper-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Executive Overview</h3>
+							<div class="info-card" style="background-color: #EFE7DA;">
+								<p style="margin: 0; font-size: 14px; line-height: 1.7; font-family: 'Open Sans', sans-serif;">
+									This executive reporting package summarizes monthly reporting readiness, exception trends, root cause findings, operational risks, and recommended actions for leadership review.
+								</p>
+							</div>
+							
+							<!-- KPI Snapshot -->
+							<h3 class="section-title"><i class="ion-ios-speedometer-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Monthly KPI Snapshot</h3>
+							<div class="kpi-row">
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">May 2026</div>
+										<div class="kpi-label">Reporting Month</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">1,139</div>
+										<div class="kpi-label">Members Reviewed</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">142</div>
+										<div class="kpi-label">Exceptions Identified</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">137</div>
+										<div class="kpi-label">Resolved</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">5</div>
+										<div class="kpi-label">Outstanding</div>
+									</div>
+								</div>
+								<div class="kpi-col">
+									<div class="kpi-card">
+										<div class="kpi-value">99.6%</div>
+										<div class="kpi-label">Submission Readiness</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Risk Assessment -->
+							<h3 class="section-title"><i class="ion-alert-circled" style="margin-right: 10px; color: #7A3E2D;"></i>Risk Assessment</h3>
+							<div class="row">
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="risk-card low">
+										<h4>Low Risk</h4>
+										<p>Resolved duplicate record exceptions by executing cross-record checks before final workbook lock.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="risk-card medium">
+										<h4>Medium Risk</h4>
+										<p>Missing MCP plan-level identifiers require upstream source file extraction logic updates.</p>
+									</div>
+								</div>
+								<div class="col-md-4" style="margin-bottom: 20px;">
+									<div class="risk-card high">
+										<h4>High Risk</h4>
+										<p>Inconsistent outreach and referral date logic can lead to validation fails and affect final submission accuracy.</p>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Findings -->
+							<h3 class="section-title"><i class="ion-ios-search" style="margin-right: 10px; color: #7A3E2D;"></i>Monthly Findings</h3>
+							<div class="info-card">
+								<ul class="info-list">
+									<li>Most exceptions originated from missing referral dates and inconsistent outreach record updates.</li>
+									<li>Duplicate member records were successfully identified and merged before final submission compilation.</li>
+									<li>Plan-specific reporting compliance rules required separate verification script logic passes.</li>
+									<li>Exception tracking Dashboards dramatically improved lead validation readiness visibility.</li>
+								</ul>
+							</div>
+							
+							<!-- Recommendations -->
+							<h3 class="section-title"><i class="ion-ios-star-outline" style="margin-right: 10px; color: #7A3E2D;"></i>VP-Level Recommendations</h3>
+							<div class="rec-card-wrapper">
+								<div class="rec-card">
+									<h4>1. Standardize Intake</h4>
+									<p>Establish strict, normalized formats at source referral checkpoints to prevent entry errors.</p>
+								</div>
+								<div class="rec-card">
+									<h4>2. Automated Validation</h4>
+									<p>Expand rule validations further upstream, processing database sanity checks pre-extraction.</p>
+								</div>
+								<div class="rec-card">
+									<h4>3. Centralized Issues</h4>
+									<p>Centralize exception logs to improve issue resolution turnaround SLAs.</p>
+								</div>
+								<div class="rec-card">
+									<h4>4. Documentation</h4>
+									<p>Write detailed data dictionary logic and validation rules for audit readiness.</p>
+								</div>
+								<div class="rec-card">
+									<h4>5. Earlier Auditing</h4>
+									<p>Perform initial validation trials earlier in the monthly reporting pipeline cycle.</p>
+								</div>
+							</div>
+							
+							<!-- Expected Outcomes -->
+							<h3 class="section-title"><i class="ion-ios-checkmark-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Expected Governance Outcomes</h3>
+							<div class="info-card">
+								<ul class="info-list check">
+									<li>Reduced manual review overhead through automation.</li>
+									<li>Improved submission readiness score targets.</li>
+									<li>Consistent and robust compliance audit traceability logs.</li>
+									<li>Earlier identification and mitigation of month-end reporting risks.</li>
+									<li>Enhanced cross-functional leadership visibility.</li>
+								</ul>
+							</div>
+							
+							<!-- Target Audience -->
+							<h3 class="section-title"><i class="ion-ios-people-outline" style="margin-right: 10px; color: #7A3E2D;"></i>Target Stakeholder Audience</h3>
+							<div class="badges-container">
+								<span class="badge-chip">Directors</span>
+								<span class="badge-chip">Operations Leaders</span>
+								<span class="badge-chip">Reporting Managers</span>
+								<span class="badge-chip">Compliance Stakeholders</span>
+								<span class="badge-chip">Program Leadership</span>
+							</div>
+							
+							<!-- Footer Navigation -->
+							<div class="text-center" style="margin-top: 50px;">
+								<a href="healthcare-reporting-case-study.html" id="btn-back-bottom" class="btn-back"><i class="ion-ios-arrow-back" style="margin-right: 8px;"></i>Back to Healthcare Case Study</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<div class='footer bg-lightgray section-block' >
+				<div class='container' >
+					<div class='row' >
+						<div class='col-xs-6 text-left' >
+							<h4>CognitPath</h4>
+							<p style="margin: 5px 0 0 0; font-size: 12px; color: #2F2F2F; opacity: 0.85; font-family: 'Open Sans', sans-serif;">&copy; 2026 CognitPath. Built by Thisha Smith.</p>
+						</div>
+						<div class='col-xs-6 text-right' >
+							<ul class='footer-social' >
+								<li>
+									<a href='https://www.linkedin.com/in/thisha/' target='_blank' title='LinkedIn' >
+										<i class='ion-social-linkedin' ></i>
+									</a>
+								</li>
+								<li>
+									<a href='https://github.com/thishas' target='_blank' title='GitHub' >
+										<i class='ion-social-github' ></i>
+									</a>
+								</li>
+								<li>
+									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<i class='ion-email' ></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src='js/jquery.min.js' ></script>
+		<script src='js/jquery.stellar.min.js' ></script>
+		<script src='js/modernizr.js' ></script>
+		<script src='js/owl.carousel.min.js' ></script>
+		<script src='js/jquery.shuffle.min.js' ></script>
+		<script src='js/jquery.magnific-popup.min.js' ></script>
+		<script src='js/validator.min.js' ></script>
+		<script src='js/smoothscroll.js' ></script>
+		<script src='js/script.js' ></script>
+		
+	</body>
+	
+</html>
