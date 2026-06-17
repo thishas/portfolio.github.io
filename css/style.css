@@ -1914,3 +1914,42 @@ body .symp-btn{
 		left:-40px;
 	}
 }
+
+/*=========================================================================
+	Back to Top Button Styling
+=========================================================================*/
+.back-to-top-btn {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 45px;
+	height: 45px;
+	background-color: #7A3E2D !important; /* Ember Clay */
+	color: #F7F2EA !important; /* Soft Ivory */
+	border-radius: 50%;
+	text-align: center;
+	line-height: 43px;
+	text-decoration: none !important;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 9999;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+}
+.back-to-top-btn i {
+	font-size: 22px;
+	color: #F7F2EA !important;
+	display: inline-block;
+	vertical-align: middle;
+}
+.back-to-top-btn:hover, .back-to-top-btn:focus {
+	background-color: #2F2F2F !important; /* Charcoal */
+	color: #F7F2EA !important;
+	transform: translateY(-4px);
+	box-shadow: 0 6px 15px rgba(122, 62, 45, 0.3);
+}
+.back-to-top-btn.show {
+	opacity: 1;
+	visibility: visible;
+}

@@ -13,6 +13,16 @@
 
 	
 		<title>Thisha Smith - Business Analyst / QA Engineer </title>
+		<!-- GA4 configured for Thisha.net -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYT28BGMF7"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-XYT28BGMF7');
+		</script>
 		<meta name="description" content="Thisha Smith - Professional Portfolio: Business Analyst, Data Reporting Specialist, QA & Cybersecurity Professional.">
 		<meta name="keywords" content="Thisha Smith, business analyst, data analyst, qa engineer, quality assurance, cybersecurity, healthcare reporting, resume, portfolio">
 		
@@ -355,12 +365,148 @@
 				color: #2F2F2F !important;
 			}
 
+			/* Disable and hide the gray transition mask entirely to prevent gray overlays during navigation */
+			.transition-mask,
+			body.section-show .transition-mask,
+			body.section-show .transition-mask:before,
+			body.section-show .transition-mask:after {
+				display: none !important;
+				background: transparent !important;
+				width: 0 !important;
+				height: 0 !important;
+				opacity: 0 !important;
+				visibility: hidden !important;
+				z-index: -999 !important;
+			}
+
+			/* Make sections fade in immediately without the 1.2s delay */
+			body.section-show .section.active {
+				-webkit-transition: opacity 0.4s ease !important;
+				-moz-transition: opacity 0.4s ease !important;
+				transition: opacity 0.4s ease !important;
+			}
+
+			/* Disable selection on visual diamond to prevent highlight blocks */
+			.front-person-img {
+				user-select: none;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+			}
+
+			/* Homepage Hero Responsive Scaling Variables (Desktop/Laptop) */
+			@media (min-width: 992px) {
+				:root {
+					--hero-img-size: clamp(280px, min(43vh, 43vw), 440px);
+					--hero-titles-size: calc(var(--hero-img-size) * 1.07);
+					--hero-margin-top: clamp(60px, 8vh, 130px);
+					--hero-heading-margin-top: clamp(50px, 7vh, 90px);
+				}
+
+				.front-section {
+					padding-top: clamp(30px, 4vh, 60px) !important;
+					padding-bottom: clamp(50px, 6vh, 120px) !important;
+					min-height: 100vh;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					box-sizing: border-box;
+				}
+
+				.front-section > .container {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+				}
+
+				.hero-wrapper {
+					position: relative !important;
+					width: var(--hero-img-size) !important;
+					height: var(--hero-img-size) !important;
+					margin: var(--hero-margin-top) auto 0 auto !important;
+					z-index: 15 !important;
+				}
+
+				.front-person-img {
+					position: absolute !important;
+					top: 0 !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: 100% !important;
+					margin: 0 !important;
+					z-index: 5 !important;
+					background: transparent !important;
+				}
+
+				.front-person-img::before {
+					content: '' !important;
+					position: absolute !important;
+					top: 0 !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: 100% !important;
+					background: #EFE7DA !important;
+					z-index: 1 !important;
+				}
+
+				.front-person-img > img {
+					position: relative !important;
+					z-index: 2 !important;
+					transform: rotate(-45deg) translateY(calc(var(--hero-img-size) * 0.08)) !important;
+				}
+
+				.front-person-titles {
+					position: absolute !important;
+					top: calc(-1 * (var(--hero-titles-size) - var(--hero-img-size)) / 2) !important;
+					left: calc(-1 * (var(--hero-titles-size) - var(--hero-img-size)) / 2) !important;
+					height: var(--hero-titles-size) !important;
+					width: var(--hero-titles-size) !important;
+					margin: 0 !important;
+					z-index: 20 !important;
+				}
+
+				.front-person-links {
+					position: absolute !important;
+					top: 0 !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: 100% !important;
+					margin: 0 !important;
+					z-index: 25 !important;
+				}
+
+				.front-person-links > ul > li > a {
+					font-size: clamp(0.7rem, 0.9vw, 1rem) !important;
+					padding: clamp(14px, 2vh, 22px) 0 !important;
+				}
+
+				.front-person-links a:focus {
+					outline: 2px dashed #7A3E2D !important;
+					outline-offset: 4px;
+				}
+
+				.front-heading {
+					margin-top: var(--hero-heading-margin-top) !important;
+				}
+
+				.front-heading > h2 {
+					font-size: clamp(36px, 4.5vh, 55px) !important;
+					letter-spacing: clamp(10px, 1.2vw, 15px) !important;
+				}
+
+				.front-heading > p {
+					font-size: clamp(13px, 1.6vh, 16px) !important;
+				}
+			}
+
 			/* Circular Text Readability & Tonal Consistency & Spacing Outward */
 			.front-person-titles {
-				height: 535px !important;
-				width: 535px !important;
-				margin-top: -518px !important;
-				margin-bottom: -17px !important;
+				height: 535px;
+				width: 535px;
+				margin-top: -518px;
+				margin-bottom: -17px;
 			}
 			.front-person-titles > span {
 				font-family: Raleway, sans-serif !important;
@@ -935,12 +1081,12 @@
 
 			/* Testimonial Typography Refinements */
 			.testimonial > p {
-				font-family: 'Playfair Display', 'Crimson Text', serif !important;
+				font-family: 'Open Sans', sans-serif !important;
 				font-size: 15px !important;
 				line-height: 1.8 !important;
 				color: #2F2F2F !important; /* Charcoal text */
-				font-style: italic !important;
-				font-weight: 400 !important;
+				font-style: normal !important;
+				font-weight: 600 !important;
 				max-width: 700px !important;
 				margin: 0 auto !important;
 				text-align: center !important;
@@ -1060,6 +1206,34 @@
 					visibility: visible !important;
 					transform: translateY(0) !important;
 				}
+				.hero-wrapper {
+					position: relative !important;
+					width: 100% !important;
+					height: auto !important;
+					margin: 0 !important;
+					display: block !important;
+				}
+				.front-person-img {
+					position: relative !important;
+					margin: 200px auto 0 auto !important;
+					background: transparent !important;
+					z-index: 5 !important;
+				}
+				.front-person-img::before {
+					content: '' !important;
+					position: absolute !important;
+					top: 0 !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: 100% !important;
+					background: #EFE7DA !important;
+					z-index: 1 !important;
+				}
+				.front-person-img > img {
+					position: relative !important;
+					z-index: 2 !important;
+					transform: rotate(-45deg) translateY(45px) !important;
+				}
 			}
 			@media (max-width: 767px) {
 				/* Global Section spacing on mobile */
@@ -1156,6 +1330,15 @@
 				.footer-social > li > a > i:before {
 					font-size: 16px !important;
 				}
+				.front-person-img {
+					margin-top: 120px !important;
+				}
+				.front-person-img > img {
+					transform: rotate(-45deg) translateY(100px) !important;
+					position: absolute !important;
+					bottom: 0 !important;
+					left: -40px !important;
+				}
 			}
 			@media (max-width: 480px) {
 				/* Skills Grid 2x2 layout on narrow screens */
@@ -1213,70 +1396,73 @@
 					<div class='transition-mask' ></div>
 					
 					
-					<div class='front-person-img' >
+					<!-- Hero Wrapper to lock all responsive elements together -->
+					<div class="hero-wrapper">
+						<div class='front-person-img' >
+							
+							<!--person's image-->
+							<img src='futuristic-utopian.png' alt='Kush Novels LLC'>
+							<!--/person's image-->
+							
+						</div>
 						
-						<!--person's image-->
-						<img src='futuristic-utopian.png' alt='Kush Novels LLC'>
-						<!--/person's image-->
+						<!--person's titles-->
+						<div class='front-person-titles' >
+							
+							<!--title1-->
+							<span class='t1' >
+								Business Analyst
+							</span>
+							<!--/title1-->
+							
+							<!--title2-->
+							<span class='t2' >
+								Data & Reporting Specialist
+							</span>
+							<!--/title2-->
+							
+							<!--title3-->
+							<span class='t3' >
+								QA & Cybersecurity Professional
+							</span>
+							<!--/title3-->
+							
+						</div>
+						<!--/person's titles-->
+	
 						
+						<nav class='front-person-links' >
+							
+							<!--
+								navigation links, data-section attribute points towards the section with id to be opened. 
+							-->
+							
+							<ul>
+								
+								<li>
+									<a href='#' data-section='about' >About Me</a>
+								</li>
+								
+								<li>
+									<a href='#' data-section='resume' >Resume</a>
+								</li>
+								
+								<li>
+									<a href='#' data-section='services' >Services</a>
+								</li>
+								
+								<li>
+									<a href='#' data-section='portfolio' >Portfolio</a>
+								</li>
+								
+								<li>
+									<a href='#' data-section='contact' >Contact</a>
+								</li>
+								
+							</ul>
+							
+						</nav>
 					</div>
-					
-					<!--person's titles-->
-					<div class='front-person-titles' >
-						
-						<!--title1-->
-						<span class='t1' >
-							Business Analyst
-						</span>
-						<!--/title1-->
-						
-						<!--title2-->
-						<span class='t2' >
-							Data & Reporting Specialist
-						</span>
-						<!--/title2-->
-						
-						<!--title3-->
-						<span class='t3' >
-							QA & Cybersecurity Professional
-						</span>
-						<!--/title3-->
-						
-					</div>
-					<!--/person's titles-->
-
-					
-					<nav class='front-person-links' >
-						
-						<!--
-							navigation links, data-section attribute points towards the section with id to be opened. 
-						-->
-						
-						<ul>
-							
-							<li>
-								<a href='#' data-section='about' >About Me</a>
-							</li>
-							
-							<li>
-								<a href='#' data-section='resume' >Resume</a>
-							</li>
-							
-							<li>
-								<a href='#' data-section='services' >Services</a>
-							</li>
-							
-							<li>
-								<a href='#' data-section='portfolio' >Portfolio</a>
-							</li>
-							
-							<li>
-								<a href='#' data-section='contact' >Contact</a>
-							</li>
-							
-						</ul>
-						
-					</nav>
 					
 					
 					
@@ -1344,11 +1530,11 @@
 							<div class='col-md-8 about-info' >
 								
 								<p>
-									I am Thisha Smith, a results-driven professional specializing in the intersection of <strong>Business Analysis, Data Reporting, Quality Assurance, and Cybersecurity</strong>. With a solid track record in managing healthcare data and verifying complex software systems, I specialize in translating stakeholder requirements into functional technical designs and high-quality deliverables.
+									I am Thisha Smith, a results-driven professional specializing in the intersection of <strong>Business Analysis, Data Reporting, Quality Assurance, and Agentic AI / AI-assisted workflow development</strong>. With a solid track record in managing healthcare data and verifying complex software systems, I specialize in translating stakeholder requirements into functional technical designs and high-quality deliverables.
 								</p>
 								
 								<p>
-									My experience includes healthcare reporting, software quality assurance, data quality and validation, process improvement, cybersecurity training, and AI-assisted productivity workflows.
+									My experience includes healthcare data reporting, software quality assurance, database validation, process improvement, and Agentic AI / AI-assisted workflow integration.
 								</p>
 								
 								<p>
@@ -1367,20 +1553,26 @@
 									</li>
 									<li>
 										<div class='inner' >
-											<h4>Age</h4>
-											<p>Full of Life</p>
-										</div>
-									</li>
-									<li>
-										<div class='inner' >
 											<h4>Website</h4>
 											<p><a href="https://www.linkedin.com/in/thisha/" target="_blank">LinkedIn</a></p>
 										</div>
 									</li>
 									<li>
 										<div class='inner' >
-											<h4>Hometown</h4>
+											<h4>GitHub</h4>
+											<p><a href="https://github.com/thishas" target="_blank">GitHub</a></p>
+										</div>
+									</li>
+									<li>
+										<div class='inner' >
+											<h4>Location</h4>
 											<p>Sacramento, CA</p>
+										</div>
+									</li>
+									<li style="width: 100%;">
+										<div class='inner' >
+											<h4>Versatility</h4>
+											<p>Business Analysis | Data Reporting | Quality Assurance | Agentic AI</p>
 										</div>
 									</li>
 									
@@ -1624,7 +1816,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" title='Email' >
 											<i class='ion-email' ></i>
 										</a>
 									</li>
@@ -2036,7 +2228,7 @@
 										</a>
 									</li>
 									<li>
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" title='Email' >
 											<i class='ion-email' ></i>
 										</a>
 									</li>
@@ -2266,73 +2458,6 @@
 					</div>
 				</div>
 				
-				<div class='testimonials-block section-block' >
-					<div class='container' >
-					
-						<div class='section-header text-center' >
-							
-							<h2 class='animate text-over-block' >Testimonials</h2>
-								
-							<!--divider-->
-							<div class='divider-draft center' ></div>
-							<!--/divider-->
-							
-							
-						</div>
-						
-						<div class='row' >
-							
-							<div class='col-md-8 col-md-offset-2' >
-								
-								<div class='testimonials-slider' >
-									
-									<div class='testimonial' >
-										<p>
-											I had the privilege of working alongside Thisha, and I can confidently say that she is an exceptional professional. She is incredibly easy to work with, displaying a natural ability to connect and interact with people at all levels. Her open-mindedness and eagerness to learn new things make her a valuable asset to any team or project.
-Thisha is highly dedicated, consistently demonstrating a strong commitment to delivering high-quality results. She navigates seamlessly across multiple domains, including IT, Business Intelligence (BI), and project management, showcasing a unique blend of technical expertise and organizational skills.
-Her combination of interpersonal skills, technical proficiency, and dedication makes her an outstanding contributor.
-										</p>
-										
-										<div class='author' >
-											<h4>Kleber Haraguchi</h4>
-											<p>Global BI & Ops Lead at Intel</p>
-										</div>
-									</div>
-									
-									<div class='testimonial' >
-										<p>
-											Thisha and I worked together through partner master data process excellence for nearly two years. Thisha is highly skilled at communicating change up and down the value chain and is lovingly referred to as the "Documentation Queen". Her ability to digest complex highly technical concepts and lead disparate stakeholders through complex change should not go unnoticed. She's a fine partner to have riding "shotgun"; particularly if the ride might be bumpy.
-										</p>
-										
-										<div class='author' >
-											<h4>Eric Lind</h4>
-											<p>Business Systems Analyst & Architect at Intel</p>
-										</div>
-									</div>
-									
-									<div class='testimonial' >
-										<p>
-											I was a consumer of a data program Thisha managed while at Intel, and she trained me to use the system. While she was always quick to help answer any questions that came up, we didn't get a chance to work closer because I rarely had issues with this program! The data came to me at a predictable cadence and was validated with any potential quality issues documented. Her Quality Assurance experience was clearly an asset to her role on the data operations team. Thisha will be a great asset to any team looking for disciplined and methodical analyst and I hope we get the chance to work together again in the future!
-										</p>
-										
-										<div class='author' >
-											<h4>Lia Kashdan</h4>
-											<p>Software & Service Partner Sales Analyst at Intel</p>
-										</div>
-									</div>
-									
-									
-									
-									
-								</div>
-								
-							</div>
-							
-						</div>
-					
-					</div>
-				</div>
-				
 				<div class='footer bg-lightgray section-block' >
 					
 					<div class='container' >
@@ -2357,7 +2482,7 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 										</a>
 									</li>
 									<li>
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" title='Email' >
 											<i class='ion-email' ></i>
 										</a>
 									</li>
@@ -2569,7 +2694,7 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 										</a>
 									</li>
 									<li>
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" title='Email' >
 											<i class='ion-email' ></i>
 										</a>
 									</li>
@@ -2626,7 +2751,7 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 										I’m open to conversations around Business Analysis, Data Reporting, Quality Assurance, Cybersecurity, AI workflow support, and technology-driven business improvement.
 									</p>
 									<ul style="list-style: none; padding: 0; font-size: 16px; line-height: 2.2em; display: inline-block; text-align: left; margin: auto; margin-bottom: 40px;">
-										<li><i class="ion-email" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>Email:</strong> <a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" style="color: #2F2F2F; text-decoration: underline;">ThishaSmith@Outlook.com</a></li>
+										<li><i class="ion-email" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>Email:</strong> <a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" style="color: #2F2F2F; text-decoration: underline;">ThishaSmith@gmail.com</a></li>
 										<li><i class="ion-social-linkedin" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/thisha/" target="_blank" style="color: #2F2F2F; text-decoration: underline;">linkedin.com/in/thisha</a></li>
 										<li><i class="ion-social-github" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>GitHub:</strong> <a href="https://github.com/thishas" target="_blank" style="color: #2F2F2F; text-decoration: underline;">github.com/thishas</a></li>
 										<li><i class="ion-ios-location" style="margin-right: 12px; color: #7A3E2D; font-size: 18px;"></i> <strong>Location:</strong> Sacramento, CA</li>
@@ -2693,7 +2818,7 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 									</div>
 								-->	
 									<div class='form-group text-center' >
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" class="btn btn-primary">Send Message</a>
+										<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" class="btn btn-primary">Send Message</a>
 									</div>
 									
 									
@@ -2730,7 +2855,7 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 										</a>
 									</li>
 									<li>
-										<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+										<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" title='Email' >
 											<i class='ion-email' ></i>
 										</a>
 									</li>
@@ -2869,9 +2994,10 @@ Her combination of interpersonal skills, technical proficiency, and dedication m
 				});
 			});
 		</script>
-		
-		
-		
+		<!-- Back to Top Button -->
+		<a href="#" id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+			<i class="ion-ios-arrow-up"></i>
+		</a>
 	</body>
 	
 </html>

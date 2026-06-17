@@ -7,6 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<title>LinkedIn Recommendations - Thisha Smith</title>
+		<!-- GA4 configured for Thisha.net -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYT28BGMF7"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-XYT28BGMF7');
+		</script>
 		<meta name="description" content="Public LinkedIn recommendations from colleagues, leaders, and partners highlighting business analysis, data analytics, and quality assurance.">
 		<meta name="keywords" content="LinkedIn recommendations, business analyst, data analyst, QA engineer, testimonials, Intel, Thisha Smith">
 		
@@ -149,11 +159,12 @@
 				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 			}
 			.recommendation-card-excerpt {
-				font-family: 'Playfair Display', 'Crimson Text', serif;
+				font-family: 'Open Sans', sans-serif;
 				font-size: 13.5px;
 				line-height: 1.6;
 				color: #2F2F2F;
-				font-style: italic;
+				font-style: normal;
+				font-weight: 600;
 				margin-bottom: 20px;
 				flex-grow: 1;
 				transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -685,7 +696,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="mailto:ThishaSmith@Outlook.com?subject=Let's Connect, Possible Opportunity" title='Email' >
+									<a href="mailto:ThishaSmith@gmail.com?subject=Let's Connect, Possible Opportunity" title='Email' >
 										<i class='ion-email' ></i>
 									</a>
 								</li>
@@ -706,7 +717,10 @@
 		<script src='js/validator.min.js' ></script>
 		<script src='js/smoothscroll.js' ></script>
 		<script src='js/script.js' ></script>
-		
+		<!-- Back to Top Button -->
+		<a href="#" id="back-to-top" class="back-to-top-btn" title="Back to top" aria-label="Back to top">
+			<i class="ion-ios-arrow-up"></i>
+		</a>
 	</body>
 	
 </html>
