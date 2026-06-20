@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting to Resume...</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYT28BGMF7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XYT28BGMF7');
+    </script>
+</head>
+<body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 100px; color: #2F2F2F;">
+        Opening resume... If it doesn't load, <a id="fallback-link" href="Thisha_Smith_Resume_2026.pdf">click here</a>.
+    </p>
+
+    <script>
+        var targetFile = 'Thisha_Smith_Resume_2026.pdf';
+        var redirected = false;
+
+        function doRedirect() {
+            if (!redirected) {
+                redirected = true;
+                window.location.replace(targetFile);
+            }
+        }
+
+        // Set a safety timeout of 400ms to ensure the user gets redirected even if GA is blocked
+        var safetyTimeout = setTimeout(doRedirect, 400);
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'resume_download', {
+                resume_type: 'General',
+                file_name: targetFile,
+                page_location: window.location.href,
+                link_url: window.location.origin + '/' + targetFile,
+                event_callback: function() {
+                    clearTimeout(safetyTimeout);
+                    doRedirect();
+                }
+            });
+        } else {
+            // Immediate redirect if GA tracker is blocked or not loaded
+            doRedirect();
+        }
+    </script>
+</body>
+</html>

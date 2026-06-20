@@ -389,3 +389,7 @@ if __name__ == "__main__":
         "Automation Support", "Python-Based Test Automation", "CI/CD Validation Support", "Business Analysis"
     ]
     create_resume_pdf("Thisha_Smith_QA_Test_Analyst.pdf", qa_roles, qa_summary, qa_skills)
+
+    # General / main resumes (using the primary Business Analyst configuration)
+    create_resume_pdf("Thisha_Smith_Resume_2026.pdf", ba_roles, ba_summary, ba_skills)
+    create_resume_pdf("ThishaSmith_Jan29.pdf", ba_roles, ba_summary, ba_skills)
