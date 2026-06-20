@@ -289,6 +289,46 @@ def create_resume_pdf(filename, target_roles, summary_paras, core_skills):
         story.append(Paragraph(f"&bull; {exp}", add_bullet_style))
     story.append(Spacer(1, 2))
     
+    # Professional Development & Community Involvement
+    add_section_divider("PROFESSIONAL DEVELOPMENT & COMMUNITY INVOLVEMENT")
+    story.append(Paragraph("&bull; Participated in Women in Cybersecurity (WiCyS) and Blacks In Cybersecurity (BIC) programs focused on cybersecurity awareness, mentorship, professional growth, networking, and career development.", add_bullet_style))
+    story.append(Spacer(1, 2))
+    
+    # Certifications & Professional Development
+    md_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resume_certifications_standard.md")
+    if not os.path.exists(md_path):
+        print(f"ERROR: Standard certifications source file is missing: {md_path}", file=sys.stderr)
+        sys.exit(1)
+        
+    section_title = "CERTIFICATIONS & PROFESSIONAL DEVELOPMENT"
+    cert_items = []
+    
+    try:
+        with open(md_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith("#"):
+                    title_candidate = line.lstrip("#").strip()
+                    if title_candidate:
+                        section_title = title_candidate
+                elif line.startswith("*") or line.startswith("-"):
+                    item = line[1:].strip()
+                    if item:
+                        item = item.replace("—", "&mdash;")
+                        cert_items.append(item)
+    except Exception as e:
+        print(f"ERROR: Failed to read/parse {md_path}: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    if not cert_items:
+        print(f"ERROR: No certification items found in {md_path}", file=sys.stderr)
+        sys.exit(1)
+
+    add_section_divider(section_title.upper())
+    for item in cert_items:
+        story.append(Paragraph(f"&bull; {item}", add_bullet_style))
+    story.append(Spacer(1, 2))
+    
     # Education
     add_section_divider("EDUCATION")
     story.append(Paragraph("<b>American River College</b> &ndash; A.S. Computer Programming, C++ Concentration | May 2023", body_style))
@@ -329,7 +369,7 @@ if __name__ == "__main__":
     ]
     data_skills = [
         "Data Analysis & Reporting", "Healthcare Reporting", "Data Validation", "Data Quality Review",
-        "Power BI & Dashboard Reporting", "SQL & Data Querying", "Microsoft Excel Advanced Formulas",
+        "Power BI & Dashboard Reporting", "SQL, Data Querying & Optimization", "Microsoft Excel Advanced Formulas",
         "Reporting Automation", "Data Governance", "KPI Reporting", "Records Management",
         "Compliance Reporting Support", "Secure File Handling / SFTP", "Process Metrics",
         "Cross-Functional Reporting", "Documentation"

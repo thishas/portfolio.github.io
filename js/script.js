@@ -217,6 +217,7 @@ $(function(){
 	// 2. Resume Downloads Tracking
 	$(document).on('click', 'a[href$=".pdf"], a[download]', function() {
 		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
 		var fileName = href.substring(href.lastIndexOf('/') + 1);
 		var resumeType = 'General';
 		
@@ -233,20 +234,34 @@ $(function(){
 		trackEvent('resume_download', {
 			resume_type: resumeType,
 			file_name: fileName,
-			page_location: window.location.href
+			page_location: window.location.href,
+			link_url: absoluteUrl
 		});
 	});
 
 	// 3. Recommendation Page Click Tracking (from Home or other links)
 	$(document).on('click', 'a[href*="linkedin-recommendations"]', function() {
+		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
+		var text = $(this).text().trim() || 'Recommendations';
+		
+		trackEvent('recommendations_click', {
+			link_text: text,
+			page_location: window.location.href,
+			link_url: absoluteUrl
+		});
+		
+		// Legacy trackEvent:
 		trackEvent('recommendations_view', {
 			page_location: window.location.href
 		});
 	});
 
-	// 4. Portfolio Case Study Click Tracking (from portfolio cards)
-	$(document).on('click', '#portfolio-grid a', function() {
+	// 4. Portfolio Case Study Click Tracking (from portfolio cards or case study links)
+	$(document).on('click', '#portfolio-grid a, a[href*="case-study.html"]', function() {
 		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
+		var text = $(this).text().trim() || 'Case Study';
 		var caseStudyName = '';
 		
 		if (href.indexOf('healthcare-reporting-case-study') !== -1) {
@@ -259,17 +274,19 @@ $(function(){
 			caseStudyName = 'AI & Automation';
 		}
 		
-		if (caseStudyName) {
-			trackEvent('portfolio_case_study_click', {
-				case_study_name: caseStudyName,
-				destination_url: href
-			});
-		}
+		trackEvent('portfolio_case_study_click', {
+			case_study_name: caseStudyName,
+			link_text: text,
+			page_location: window.location.href,
+			link_url: absoluteUrl
+		});
 	});
 
 	// 5. External LinkedIn Clicks (unified profile clicks and recommendation card profile clicks)
 	$(document).on('click', 'a[href*="linkedin.com"]', function() {
 		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
+		var text = $(this).text().trim() || 'LinkedIn';
 		var name = '';
 		
 		var recCard = $(this).closest('.recommendation-card-wrapper');
@@ -278,30 +295,110 @@ $(function(){
 		} else if (href.indexOf('/in/thisha') !== -1) {
 			name = 'Thisha Smith';
 		} else {
-			name = $(this).text().trim() || $(this).closest('h4').text().trim() || '';
+			name = text || $(this).closest('h4').text().trim() || '';
 			name = name.replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim();
 		}
 		
 		trackEvent('external_linkedin_click', {
 			profile_name: name,
-			profile_url: href
+			profile_url: absoluteUrl
+		});
+
+		trackEvent('linkedin_click', {
+			link_text: text,
+			page_location: window.location.href,
+			link_url: absoluteUrl
 		});
 	});
 
-	// 6. GitHub Click Tracking
+	// 6. GitHub Click Tracking & Exit
 	$(document).on('click', 'a[href*="github.com"]', function() {
 		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
+		var text = $(this).text().trim() || 'GitHub';
+		
 		trackEvent('github_click', {
-			profile_url: href
+			link_text: text,
+			page_location: window.location.href,
+			link_url: absoluteUrl
+		});
+
+		trackEvent('external_portfolio_exit', {
+			destination_name: 'GitHub',
+			link_url: absoluteUrl,
+			page_location: window.location.href,
+			link_text: text
 		});
 	});
 
-	// 7. TrueBalance Live App Link Tracking (external product link)
+	// 6a. Email Link Tracking
+	$(document).on('click', 'a[href^="mailto:"]', function() {
+		var href = $(this).attr('href') || '';
+		var text = $(this).text().trim() || 'Email';
+		
+		trackEvent('email_click', {
+			link_text: text,
+			page_location: window.location.href,
+			link_url: href
+		});
+	});
+
+	// 6b. Phone Link Tracking
+	$(document).on('click', 'a[href^="tel:"]', function() {
+		var href = $(this).attr('href') || '';
+		var text = $(this).text().trim() || 'Phone';
+		
+		trackEvent('phone_click', {
+			link_text: text,
+			page_location: window.location.href,
+			link_url: href
+		});
+	});
+
+	// 7. TrueBalance Live App Link Tracking & Exit (external product link)
 	$(document).on('click', 'a[href*="app-truebalance.netlify.app"]', function() {
 		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
+		var text = $(this).text().trim() || 'TrueBalance Live App';
+		
 		trackEvent('external_product_link', {
 			product_name: 'TrueBalance Planner',
-			product_url: href
+			product_url: absoluteUrl
+		});
+
+		trackEvent('external_portfolio_exit', {
+			destination_name: 'TrueBalance Planner',
+			link_url: absoluteUrl,
+			page_location: window.location.href,
+			link_text: text
+		});
+	});
+
+	// 7a. Generic External Exit Tracking (for links not matching github, netlify, or linkedin)
+	$(document).on('click', 'a[href^="http://"], a[href^="https://"]', function() {
+		var href = $(this).attr('href') || '';
+		var absoluteUrl = $(this).prop('href') || href;
+		
+		if (href.indexOf('linkedin.com') !== -1 || href.indexOf('github.com') !== -1 || href.indexOf('app-truebalance.netlify.app') !== -1) {
+			return; // Handled by specific handlers
+		}
+		
+		var text = $(this).text().trim() || 'External Link';
+		var destinationName = 'External Link';
+		if (href.indexOf('coursera.org') !== -1) {
+			destinationName = 'Coursera Credential Verification';
+		} else {
+			try {
+				var urlObj = new URL(absoluteUrl);
+				destinationName = urlObj.hostname;
+			} catch (e) {}
+		}
+		
+		trackEvent('external_portfolio_exit', {
+			destination_name: destinationName,
+			link_url: absoluteUrl,
+			page_location: window.location.href,
+			link_text: text
 		});
 	});
 
@@ -316,12 +413,38 @@ $(function(){
 		});
 	});
 
-	// 9. Back to Top Scroll Behavior and Click Event
+	// 9. Back to Top Scroll Behavior, Scroll Depth Tracking, and Click Event
+	var trackedThresholds = {};
 	$(window).on('scroll', function() {
+		// Back to Top visibility
 		if ($(window).scrollTop() > 300) {
 			$('#back-to-top').addClass('show');
 		} else {
 			$('#back-to-top').removeClass('show');
+		}
+
+		// Scroll Depth Tracking
+		var docHeight = $(document).height();
+		var winHeight = $(window).height();
+		var scrollTop = $(window).scrollTop();
+		
+		if (docHeight > winHeight) {
+			var scrollPercent = Math.round((scrollTop / (docHeight - winHeight)) * 100);
+			if (scrollTop + winHeight >= docHeight - 5) {
+				scrollPercent = 100;
+			}
+			
+			var milestones = [25, 50, 75, 100];
+			milestones.forEach(function(threshold) {
+				if (scrollPercent >= threshold && !trackedThresholds[threshold]) {
+					trackedThresholds[threshold] = true;
+					trackEvent('scroll_depth', {
+						scroll_percent: threshold,
+						page_location: window.location.href,
+						page_title: document.title
+					});
+				}
+			});
 		}
 	});
 
