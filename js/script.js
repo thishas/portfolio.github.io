@@ -220,19 +220,25 @@ $(function(){
 		var absoluteUrl = $(this).prop('href') || href;
 		var fileName = href.substring(href.lastIndexOf('/') + 1);
 		var resumeType = 'General';
+		var resumeVariant = 'general';
 		
 		if (fileName.indexOf('Business_Analyst') !== -1) {
 			resumeType = 'Business Analyst';
+			resumeVariant = 'business_analyst';
 		} else if (fileName.indexOf('Data_Reporting') !== -1) {
 			resumeType = 'Data Reporting';
+			resumeVariant = 'data_reporting';
 		} else if (fileName.indexOf('QA_Test') !== -1) {
 			resumeType = 'QA';
+			resumeVariant = 'qa';
 		} else if (fileName.indexOf('Jan29') !== -1 || fileName.indexOf('Resume_2026') !== -1) {
 			resumeType = 'General';
+			resumeVariant = 'general';
 		}
 		
 		trackEvent('resume_download', {
 			resume_type: resumeType,
+			resume_variant: resumeVariant,
 			file_name: fileName,
 			page_location: window.location.href,
 			link_url: absoluteUrl
