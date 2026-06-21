@@ -151,7 +151,7 @@ def create_resume_pdf(filename, target_roles, summary_paras, core_skills):
     
     # Name and Header
     story.append(Paragraph("THISHA SMITH", name_style))
-    story.append(Paragraph("Sacramento, CA | (916) 776-6368 | ThishaSmith@gmail.com | Portfolio: Thisha.net", contact_style))
+    story.append(Paragraph('Sacramento, CA | (916) 776-6368 | ThishaSmith@gmail.com | Portfolio: <a href="https://thisha.net" color="#2F2F2F">Thisha.net</a>', contact_style))
     
     def add_section_divider(title):
         t = Table([[Paragraph(title, section_heading)]], colWidths=[540])
@@ -219,8 +219,7 @@ def create_resume_pdf(filename, target_roles, summary_paras, core_skills):
             "Data Validation & Quality Review: Utilize advanced Excel functions, reporting logic, and validation techniques to identify discrepancies, improve file accuracy, and support successful monthly submissions.",
             "Team & Stakeholder Support: Provide reporting updates, clarify data issues, and coordinate with internal teams and leadership to meet regulatory and operational deadlines.",
             "Reporting Documentation & Process Improvement: Maintain reporting logic, mapping documentation, validation procedures, and audit-ready working files to support repeatable, scalable, and traceable reporting processes.",
-            "Reporting Modernization & AI Workflow Innovation: Support reporting modernization initiatives through process analysis, workflow documentation, validation planning, and evaluation of AI-assisted approaches designed to improve reporting accuracy, operational efficiency, and analyst productivity.",
-            "Tools & Technologies: Advanced Excel, SFTP, Reporting Templates, Data Validation, Process Mapping, Workflow Documentation, Local AI Evaluation, Prompt Engineering."
+            "Reporting Modernization & AI Workflow Innovation: Support reporting modernization initiatives through process analysis, workflow documentation, validation planning, and evaluation of AI-assisted approaches designed to improve reporting accuracy, operational efficiency, and analyst productivity."
         ]
     )
     
