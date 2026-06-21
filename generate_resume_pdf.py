@@ -202,20 +202,25 @@ def create_resume_pdf(filename, target_roles, summary_paras, core_skills):
         story.append(Spacer(1, 1))
         
         for bullet in bullets:
-            story.append(Paragraph(f"&bull; {bullet}", bullet_style))
+            if bullet.startswith("Tools & Technologies:"):
+                story.append(Paragraph(f"<b>Tools & Technologies:</b>" + bullet[21:], ParagraphStyle('JobTools', parent=bullet_style, leftIndent=12, firstLineIndent=0, spaceBefore=2)))
+            else:
+                story.append(Paragraph(f"&bull; {bullet}", bullet_style))
         story.append(Spacer(1, 4))
 
     # Job 1
     add_job(
         "Data & Reporting Specialist",
-        "Master Care, Inc. &ndash; Sacramento, CA",
+        "Master Care, LLC &ndash; Sacramento, CA",
         "02/2026 &ndash; Present",
         [
-            "Records & Reporting Support: Validate and reconcile member-level data for Cal AIM reporting, ensuring accurate records, clean files, and compliance with reporting requirements.",
-            "Confidential Data Handling: Retrieve, process, and organize secure files through SFTP, including encrypted files and structured reporting outputs.",
-            "Data Entry & Quality Review: Use Excel formulas, date logic, and validation checks to identify discrepancies, correct errors, and improve file accuracy before submission.",
-            "Team & Stakeholder Support: Provide timely updates, clarify reporting issues, and coordinate with internal teams to meet monthly deadlines.",
-            "Documentation: Maintain working files, mapping notes, and reporting logic to support traceability, audit readiness, and repeatable office processes."
+            "Records & Reporting Support: Validate and reconcile member-level data for CalAIM reporting, ensuring accurate records, clean files, and compliance with reporting requirements.",
+            "Confidential Data Handling: Retrieve, process, and organize secure files through SFTP, including encrypted files, structured reporting outputs, and payer-specific submission files.",
+            "Data Validation & Quality Review: Utilize advanced Excel functions, reporting logic, and validation techniques to identify discrepancies, improve file accuracy, and support successful monthly submissions.",
+            "Team & Stakeholder Support: Provide reporting updates, clarify data issues, and coordinate with internal teams and leadership to meet regulatory and operational deadlines.",
+            "Reporting Documentation & Process Improvement: Maintain reporting logic, mapping documentation, validation procedures, and audit-ready working files to support repeatable, scalable, and traceable reporting processes.",
+            "Reporting Modernization & AI Workflow Innovation: Support reporting modernization initiatives through process analysis, workflow documentation, validation planning, and evaluation of AI-assisted approaches designed to improve reporting accuracy, operational efficiency, and analyst productivity.",
+            "Tools & Technologies: Advanced Excel, SFTP, Reporting Templates, Data Validation, Process Mapping, Workflow Documentation, Local AI Evaluation, Prompt Engineering."
         ]
     )
     
