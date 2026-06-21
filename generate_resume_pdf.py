@@ -151,7 +151,7 @@ def create_resume_pdf(filename, target_roles, summary_paras, core_skills):
     
     # Name and Header
     story.append(Paragraph("THISHA SMITH", name_style))
-    story.append(Paragraph("Sacramento, CA | (916) 776-6368 | ThishaSmith@gmail.com | linkedin.com/in/thisha", contact_style))
+    story.append(Paragraph("Sacramento, CA | (916) 776-6368 | ThishaSmith@gmail.com | Portfolio: Thisha.net", contact_style))
     
     def add_section_divider(title):
         t = Table([[Paragraph(title, section_heading)]], colWidths=[540])
