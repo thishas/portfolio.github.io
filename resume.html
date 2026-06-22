@@ -14,7 +14,7 @@
 </head>
 <body>
     <p style="font-family: sans-serif; text-align: center; margin-top: 100px; color: #2F2F2F;">
-        Opening resume... If it doesn't load, <a id="fallback-link" href="Thisha_Smith_Resume_2026.pdf">click here</a>.
+        Opening resume... If it doesn't load, <a id="fallback-link" href="Thisha_Smith_Resume_2026.pdf" onclick="trackFallbackClick(event)">click here</a>.
     </p>
 
     <script>
@@ -28,6 +28,26 @@
             }
         }
 
+        function trackFallbackClick(e) {
+            if (typeof gtag === 'function') {
+                e.preventDefault();
+                gtag('event', 'resume_download', {
+                    resume_type: 'General',
+                    resume_variant: 'general',
+                    file_name: targetFile,
+                    page_location: window.location.href,
+                    link_url: window.location.origin + '/' + targetFile,
+                    transport_type: 'beacon',
+                    event_callback: function() {
+                        window.location.href = targetFile;
+                    }
+                });
+                setTimeout(function() {
+                    window.location.href = targetFile;
+                }, 300);
+            }
+        }
+
         // Set a safety timeout of 400ms to ensure the user gets redirected even if GA is blocked
         var safetyTimeout = setTimeout(doRedirect, 400);
 
@@ -38,6 +58,7 @@
                 file_name: targetFile,
                 page_location: window.location.href,
                 link_url: window.location.origin + '/' + targetFile,
+                transport_type: 'beacon',
                 event_callback: function() {
                     clearTimeout(safetyTimeout);
                     doRedirect();

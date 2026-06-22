@@ -180,6 +180,9 @@ $(function(){
 	=========================================================================*/
 	function trackEvent(name, params) {
 		if (typeof gtag === "function") {
+			if (params && !params.transport_type) {
+				params.transport_type = 'beacon';
+			}
 			gtag("event", name, params);
 		}
 	}
@@ -219,21 +222,29 @@ $(function(){
 		var href = $(this).attr('href') || '';
 		var absoluteUrl = $(this).prop('href') || href;
 		var fileName = href.substring(href.lastIndexOf('/') + 1);
-		var resumeType = 'General';
-		var resumeVariant = 'general';
 		
-		if (fileName.indexOf('Business_Analyst') !== -1) {
-			resumeType = 'Business Analyst';
-			resumeVariant = 'business_analyst';
-		} else if (fileName.indexOf('Data_Reporting') !== -1) {
-			resumeType = 'Data Reporting';
-			resumeVariant = 'data_reporting';
-		} else if (fileName.indexOf('QA_Test') !== -1) {
-			resumeType = 'QA';
-			resumeVariant = 'qa';
-		} else if (fileName.indexOf('Jan29') !== -1 || fileName.indexOf('Resume_2026') !== -1) {
-			resumeType = 'General';
-			resumeVariant = 'general';
+		// Use data attributes if present, otherwise fall back to filename matching
+		var resumeVariant = $(this).attr('data-resume-variant') || $(this).data('resume-variant');
+		var resumeType = $(this).attr('data-resume-type') || $(this).data('resume-type');
+		
+		if (!resumeVariant) {
+			var lowerFileName = fileName.toLowerCase();
+			if (lowerFileName.indexOf('business_analyst') !== -1) {
+				resumeType = 'Business Analyst';
+				resumeVariant = 'business_analyst';
+			} else if (lowerFileName.indexOf('data_reporting') !== -1) {
+				resumeType = 'Data Reporting';
+				resumeVariant = 'data_reporting';
+			} else if (lowerFileName.indexOf('qa_test') !== -1) {
+				resumeType = 'QA';
+				resumeVariant = 'qa';
+			} else if (lowerFileName.indexOf('jan29') !== -1 || lowerFileName.indexOf('resume_2026') !== -1) {
+				resumeType = 'General';
+				resumeVariant = 'general';
+			} else {
+				resumeType = 'General';
+				resumeVariant = 'general';
+			}
 		}
 		
 		trackEvent('resume_download', {
